@@ -1,0 +1,23 @@
+CREATE TABLE `users` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary_key',
+  `user_name` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `birthday` date DEFAULT NULL,
+  `country` varchar(20) DEFAULT NULL,
+  `postal` varchar(10) DEFAULT NULL,
+  `address` varchar(30) DEFAULT NULL,
+  `address1` varchar(30) DEFAULT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `phone1` varchar(20) DEFAULT NULL,
+  `email` varchar(30) DEFAULT NULL,
+  `email1` varchar(30) DEFAULT NULL,
+  `profile_photo` binary(50) DEFAULT NULL,
+  `status` varchar(20) DEFAULT '0' COMMENT '0:Active,9:Deleted',
+  `role` smallint(2) DEFAULT 0 COMMENT '0:Subscriber,1:Contributor,2:Author,3:Editor,4:Administrator,5:Super Admin',
+  `ins_date` datetime DEFAULT NULL,
+  `ins_user_name` varchar(20) DEFAULT NULL,
+  `upd_date` datetime DEFAULT NULL,
+  `upd_user_name` varchar(20) DEFAULT NULL,
+  `operation` varchar(30) DEFAULT NULL COMMENT 'Note of DB changes',
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COMMENT='Sempai User'

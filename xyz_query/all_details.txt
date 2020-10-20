@@ -1,0 +1,18 @@
+CREATE TABLE `all_details` (
+  `detail_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary_key',
+  `header_table` varchar(20) NOT NULL,
+  `header_id` int(11) NOT NULL,
+  `display_order` int(4) NOT NULL,
+  `Column1` varchar(30) DEFAULT NULL,
+  `Column2` varchar(30) DEFAULT NULL,
+  `Column3` varchar(50) DEFAULT NULL,
+  `Column4` varchar(50) DEFAULT NULL,
+  `Column 5` varchar(90) DEFAULT NULL,
+  `status` varchar(20) DEFAULT '0' COMMENT '0:Active,9:Deleted',
+  `ins_date` datetime DEFAULT NULL,
+  `ins_user_name` varchar(20) DEFAULT NULL,
+  `upd_date` datetime DEFAULT NULL,
+  `upd_user_name` varchar(20) DEFAULT NULL,
+  `operation` varchar(30) DEFAULT NULL COMMENT 'Note of DB changes',
+  PRIMARY KEY (`detail_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COMMENT='All details'
