@@ -7,13 +7,13 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li><?php echo  $this->Html->link('Home', ['controller' => 'Home', 'action' => 'display', 'index']); ?></li>
-          <li><?php echo  $this->Html->link('About', ['controller'=>'About','action' => 'display']); ?></li>
-          <li><?php echo  $this->Html->link('Courses', ['controller'=>'Courses','action' => 'display']); ?></li>
+          <li><?php echo  $this->Html->link('Нүүр', ['controller' => 'Home', 'action' => 'display', 'index']); ?></li>
+          <li><?php echo  $this->Html->link('Монгол мэдээ', ['controller'=>'About','action' => 'display']); ?></li>
+          <li><?php echo  $this->Html->link('Япон мэдээ', ['controller'=>'Courses','action' => 'display']); ?></li>
 
-          <li><a href="trainers.html">Trainers</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="trainers.html">Элчин сайдын яам</a></li>
+          <li><a href="events.html">Зар</a></li>
+          <li><a href="pricing.html">Япон хуанли</a></li>
           <li class="drop-down"><a href="">Drop Down</a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
