@@ -35,7 +35,6 @@
 
         </ul>
       </nav><!-- .nav-menu -->
-      
-      <a href="courses.html" class="get-started-btn">Get Started</a>
+      <?php echo  $this->Html->link('Login', ['controller' => 'Users', 'action' => 'login'],['class'=>'get-started-btn']); ?>
     </div>
   </header><!-- End Header -->
