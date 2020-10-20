@@ -1,0 +1,41 @@
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+      <h1 class="logo mr-auto"><?php echo  $this->Html->link('Senpai', ['controller' => 'Home', 'action' => 'display', 'index']); ?></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li><?php echo  $this->Html->link('Home', ['controller' => 'Home', 'action' => 'display', 'index']); ?></li>
+          <li><?php echo  $this->Html->link('About', ['controller'=>'About','action' => 'display']); ?></li>
+          <li><?php echo  $this->Html->link('Courses', ['controller'=>'Courses','action' => 'display']); ?></li>
+
+          <li><a href="trainers.html">Trainers</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li class="drop-down"><a href="">Drop Down</a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="drop-down"><a href="#">Deep Drop Down</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+      
+      <a href="courses.html" class="get-started-btn">Get Started</a>
+    </div>
+  </header><!-- End Header -->
