@@ -62,7 +62,6 @@
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
-
     <?= $this->element('navbar') ?>
     <?= $this->Flash->render() ?>
     <?= $this->fetch('content') ?>
