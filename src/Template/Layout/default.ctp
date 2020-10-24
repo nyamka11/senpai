@@ -37,29 +37,30 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/jquery/jquery.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-    <script src="assets/vendor/counterup/counterup.min.js"></script>
-    <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
+    <?= $this->Html->css('../assets/vendor/bootstrap/css/bootstrap.min.css') ?>
+    <?= $this->Html->css('../assets/vendor/icofont/icofont.min.css') ?>
+    <?= $this->Html->css('../assets/vendor/boxicons/css/boxicons.min.css') ?>
+    <?= $this->Html->css('../assets/vendor/remixicon/remixicon.css') ?>
+    <?= $this->Html->css('../assets/vendor/owl.carousel/assets/owl.carousel.min.css') ?>
+    <?= $this->Html->css('../assets/vendor/animate.css/animate.min.css') ?>
+    <?= $this->Html->css('../assets/vendor/aos/aos.css') ?>
+
+
+    <?= $this->Html->script('../assets/vendor/jquery/jquery.min.js') ?>
+    <?= $this->Html->script('../assets/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>
+    <?= $this->Html->script('../assets/vendor/jquery.easing/jquery.easing.min.js') ?>
+    <?= $this->Html->script('../assets/vendor/php-email-form/validate.js') ?>
+    <?= $this->Html->script('../assets/vendor/waypoints/jquery.waypoints.min.js') ?>
+    <?= $this->Html->script('../assets/vendor/counterup/counterup.min.js') ?>
+    <?= $this->Html->script('../assets/vendor/owl.carousel/owl.carousel.min.js') ?>
+    <?= $this->Html->script('../assets/vendor/aos/aos.js') ?>
 
     <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <?= $this->Html->script('../assets/js/main.js') ?>
 
     <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <?= $this->Html->css('../assets/css/style.css') ?>
 </head>
 <body>
     <?= $this->element('navbar') ?>

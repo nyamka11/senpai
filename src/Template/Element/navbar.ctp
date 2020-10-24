@@ -35,6 +35,6 @@
 
         </ul>
       </nav><!-- .nav-menu -->
-      <?php echo  $this->Html->link('Login', ['controller' => 'Users', 'action' => 'login'],['class'=>'get-started-btn']); ?>
+      <?php echo  $this->Html->link('Register', ['controller' => 'Users', 'action' => 'register'],['class'=>'get-started-btn']); ?>
     </div>
   </header><!-- End Header -->

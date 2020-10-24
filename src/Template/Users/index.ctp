@@ -4,23 +4,28 @@
  * @var \App\Model\Entity\User[]|\Cake\Collection\CollectionInterface $users
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New User'), ['action' => 'add']) ?></li>
-    </ul>
-</nav>
-<div class="users index large-9 medium-8 columns content container mt-5" style="border:1px solid red ">
+
+
+<br/><br/><br/><br/><br/>
+<div class="row border container m-auto">
+    <div class="col-sm-12 col-md-3 border">
+        <div class="heading "><?= __('Actions') ?></div>
+        <ul class="side-nav">
+            <li><?= $this->Html->link(__('New User'), ['action' => 'add']) ?></li>
+        </ul>
+
+    </div>
+    <div class="col-sm-12 col-md-9 border"> 
     <h3><?= __('Users') ?></h3>
-    <table cellpadding="0" cellspacing="0">
+    <table cellpadding="0" cellspacing="0" class="border w-100">
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('user_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('user_name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('password') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('birthday') ?></th>
+                <!-- <th scope="col"><?= $this->Paginator->sort('birthday') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('country') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('postal') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('postal') ?></th> -->
                 <!-- <th scope="col"><?= $this->Paginator->sort('address') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('address1') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('phone') ?></th>
@@ -39,12 +44,12 @@
         </thead>
         <tbody>
             <?php foreach ($users as $user): ?>
-            <tr>
+            <tr class="border" >
                 <td><?= $this->Number->format($user->user_id) ?></td>
                 <td><?= h($user->user_name) ?></td>
                 <td><?= h($user->password) ?></td>
-                <td><?= h($user->birthday) ?></td>
-                <td><?= h($user->country) ?></td>
+                <!-- <td><?= h($user->birthday) ?></td>
+                <td><?= h($user->country) ?></td> -->
                 <!-- <td><?= h($user->postal) ?></td>
                 <td><?= h($user->address) ?></td>
                 <td><?= h($user->address1) ?></td>
@@ -77,5 +82,7 @@
             <?= $this->Paginator->last(__('last') . ' >>') ?>
         </ul>
         <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
+    </div>
+
     </div>
 </div>

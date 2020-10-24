@@ -66,14 +66,14 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/News', ['controller' => 'News', 'action' => 'display']);
 
     $routes->connect('/Courses', ['controller' => 'Courses', 'action' => 'display']);
-    $routes->connect('/Users/*', ['controller' => 'Users', 'action' => 'index']);
+    // $routes->connect('/Users/*', ['controller' => 'Users', 'action' => 'index']);
     // $routes->connect('/users/view/*', ['controller' => 'Users', 'action' => 'view']);
-    $routes->connect(
-        '/users/view/:id',
-        ['controller' => 'Users', 'action' => 'view']
-    )
-    ->setPatterns(['id' => '\d+'])
-    ->setPass(['id']);
+    // $routes->connect(
+    //     '/users/view/:id',
+    //     ['controller' => 'Users', 'action' => 'view']
+    // )
+    // ->setPatterns(['id' => '\d+'])
+    // ->setPass(['id']);
     
 
     /*
