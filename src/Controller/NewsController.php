@@ -1,43 +1,116 @@
 <?php
-/**
- * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- * @link      https://cakephp.org CakePHP(tm) Project
- * @since     0.2.9
- * @license   https://opensource.org/licenses/mit-license.php MIT License
- */ 
 namespace App\Controller;
 
-use Cake\Core\Configure;
-use Cake\Http\Exception\ForbiddenException;
-use Cake\Http\Exception\NotFoundException;
-use Cake\View\Exception\MissingTemplateException;
+use App\Controller\AppController;
 
 /**
- * Static content controller
+ * News Controller
  *
- * This controller will render views from Template/Pages/
+ * @property \App\Model\Table\NewsTable $News
  *
- * @link https://book.cakephp.org/3/en/controllers/pages-controller.html
+ * @method \App\Model\Entity\News[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
-class NewsController extends AppController  {
+class NewsController extends AppController
+{
+
     /**
-     * Displays a view
+     * list method
      *
-     * @param array ...$path Path segments.
      * @return \Cake\Http\Response|null
-     * @throws \Cake\Http\Exception\ForbiddenException When a directory traversal attempt.
-     * @throws \Cake\Http\Exception\NotFoundException When the view file could not
-     *   be found
-     * @throws \Cake\View\Exception\MissingTemplateException In debug mode.
      */
-    public function display()  {
-        
+    public function index()  {
+        $query = $this->News->find()->order(['id' => 'desc']);
+        $this->set('news', $this->paginate($query)) ;
+    }
+
+    /**
+     * list method
+     *
+     * @return \Cake\Http\Response|null
+     */
+    public function list()
+    {
+        $query = $this->News->find()->order(['id' => 'desc']);
+        $this->set('news', $this->paginate($query)) ;
+    }
+
+    /**
+     * View method
+     *
+     * @param string|null $id News id.
+     * @return \Cake\Http\Response|null
+     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+     */
+    public function view($id = null)
+    {
+        $news = $this->News->get($id, [
+            'contain' => [],
+        ]);
+
+        $this->set('news', $news);
+    }
+
+    /**
+     * Add method
+     *
+     * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
+     */
+    public function add()
+    {
+        $news = $this->News->newEntity();
+        if ($this->request->is('post')) {
+            $news = $this->News->patchEntity($news, $this->request->getData());
+            if ($this->News->save($news)) {
+                $this->Flash->success(__('The news has been saved.'));
+
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error(__('The news could not be saved. Please, try again.'));
+        }
+        $this->set(compact('news'));
+    }
+
+    /**
+     * Edit method
+     *
+     * @param string|null $id News id.
+     * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
+     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+     */
+    public function edit($id = null)
+    {
+        $news = $this->News->get($id, [
+            'contain' => [],
+        ]);
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $news = $this->News->patchEntity($news, $this->request->getData());
+            if ($this->News->save($news)) {
+                $this->Flash->success(__('The news has been saved.'));
+
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error(__('The news could not be saved. Please, try again.'));
+        }
+        $this->set(compact('news'));
+    }
+
+    /**
+     * Delete method
+     *
+     * @param string|null $id News id.
+     * @return \Cake\Http\Response|null Redirects to index.
+     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+     */
+    public function delete($id = null)
+    {
+        $this->request->allowMethod(['post', 'delete']);
+        $news = $this->News->get($id);
+        if ($this->News->delete($news)) {
+            $this->Flash->success(__('The news has been deleted.'));
+        } else {
+            $this->Flash->error(__('The news could not be deleted. Please, try again.'));
+        }
+
+        return $this->redirect(['action' => 'index']);
     }
 }

@@ -1562,17 +1562,17 @@ section {
   text-decoration: none;
 }
 
-
-
-/* .content, #actions-sidebar {
-  margin-bottom: -99999px;
-  padding-bottom: 99999px;
+.field  {
+  height: 46px;
+  overflow: hidden;
 }
-#actions-sidebar {
-  background: #fafafa;
-  width: 33.33333%;
-  position: relative;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    float: left;
-} */
+
+.catName  {
+  font-size: 14px;
+  background: #5fcf80;
+  padding: 7px 14px 7px;
+  color: #fff;
+  margin: 0;
+  float: left;
+}
+

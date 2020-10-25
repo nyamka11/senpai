@@ -1,13 +1,26 @@
+<main id="main">
+    <br/><br/><br/><br/>
+    <h1 class="text-center">Мэдээ</h1>
 
-  <main id="main">
-    <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs" data-aos="fade-in">
-      <div class="container">
-        <h2>Мэдээ</h2>
-        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
-      </div>
-    </div><!-- End Breadcrumbs -->
-
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 mb-4" data-aos-delay="100">
+                    <img src="img/medee.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-sm-12 col-md-6" style="height: 340px; overflow: hidden;">
+                    <?php foreach ($news as $news): ?>
+                        <h4><?= $news->title ?></h4>
+                        <p><?= $news->body ?></p>
+                        
+                    <?php break; endforeach; ?>
+                </div>
+                <?= $this->Html->link(__('Харах'), ['action' => 'view', $news->id],['class'=>'btn btn-outline-info float-right']) ?>
+                        
+            </div>
+        </div>
+    </section><!-- End About Section -->
 
     <!-- ======= Popular Courses Section ======= -->
     <section id="popular-courses" class="courses">
@@ -102,37 +115,6 @@
 
       </div>
     </section><!-- End Popular Courses Section -->
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row">
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-            <p class="font-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <ul>
-              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="icofont-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-            </ul>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            </p>
-
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-
   </main><!-- End #main -->
 
   <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>

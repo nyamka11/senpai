@@ -1,5 +1,5 @@
 <!-- ======= Header ======= -->
-<header id="header" class="fixed-top">
+<header id="header" class="fixed-top shadow-sm">
     <div class="container d-flex align-items-center">
       <h1 class="logo mr-auto"><?php echo  $this->Html->link('Senpai', ['controller' => 'Home', 'action' => 'display', 'index']); ?></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
@@ -8,7 +8,7 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li><?php echo  $this->Html->link('Нүүр', ['controller' => 'Home', 'action' => 'display', 'index']); ?></li>
-          <li><?php echo  $this->Html->link('Мэдээ', ['controller'=>'News','action' => 'display']); ?></li>
+          <li><?php echo  $this->Html->link('Мэдээ', ['controller'=>'News', 'action' => 'index']); ?></li>
           <li><?php echo  $this->Html->link('Японы амьдрал', ['controller'=>'Courses','action' => 'display']); ?></li>
 
           <li><a href="trainers.html">Япон хэл</a></li>
