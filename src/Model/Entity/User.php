@@ -9,6 +9,8 @@ use Cake\ORM\Entity;
  * @property int $user_id
  * @property string $user_name
  * @property string $password
+ * @property string $lastname
+ * @property string $firstname
  * @property \Cake\I18n\FrozenDate|null $birthday
  * @property string|null $country
  * @property string|null $postal
@@ -18,9 +20,10 @@ use Cake\ORM\Entity;
  * @property string|null $phone1
  * @property string|null $email
  * @property string|null $email1
+ * @property int|null $role
+ * @property int|null $gender
  * @property string|resource|null $profile_photo
  * @property string|null $status
- * @property int|null $role
  * @property \Cake\I18n\FrozenTime|null $ins_date
  * @property string|null $ins_user_name
  * @property \Cake\I18n\FrozenTime|null $upd_date
@@ -41,6 +44,8 @@ class User extends Entity
     protected $_accessible = [
         'user_name' => true,
         'password' => true,
+        'lastname' => true,
+        'firstname' => true,
         'birthday' => true,
         'country' => true,
         'postal' => true,
@@ -50,9 +55,10 @@ class User extends Entity
         'phone1' => true,
         'email' => true,
         'email1' => true,
+        'role' => true,
+        'gender' => true,
         'profile_photo' => true,
         'status' => true,
-        'role' => true,
         'ins_date' => true,
         'ins_user_name' => true,
         'upd_date' => true,

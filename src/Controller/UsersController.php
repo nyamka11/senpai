@@ -104,7 +104,22 @@ class UsersController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
-    public function register($id = null)  {
-        
+      /**
+     * Sign up method
+     *
+     * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
+     */
+    public function signup($id = null)  {
+           $user = $this->Users->newEntity();
+        if ($this->request->is('post')) {
+            $user = $this->Users->patchEntity($user, $this->request->getData());
+            if ($this->Users->save($user)) {
+                $this->Flash->success(__('The user has been saved.'));
+
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error(__('The user could not be saved. Please, try again.'));
+        }
+        $this->set(compact('user'));
     }
 }
