@@ -1561,7 +1561,7 @@ section {
   color: #fff;
   text-decoration: none;
 }
-
+/****************----------------------------------------------------------------*********/
 .field  {
   height: 46px;
   overflow: hidden;
@@ -1574,5 +1574,105 @@ section {
   color: #fff;
   margin: 0;
   float: left;
+}
+/* .container {
+  margin-top: 100px
+} */
+
+a.img-caption {
+  /* margin: 0 0 40px; */
+  display: block
+}
+
+.img-caption img {
+  position: relative
+}
+
+.img-caption figure {
+  box-sizing: content-box;
+  overflow: hidden;
+  position: relative
+}
+
+.img-caption figcaption {
+  /* background: rgba(0, 0, 0, .4); */
+  background: rgb(0 0 0 / 65%);
+  position: absolute;
+  /* box-sizing: content-box; */
+  padding: 17px;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  -webkit-transition: background-color .2s ease-in-out;
+  -moz-transition: background-color .2s ease-in-out;
+  -ms-transition: background-color .2s ease-in-out;
+  -o-transition: background-color .2s ease-in-out;
+  transition: background-color .2s ease-in-out
+}
+
+.img-caption figcaption h3 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px
+}
+
+.mega .img-caption figcaption h3 {
+  font-size: 14px;
+  line-height: 20px
+}
+
+.mega .img-caption figcaption span {
+  font-size: 14px;
+  line-height: 14px
+}
+
+.mega .img-caption figcaption {
+  padding: 10px 20px
+}
+
+.img-caption figcaption span {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 16px;
+  display: block;
+  position: relative;
+  opacity: 0;
+  max-height: 0;
+  padding: 0;
+  -webkit-transition: max-height .2s ease-in-out, opacity .2s ease-in-out, padding .2s ease-in-out;
+  -moz-transition: max-height .2s ease-in-out, opacity .2s ease-in-out, padding .2s ease-in-out;
+  -ms-transition: max-height .2s ease-in-out, opacity .2s ease-in-out, padding .2s ease-in-out;
+  -o-transition: max-height .2s ease-in-out, opacity .2s ease-in-out, padding .2s ease-in-out;
+  transition: max-height .2s ease-in-out, opacity .2s ease-in-out, padding .2s ease-in-out
+}
+
+figcaption span {
+  max-height: 50px;
+  opacity: 1;
+  padding: 5px 0 4px
+}
+
+.ourRow {
+  margin-right: -12px;
+  margin-left: -20px;
+}
+
+.ourCol {
+  padding-right: 0px;
+  padding-left: 19px;
+}
+
+.img-responsive  {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.6s;
+}
+
+.img-responsive:hover {
+  transform: scale(1.2);
 }
 

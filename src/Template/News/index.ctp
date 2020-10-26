@@ -1,26 +1,84 @@
 <main id="main">
     <br/><br/><br/><br/>
-    <h1 class="text-center">Мэдээ</h1>
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-        <div class="container" data-aos="fade-up">
+    <div class="container">  
+      <div class="row">
+        <div class="col-md-6 my-auto">
+            <a href="/news/view/20" class="img-caption">
+                <figure> 
+                    <img class="img-responsive w-100" src="assets/img/course-1.jpg" alt="" />
+                    <figcaption>
+                        <h3>"Ачаа тээврийн зохицуулалтын үйл ажиллагааг арванхоёрдугаар сарын 1-нээс шинэ горимд шилжүүлнэ"</h3> 
+                    </figcaption>
+                </figure>
+            </a> 
+        </div>
+
+        <div class="col-md-3">
             <div class="row">
-                <div class="col-sm-12 col-md-6 mb-4" data-aos-delay="100">
-                    <img src="img/medee.jpg" class="img-fluid" alt="">
+                <div class="col-sm-12">
+                    <a href="#" class="img-caption">
+                        <figure> <img class="img-responsive w-100" src="assets/img/course-2.jpg" alt="" />
+                            <figcaption>
+                                <small style="color:white;">ХХААХҮЯ: Мах экспортлогч компаниудад нэг цэгийн үйлчилгээ</small> 
+                            </figcaption>
+                        </figure>
+                    </a> 
                 </div>
-                <div class="col-sm-12 col-md-6" style="height: 340px; overflow: hidden;">
-                    <?php foreach ($news as $news): ?>
-                        <h4><?= $news->title ?></h4>
-                        <p><?= $news->body ?></p>
-                        
-                    <?php break; endforeach; ?>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <a href="#" class="img-caption">
+                        <figure> <img class="img-responsive w-100" src="assets/img/course-3.jpg" alt="" />
+                            <figcaption>
+                                <small style="color:white;">Л.Мөнхтүшиг: 11 дүгээр сард тусгай үүргийн 10 удаагийн нислэг</small>
+                            </figcaption>
+                        </figure>
+                    </a> 
                 </div>
-                <?= $this->Html->link(__('Харах'), ['action' => 'view', $news->id],['class'=>'btn btn-outline-info float-right']) ?>
-                        
             </div>
         </div>
-    </section><!-- End About Section -->
+
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-sm-12">
+                    <a href="#" class="img-caption">
+                        <figure> <img class="img-responsive w-100" src="assets/img/course-1.jpg" alt="" />
+                            <figcaption>
+                                <h3>MY First Caption</h3> <span>For what reason would it be advisable for me to think about business content?</span>
+                            </figcaption>
+                        </figure>
+                    </a> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                     <a href="#" class="img-caption">
+                        <figure> <img class="img-responsive w-100" src="assets/img/course-2.jpg" alt="" />
+                            <figcaption>
+                                <h3>MY First Caption</h3> <span>For what reason would it be advisable for me to think about business content?</span>
+                            </figcaption>
+                        </figure>
+                    </a> 
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <?= $this->Html->link(__('Харах'), ['action' => 'view', $news->id],['class'=>'btn btn-outline-info float-right']) ?> -->
+
+    <div class="row container m-auto mt-3">
+      <div class="col-4 border">
+        <h5>ОНЦЛОХ МЭДЭЭ</h5>
+        <img src="assets/img/course-2.jpg" class="rounded float-left w-50" alt="...">
+        <small>"Ачаа тээврийн зохицуулалтын үйл ажиллагааг арванхоёрдугаар сарын 1-нээс шинэ горимд шилжүүлнэ"</small>
+        <br/>
+        <img src="assets/img/course-2.jpg" class="rounded float-left w-50" alt="...">
+        <p>"Ачаа тээврийн зохицуулалтын үйл ажиллагааг арванхоёрдугаар сарын 1-нээс шинэ горимд шилжүүлнэ"</p>
+      </div>
+      <div class="col-8 border">asf</div>
+    </div>
 
     <!-- ======= Popular Courses Section ======= -->
     <section id="popular-courses" class="courses">
