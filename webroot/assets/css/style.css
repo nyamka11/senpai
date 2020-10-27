@@ -1676,3 +1676,10 @@ figcaption span {
   transform: scale(1.2);
 }
 
+.specialNewsList {
+  line-height: 1;
+  margin-top:15px;
+  margin-bottom:15px;
+  cursor: pointer;
+}
+
