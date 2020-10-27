@@ -66,8 +66,8 @@
       </div>
     </div>
 
-    <div class="row container m-auto mt-3">
-      <div class="col-4 border pt-3">
+    <div class="row container m-auto mt-3"> <!-- 1 dahi bagana  -->
+      <div class="col-sm-12 col-md-4 border pt-3">
         <h5 class="font-weight-bold">ОНЦЛОХ МЭДЭЭ</h5>
         <div class="row">
           <div class="col-12 specialNewsList" class="border">
@@ -87,32 +87,39 @@
         </div>
       </div>
 
-      <div class="col-8">
-          <div class="row mt-3">
-              <div class="col-4">
-                  <img src="assets/img/course-3.jpg" class="float-left w-100" alt="...">
-              </div>
-              <div class="col-8">
-                  <div class="row">
-                      <div class="col-12 d-flex justify-content-between">
-                        <small class="text-muted">НИЙГЭМ</small>
-                      </div>
-                      <div class="col-12 font-weight-bold text-justify">
-                        ТАНИЛЦ: Хотын даргын орлогч болон төслүүдийн удирдагчаар томилогдсон зургаан төлөөлөгч
-                      </div>
-                      <div class="col-12 text-muted specialNewsList text-justify">
-                           <small>"Ачаа тээврийн зохицуулалтын үйл ажиллагааг арванхоёрдугаар сарын 1-нээс шинэ горимд шилжүүлнэ"</small>
-                      </div>
-                      <div class="col-12 d-flex justify-content-between">
-                        <small class="text-muted font-weight-bold">2 цагийн өмнө</small>
-                        <small class="text-muted font-weight-bold">React (17)</small>
-                        <small class="text-muted font-weight-bold">Сэтгэгдэл (4)</small>
-                        <small class="text-muted font-weight-bold">Б.Сондор</small>
+      
+
+      <div class="col-sm-12 col-md-8"> <!--  2 dahi bagana  -->
+        <?php foreach($news as $item): ?>
+          <a href="/news/view/<?= h($item->id) ?>" class="text-dark">
+              <div class="row mt-4">
+                  <div class="col-4">
+                      <img src="assets/img/course-3.jpg" class="float-left w-100" alt="...">
+                  </div>
+                  <div class="col-8">
+                      <div class="row">
+                          <div class="col-12 d-flex justify-content-between">
+                            <small class="text-muted"><?= h($item->category) ?></small>
+                          </div>
+                          <div class="col-12 font-weight-bold text-justify" style="max-height: 47px; overflow: hidden;">
+                              <?= h($item->title) ?>
+                          </div>
+                          <div class="col-12 text-muted specialNewsList text-justify" style="max-height: 33px; overflow: hidden;">
+                              <small><?= h($item->body) ?></small>
+                          </div>
+                          <div class="col-12 d-flex justify-content-between">
+                            <small class="text-muted font-weight-bold">2 цагийн өмнө</small>
+                            <small class="text-muted font-weight-bold">React (17)</small>
+                            <small class="text-muted font-weight-bold">Сэтгэгдэл (4)</small>
+                            <small class="text-muted font-weight-bold">Б.Сондор</small>
+                          </div>
                       </div>
                   </div>
               </div>
-          </div>
+          </a>
+        <?php endforeach; ?>
 
+        <?php foreach($news as $item):  ?>
           <div class="row mt-4">
               <div class="col-4">
                   <img src="assets/img/course-3.jpg" class="float-left w-100" alt="...">
@@ -120,38 +127,13 @@
               <div class="col-8">
                   <div class="row">
                       <div class="col-12 d-flex justify-content-between">
-                        <small class="text-muted">НИЙГЭМ</small>
+                        <small class="text-muted"><?= h($item->category) ?></small>
                       </div>
-                      <div class="col-12 font-weight-bold">
-                        ТАНИЛЦ: Хотын даргын орлогч болон төслүүдийн удирдагчаар томилогдсон зургаан төлөөлөгч
+                      <div class="col-12 font-weight-bold text-justify" style="max-height: 47px; overflow: hidden;">
+                          <?= h($item->title) ?>
                       </div>
-                      <div class="col-12 text-muted specialNewsList">
-                           <small>"Ачаа тээврийн зохицуулалтын үйл ажиллагааг арванхоёрдугаар сарын 1-нээс шинэ горимд шилжүүлнэ"</small>
-                      </div>
-                      <div class="col-12 d-flex justify-content-between">
-                        <small class="text-muted font-weight-bold">2 цагийн өмнө</small>
-                        <small class="text-muted font-weight-bold">React (17)</small>
-                        <small class="text-muted font-weight-bold">Сэтгэгдэл (4)</small>
-                        <small class="text-muted font-weight-bold">Б.Сондор</small>
-                      </div>
-                  </div>
-              </div>
-          </div>
-
-          <div class="row mt-4">
-              <div class="col-4">
-                  <img src="assets/img/course-3.jpg" class="float-left w-100" alt="...">
-              </div>
-              <div class="col-8">
-                  <div class="row">
-                      <div class="col-12 d-flex justify-content-between">
-                        <small class="text-muted">НИЙГЭМ</small>
-                      </div>
-                      <div class="col-12 font-weight-bold">
-                        ТАНИЛЦ: Хотын даргын орлогч болон төслүүдийн удирдагчаар томилогдсон зургаан төлөөлөгч
-                      </div>
-                      <div class="col-12 text-muted specialNewsList">
-                           <small>"Ачаа тээврийн зохицуулалтын үйл ажиллагааг арванхоёрдугаар сарын 1-нээс шинэ горимд шилжүүлнэ"</small>
+                      <div class="col-12 text-muted specialNewsList text-justify" style="max-height: 33px; overflow: hidden;">
+                           <small><?= h($item->body) ?></small>
                       </div>
                       <div class="col-12 d-flex justify-content-between">
                         <small class="text-muted font-weight-bold">2 цагийн өмнө</small>
@@ -162,13 +144,12 @@
                   </div>
               </div>
           </div>
+        <?php endforeach; ?>
 
 
       </div>
     </div>
     <br/>
-
-
   </main><!-- End #main -->
 
   <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
