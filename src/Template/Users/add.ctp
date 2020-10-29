@@ -9,22 +9,35 @@
 </div>
 
 <div class="row  container m-auto">
-    <div class="col-sm-8 pad-right full-height">
-
+    <div class="col-sm-12 pad-right full-height">
         <div class="mt-5">
             <div class="heading"><?= __('Actions') ?></div>
-            <i class="bx bx-chevron-right"></i><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?>
+            <i class="bx bx-chevron-right"></i>
+            <?= $this->Html->link(__('List Users'), ['action' => 'index']) ?>
         </div>
 
         <div class="table-responsive mt-3">
             <?= $this->Form->create($user) ?>
             <fieldset class="border p-2">
                 <legend class="w-auto"><?= __('Add User') ?></legend>
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <?php echo $this->Form->control('user_name', ['class' => 'form-control']);  ?>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <?php echo $this->Form->control('password', ['class' => 'form-control']);  ?>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <?php echo $this->Form->control('lastname', ['class' => 'form-control']);  ?>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <?php echo $this->Form->control('firstname', ['class' => 'form-control']);  ?>
+                    </div>
+                </div>
                 <?php
-            echo $this->Form->control('user_name', ['class' => 'form-control']);
-            echo $this->Form->control('password', ['class' => 'form-control']);
-            echo $this->Form->control('lastname', ['class' => 'form-control']);
-            echo $this->Form->control('firstname', ['class' => 'form-control']);
+
             echo $this->Form->control('birthday', ['class' => 'picker']);
             echo $this->Form->control('country', ['class' => 'form-control']);
             echo $this->Form->control('postal', ['class' => 'form-control']);

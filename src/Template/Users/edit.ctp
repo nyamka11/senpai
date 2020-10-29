@@ -9,12 +9,11 @@
 </div>
 
 <div class="row  container m-auto">
-    <div class="col-sm-8 pad-right full-height">
+    <div class="col-sm-12 pad-right full-height">
         <div class="mt-5">
             <div class="heading"><?= __('Actions') ?></div>
-            <i class="bx bx-chevron-right"></i><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $user->user_id],
+            <i class="bx bx-chevron-right"></i>
+            <?= $this->Form->postLink(__('Delete'),['action' => 'delete', $user->user_id],
                 ['confirm' => __('Are you sure you want to delete # {0}?', $user->user_id)]
             )
         ?>
