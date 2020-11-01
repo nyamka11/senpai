@@ -38,6 +38,6 @@
 
             </ul>
         </nav><!-- .nav-menu -->
-        <?php echo  $this->Html->link('Sign In', ['controller' => 'Users', 'action' => 'Signup'],['class'=>'get-started-btn']); ?>
+        <?php echo  $this->Html->link('Sign In', ['controller' => 'Users', 'action' => 'Signin'],['class'=>'get-started-btn']); ?>
     </div>
 </header><!-- End Header -->
