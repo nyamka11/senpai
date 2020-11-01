@@ -5,22 +5,20 @@
  */
 ?>
 
-    <br/><br/><br/><br/>
+<br /><br /><br /><br />
 <div class="row container m-auto mt-5 pt-4">
     <div class="col-sm-8 shadow mb-5 p-5">
         <section class="section section-noleft">
             <div class="section-content">
-                <h2 class="margin: 0 0 0px">Sign In</h2>
+                <h3 class="margin: 0 0 0px">Sign In</h3>
                 <p class="ipsType_reset ipsType_large ipsType_light">
-								Don't have an account?
-                                    <?= $this->Html->link(__('Sign Up'), ['action' => 'add'], ['class'=>' ']) ?>
-									</p>
-
+                    Don't have an account?
+                    <?= $this->Html->link(__('Sign Up'), ['action' => 'add'], ['class'=>' ']) ?>
+                </p>
                 <input type="hidden" name="_token" value="hLYLMCM5k9aHvJaPQiByWTcNUBK20OFHCpeLykTz">
                 <div class="js-steps hide-until-steps-init">
                     <div class="form-section">
                         <section>
-
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="form-group">
@@ -28,11 +26,11 @@
                                     </div>
                                 </div>
                             </div>
-                                          <div class="row password-form">
+                            <div class="row password-form">
                                 <div class="col-sm-12">
                                     <div class="form-group primary-password">
                                         <label class="control-label" style="width: 100%;">
-                                            Password 
+                                            Password
                                         </label>
                                         <div style="position:relative">
                                             <input type="password" name="password" value="" id="password"
@@ -50,63 +48,68 @@
                             </div>
                         </section>
                     </div>
-                        <div class="col-sm-12">
-                    <div class="form-section">
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-block btn-lg text-serif "
-                                data-heap="register-submit-button" data-e2e="submit">Sign In</button>
+                    <div class="col-sm-12">
+                        <div class="form-section">
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block btn-lg text-serif "
+                                    data-heap="register-submit-button" data-e2e="submit">Sign In</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <?= $this->Form->end() ?>
-            <p class="hide-for-step1">
-                <a data-toggle="modal" data-target="#forgot-pass" class="underlink" href="#" style="float: right; margin-right: 30px;">Forgot your password?</a>
-            </p>
+                <?= $this->Form->end() ?>
+                <p class="hide-for-step1">
+                    <a data-toggle="modal" data-target="#forgot-pass" class="underlink" href="#"
+                        style="float: right; margin-right: 30px;">Forgot your password?</a>
+                </p>
 
+                <!-- Modal -->
+                <div class="modal fade" id="forgot-pass" tabindex="-1" role="dialog" aria-labelledby="termsLable">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body" style="height: 200px; overflow: scroll">
+                                <h4>Forgot your password?</h4>
+                                <hr class="spacer visible-xs hide-for-step1" style="margin: 4px">
+                                <div class="form-group">
+                                    <span class="pull-right js-email-validating"
+                                        style="display:none"><small>validating...</small></span>
+                                    <label class="control-label" for="email">Email Address</label>
+                                    <input type="email" name="email" id="email" value="" class="form-control" required
+                                        data-e2e="email" placeholder="Type your email address here">
+                                </div>
+                                <button type="submit" class="btn btn-info float-right"
+                                    data-heap="register-submit-button" data-e2e="submit">Recover Password</button>
+                            </div>
 
-            <!-- Modal -->
-            <div class="modal fade" id="forgot-pass" tabindex="-1" role="dialog" aria-labelledby="termsLable">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-body" style="height: 200px; overflow: scroll">
-                            <h4>Forgot your password?</h4>
-                            <hr class="spacer visible-xs hide-for-step1" style="margin: 4px">
-                                    <div class="form-group">
-                                        <span class="pull-right js-email-validating"
-                                            style="display:none"><small>validating...</small></span>
-                                        <label class="control-label" for="email">Email Address</label>
-                                        <input type="email" name="email" id="email" value="" class="form-control"
-                                            required data-e2e="email" placeholder="Type your email address here">
-                                    </div>
-                                    <button type="submit" class="btn btn-info float-right"
-                                data-heap="register-submit-button" data-e2e="submit">Recover Password</button>
                         </div>
-                           
                     </div>
                 </div>
+                <hr class="spacer" />
             </div>
-            <hr class="spacer" />
+        </section>
     </div>
-    <div class="col-sm-4 shadow mb-5 p-5 ">
+    <div class="col-sm-4  mb-5 p-5 ">
         <section class="section section-noright">
             <div class="section-content">
-                <h2 class="margin: 0 0 0px">Sign In Faster</h2>
+                <h3 class="margin: 0 0 0px">Sign In Faster</h3>
                 <hr class="spacer visible-xs hide-for-step1" style="margin: 4px">
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-block btn-lg text-serif "
-                                data-heap="register-submit-button" data-e2e="submit">Sign in with Facebook</button>
+                <br>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block btn-lg text-serif ">
+                        <i class="fab fa-facebook-f"> Sign in with Facebook</i>
+                    </button>
                 </div>
                 <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-block btn-lg text-serif "
-                                data-heap="register-submit-button" data-e2e="submit">Sign in with Gmail</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-lg text-serif ">
+                        <i class="fab fa-google-plus-g"> Sign in with Gmail</i></button>
                 </div>
-                <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-block btn-lg text-serif "
-                                data-heap="register-submit-button" data-e2e="submit">Sign in with Twitter</button>
+                <div class=" form-group">
+                    <button type="submit" class="btn btn-primary btn-block btn-lg text-serif ">
+                        <i class="fab fa-twitter"> Sign in with Twitter</i>
+                    </button>
                 </div>
-
             </div>
-           </div>
+        </section>
+    </div>
 </div>
