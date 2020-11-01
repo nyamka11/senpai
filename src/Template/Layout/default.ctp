@@ -46,6 +46,7 @@
     <?= $this->Html->css('../assets/vendor/owl.carousel/assets/owl.carousel.min.css') ?>
     <?= $this->Html->css('../assets/vendor/animate.css/animate.min.css') ?>
     <?= $this->Html->css('../assets/vendor/aos/aos.css') ?>
+    <?= $this->Html->css('https://use.fontawesome.com/releases/v5.7.0/css/all.css') ?>
 
     <!-- Vendor JS Files -->
     <?= $this->Html->script('../assets/vendor/jquery/jquery.min.js') ?>
@@ -59,6 +60,11 @@
 
     <!-- Template Main JS File -->
     <?= $this->Html->script('../assets/js/main.js') ?>
+
+    <?= $this->Html->css('https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css') ?>
+    <?= $this->Html->script('https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js') ?>
+    <?= $this->Html->script('our.js') ?>
+    <?= $this->Html->css('our.css') ?>
 
     <!-- Template Main CSS File -->
     <?= $this->Html->css('../assets/css/style.css') ?>

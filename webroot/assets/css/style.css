@@ -1682,4 +1682,15 @@ figcaption span {
   margin-bottom:15px;
   cursor: pointer;
 }
+.pagination li a {
+  border: 1px solid gray;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* padding-top: 10px;
+  padding-bottom: 10px; */
+}
+.pagination .active{
+  background-color: #cacaca;
+}
+
 

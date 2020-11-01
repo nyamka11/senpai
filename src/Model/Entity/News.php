@@ -9,11 +9,11 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property string|null $body
  * @property string|null $category
+ * @property string|null $placeoforigin
  * @property string|null $author
  * @property \Cake\I18n\FrozenTime|null $date
  */
-class News extends Entity
-{
+class News extends Entity  {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
      *
@@ -27,6 +27,7 @@ class News extends Entity
         'title' => true,
         'body' => true,
         'category' => true,
+        'placeoforigin' => true,
         'author' => true,
         'date' => true,
     ];

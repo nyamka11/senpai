@@ -55,6 +55,7 @@ class NewsController extends AppController  {
     public function add()  {
         $news = $this->News->newEntity();
         if ($this->request->is('post')) {
+            $news->date = time();
             $news = $this->News->patchEntity($news, $this->request->getData());
             if ($this->News->save($news)) {
                 $this->Flash->success(__('The news has been saved.'));

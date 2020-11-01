@@ -5,7 +5,7 @@
  */
 ?>
 <br/><br/><br/><br/>
-<div class="row container shadow m-auto mt-5 pt-4 mb-5 ">
+<div class="row container m-auto mt-5 mb-5">
     <div class="col-12">
         <h1 class="float-left mt-4">Мэдээний жагсаалт</h1>
         <?= $this->Html->link(__('+ Мэдээ нэмэх'), ['action' => 'add'], ['class'=>'btn btn-info mt-5 float-right mb-4']) ?>
@@ -15,7 +15,7 @@
                     <th scope="col">#</th>
                     <th scope="col"><?= $this->Paginator->sort('Бүлэг') ?></th>
                     <th scope="col"><?= $this->Paginator->sort('Гарчиг') ?></th>
-                    <th scope="col"><?= $this->Paginator->sort('Их бие') ?></th>
+                    <th scope="col"><?= $this->Paginator->sort('Эх сурвалж') ?></th>
                     <th scope="col"><?= $this->Paginator->sort('Хариуцагч') ?></th>
                     <th scope="col"><?= $this->Paginator->sort('Онгоо') ?></th>
                     <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -30,7 +30,7 @@
                     <td><?= h(++$cnt) ?></td>
                     <td><?= h($news->category) ?></td>
                     <td><div class="field"><?= h($news->title) ?></div></td>
-                    <td><div class="field"><?= h($news->body) ?></div></td>
+                    <td><div class="field"><?= h($news->placeoforigin) ?></div></td>
                     <td><?= h($news->author) ?></td>
                     <td><?= h($news->date) ?></td>
                     <td class="actions w-25">
