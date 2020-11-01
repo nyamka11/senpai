@@ -104,7 +104,7 @@ class UsersController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
-      /**
+    /**
      * Sign up method
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
@@ -121,5 +121,13 @@ class UsersController extends AppController
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
         $this->set(compact('user'));
+    }
+
+    /**
+     * Sign in method
+     *
+     * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
+     */
+    public function signin($id = null)  {
     }
 }

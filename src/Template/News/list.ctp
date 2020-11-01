@@ -4,8 +4,13 @@
  * @var \App\Model\Entity\News[]|\Cake\Collection\CollectionInterface $news
  */
 ?>
+<<<<<<< HEAD
 <br/><br/><br/><br/>
 <div class="row container m-auto mt-5 mb-5">
+=======
+<br /><br /><br /><br />
+<div class="row container shadow m-auto mt-5 pt-4 mb-5 ">
+>>>>>>> a7a5f83d36e72da3a9c99f76fed13169c2b93727
     <div class="col-12">
         <h1 class="float-left mt-4">Мэдээний жагсаалт</h1>
         <?= $this->Html->link(__('+ Мэдээ нэмэх'), ['action' => 'add'], ['class'=>'btn btn-info mt-5 float-right mb-4']) ?>
@@ -29,8 +34,17 @@
                 <tr>
                     <td><?= h(++$cnt) ?></td>
                     <td><?= h($news->category) ?></td>
+<<<<<<< HEAD
                     <td><div class="field"><?= h($news->title) ?></div></td>
                     <td><div class="field"><?= h($news->placeoforigin) ?></div></td>
+=======
+                    <td>
+                        <div class="field"><?= h($news->title) ?></div>
+                    </td>
+                    <td>
+                        <div class="field"><?= h($news->body) ?></div>
+                    </td>
+>>>>>>> a7a5f83d36e72da3a9c99f76fed13169c2b93727
                     <td><?= h($news->author) ?></td>
                     <td><?= h($news->date) ?></td>
                     <td class="actions w-25">
@@ -53,8 +67,9 @@
                 <?= $this->Paginator->next(__('next') . ' >') ?>
                 <?= $this->Paginator->last(__('last') . ' >>') ?>
             </ul>
-            <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
+            <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?>
+            </p>
         </div>
     </div>
 </div>
-<br/>
+<br />

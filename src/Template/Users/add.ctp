@@ -4,42 +4,65 @@
  * @var \App\Model\Entity\User $user
  */
 ?>
-
-<div class="mt-5">
-</div>
-
-<div class="row  container m-auto">
-    <div class="col-sm-8 pad-right full-height">
-
-        <div class="mt-5">
-            <div class="heading"><?= __('Actions') ?></div>
-            <i class="bx bx-chevron-right"></i><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?>
+<br /><br /><br /><br />
+<div class="row  container shadow m-auto mt-5 pt-4 mb-5">
+    <div class="col-12">
+        <div class="row">
+            <div class="col">
+                <h1 class="float-left mt-4">Sign up</h1>
+            </div>
+            <div class="col">
+                <?= $this->Html->link(__('List Users'), ['action' => 'index'], ['class'=>'btn btn-info float-right']) ?>
+                <?= $this->Html->link(__('Sign in'), ['action' => 'signin'], ['class'=>'btn btn-info float-right mr-2']) ?>
+            </div>
         </div>
-
-        <div class="table-responsive mt-3">
+        <div class="table-responsive w-100">
             <?= $this->Form->create($user) ?>
-            <fieldset class="border p-2">
-                <legend class="w-auto"><?= __('Add User') ?></legend>
+            <fieldset>
+                <!-- <legend class="w-auto"><?= __('Add User') ?></legend> -->
+                <div class="row">
+                    <div class="form-group col-sm-3">
+                        <?php echo $this->Form->control('lastname', ['class' => 'form-control']);  ?>
+                    </div>
+                    <div class="form-group col-sm-3">
+                        <?php echo $this->Form->control('firstname', ['class' => 'form-control']);  ?>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-3">
+                        <?php echo $this->Form->control('user_name', ['class' => 'form-control']);  ?>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-3">
+                        <?php echo $this->Form->control('password', ['class' => 'form-control']);  ?>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-3">
+                        <?php echo $this->Form->input('birthday', 
+                        ['type' => 'text','class'=> 'form-control sp_datepicker','label' => 'Birthday']);
+                        ?>
+                    </div>
+                </div>
+
+
                 <?php
-            echo $this->Form->control('user_name', ['class' => 'form-control']);
-            echo $this->Form->control('password', ['class' => 'form-control']);
-            echo $this->Form->control('lastname', ['class' => 'form-control']);
-            echo $this->Form->control('firstname', ['class' => 'form-control']);
-            echo $this->Form->control('birthday', ['class' => 'picker']);
-            echo $this->Form->control('country', ['class' => 'form-control']);
-            echo $this->Form->control('postal', ['class' => 'form-control']);
-            echo $this->Form->control('address', ['class' => 'form-control']);
-            echo $this->Form->control('address1', ['class' => 'form-control']);
-            echo $this->Form->control('phone', ['class' => 'form-control']);
-            echo $this->Form->control('phone1', ['class' => 'form-control']);
-            echo $this->Form->control('email', ['class' => 'form-control']);
-            echo $this->Form->control('email1', ['class' => 'form-control']);
-            echo $this->Form->control('role', ['class' => 'form-control']);
-            echo $this->Form->control('gender', ['class' => 'form-control']);
-            echo $this->Form->control('profile_photo');
-            echo $this->Form->control('status', ['class' => 'form-control']);
-            echo $this->Form->control('operation', ['class' => 'form-control']);
-        ?>
+                echo $this->Form->control('country', ['class' => 'form-control']);
+                echo $this->Form->control('postal', ['class' => 'form-control']);
+                echo $this->Form->control('address', ['class' => 'form-control']);
+                echo $this->Form->control('address1', ['class' => 'form-control']);
+                echo $this->Form->control('phone', ['class' => 'form-control']);
+                echo $this->Form->control('phone1', ['class' => 'form-control']);
+                echo $this->Form->control('email', ['class' => 'form-control']);
+                echo $this->Form->control('email1', ['class' => 'form-control']);
+                echo $this->Form->control('role', ['class' => 'form-control']);
+                echo $this->Form->control('gender', ['class' => 'form-control']);
+                echo $this->Form->control('profile_photo');
+                echo $this->Form->control('status', ['class' => 'form-control']);
+                echo $this->Form->control('operation', ['class' => 'form-control']);
+
+                ?>
             </fieldset>
             <div class="col-sm-12">
                 <div class="form-section">
@@ -53,3 +76,10 @@
         </div>
     </div>
 </div>
+
+<!-- Datepiker -->
+<script>
+$('.sp_datepicker').attr('type', 'date', {
+    format: "yyyy/mm/dd"
+});
+</script>

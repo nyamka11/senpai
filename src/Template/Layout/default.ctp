@@ -68,6 +68,7 @@
 
     <!-- Template Main CSS File -->
     <?= $this->Html->css('../assets/css/style.css') ?>
+
 </head>
 
 <body>
