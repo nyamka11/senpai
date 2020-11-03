@@ -2,14 +2,16 @@
 <header id="header" class="fixed-top shadow-sm">
     <div class="container d-flex align-items-center">
         <h1 class="logo mr-auto">
-            <?php echo  $this->Html->link('Senpai', ['controller' => 'Home', 'action' => 'display', 'index']); ?></h1>
+            <?php echo $this->Html->link($this->Html->image("senpai4.png", array("alt" => "alt-tag")),['controller' => 'Home', 'action' => 'display', 'index'], array('class' => 'some-class', 'escape' => false)); ?>
+        </h1>
+
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
         <nav class="nav-menu d-none d-lg-block">
             <ul>
-                <!-- <li><?php echo  $this->Html->link('Нүүр', ['controller' => 'Home', 'action' => 'display', 'index']); ?>
-                </li> -->
+                <li><?php echo  $this->Html->link('Нүүр', ['controller' => 'Home', 'action' => 'display', 'index']); ?>
+                </li>
                 <li><?php echo  $this->Html->link('Мэдээ', ['controller'=>'News', 'action' => 'index']); ?></li>
                 <li><?php echo  $this->Html->link('Японы амьдрал', ['controller'=>'Courses','action' => 'display']); ?>
                 </li>
