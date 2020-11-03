@@ -4,21 +4,18 @@
  * @var \App\Model\Entity\User $user
  */
 ?>
-
-<div class="mt-5">
-</div>
-
-<div class="row container m-auto">
-    <div class="col-sm-8 pad-right full-height">
+<br /><br /><br />
+<div class="row container m-auto mt-5 pt-4">
+    <div class="col-sm-8 shadow mb-5 p-5">
         <section class="section section-noleft">
             <div class="section-content">
-                <h2 style="margin: 0 0 0px">Create your account for access to other members.</h2>
+                <h3 style="margin: 0 0 0px">Create your account for access to other members.</h3>
                 <?= $this->Form->create($user) ?>
                 <input type="hidden" name="_token" value="hLYLMCM5k9aHvJaPQiByWTcNUBK20OFHCpeLykTz">
                 <div class="js-steps hide-until-steps-init">
                     <div class="form-section">
                         <section>
-                            <h2 class="text-peach-1">Account info</h2>
+                            <!-- <h2 class="text-peach-1">Account info</h2> -->
                             <?= $this->Form->create($user) ?>
                             <div class="row">
                                 <div class="col-sm-12">
@@ -80,9 +77,11 @@
                             </div>
                         </section>
                     </div>
-                    <div class="form-section">
+                    <p><a data-toggle="collapse" href="#hidden_detail">Detail info</a></p>
+
+                    <div id="hidden_detail" class="collapse">
                         <section>
-                            <h2 class="text-peach-1">Profile</h2>
+                            <!-- <h2 class=" text-peach-1">Profile</h2> -->
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
@@ -187,9 +186,8 @@
                         </section>
                     </div>
                 </div>
-                <div class="show-for-step2">
-                    <p><a data-toggle="collapse" href="#credit_code">Have a promo code?</a></p>
-                    <div id="credit_code" class="collapse">
+                <!-- <div class="show-for-step2">
+                    <div id="hidden_detail" class="collapse">
                         <div style="padding: 10px 0">
                             <div class="form-group" id="check_credit_code_wrapper">
                                 <input data-reg="true" type="text" name="credit_code" id="check_credit_code"
@@ -199,7 +197,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="col-sm-12">
                     <div class="form-section">
                         <div class="form-group">
@@ -213,7 +211,7 @@
 
             <hr class="spacer visible-xs hide-for-step1" style="margin: 4px">
             <p class="hide-for-step1">
-                <small>By creating an account, you certify you are at least 16 years of age, and agree to
+                <small>By creating an account, you agree to
                     SENPAI Team’s <a data-toggle="modal" data-target="#terms" class="underlink" href="#">Terms
                         of Use</a>.</small>
             </p>
@@ -245,9 +243,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-body" style="height: 400px; overflow: scroll">
-                            <h1>Terms of Use</h1>
-                            <p>The SENPAI Terms of Use were updated on May 4, 2020.</p>
-                            <h2>Terms of Use</h2>
+                            <h3>Terms of Use</h3>
                             <p>SENPAI reserves the right, in its sole discretion, to terminate your access
                                 to all or part of this Site, with or without cause, and with or without
                                 notice. SENPAI reserves the right to modify these Terms of Use at any time,
@@ -302,6 +298,6 @@
                     </div>
                 </div>
             </div>
-            <hr class="spacer" />
+        </section>
     </div>
 </div>

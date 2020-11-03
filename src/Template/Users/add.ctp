@@ -4,12 +4,12 @@
  * @var \App\Model\Entity\User $user
  */
 ?>
-<br /><br /><br /><br />
-<div class="row  container shadow m-auto mt-5 pt-4 mb-5">
-    <div class="col-12">
+<br /><br /><br />
+<div class="row  container m-auto mt-5 pt-4 mb-5">
+    <div class="col-sm-12 shadow mb-5 p-5">
         <div class="row">
             <div class="col">
-                <h1 class="float-left mt-4">Sign up</h1>
+                <h3 class="float-left mt-4">Add new User</h3>
             </div>
             <div class="col">
                 <?= $this->Html->link(__('List Users'), ['action' => 'index'], ['class'=>'btn btn-info float-right']) ?>

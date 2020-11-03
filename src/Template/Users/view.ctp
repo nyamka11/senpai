@@ -4,10 +4,7 @@
  * @var \App\Model\Entity\User $user
  */
 ?>
-
-<div class="mt-5">
-</div>
-
+<br /><br /><br />
 <div class="row container m-auto">
     <div class="col-4">
         <ul class="side-nav">

@@ -4,8 +4,7 @@
  * @var \App\Model\Entity\User $user
  */
 ?>
-
-<br /><br /><br /><br />
+<br /><br /><br />
 <div class="row container m-auto mt-5 pt-4">
     <div class="col-sm-8 shadow mb-5 p-5">
         <section class="section section-noleft">
@@ -13,7 +12,7 @@
                 <h3 class="margin: 0 0 0px">Sign In</h3>
                 <p class="ipsType_reset ipsType_large ipsType_light">
                     Don't have an account?
-                    <?= $this->Html->link(__('Sign Up'), ['action' => 'add'], ['class'=>' ']) ?>
+                    <?= $this->Html->link(__('Sign Up'), ['action' => 'signup'], ['class'=>' ']) ?>
                 </p>
                 <input type="hidden" name="_token" value="hLYLMCM5k9aHvJaPQiByWTcNUBK20OFHCpeLykTz">
                 <div class="js-steps hide-until-steps-init">
@@ -57,7 +56,6 @@
                         </div>
                     </div>
                 </div>
-
                 <?= $this->Form->end() ?>
                 <p class="hide-for-step1">
                     <a data-toggle="modal" data-target="#forgot-pass" class="underlink" href="#"
@@ -81,33 +79,28 @@
                                 <button type="submit" class="btn btn-info float-right"
                                     data-heap="register-submit-button" data-e2e="submit">Recover Password</button>
                             </div>
-
                         </div>
                     </div>
                 </div>
                 <hr class="spacer" />
+
             </div>
         </section>
     </div>
     <div class="col-sm-4  mb-5 p-5 ">
         <section class="section section-noright">
-            <div class="section-content">
-                <h3 class="margin: 0 0 0px">Sign In Faster</h3>
-                <hr class="spacer visible-xs hide-for-step1" style="margin: 4px">
-                <br>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block btn-lg text-serif ">
-                        <i class="fab fa-facebook-f"> Sign in with Facebook</i>
-                    </button>
+            <h3 class="margin: 0 0 0px">Sign In Faster</h3>
+            <hr class="spacer visible-xs hide-for-step1">
+            <div class="social-links text-center text-md-left pt-3 pt-md-0">
+                <div> <a href="#" class="twitter"><i class="bx bxl-twitter"> Twitter</i></a>
                 </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block btn-lg text-serif ">
-                        <i class="fab fa-google-plus-g"> Sign in with Gmail</i></button>
+                <div> <a href="#" class="facebook"><i class="bx bxl-facebook"> Facebook</i></a>
                 </div>
-                <div class=" form-group">
-                    <button type="submit" class="btn btn-primary btn-block btn-lg text-serif ">
-                        <i class="fab fa-twitter"> Sign in with Twitter</i>
-                    </button>
+                <div> <a href="#" class="instagram"><i class="bx bxl-instagram"> Instagram</i></a>
+                </div>
+                <div> <a href="#" class="google-plus"><i class="bx bxl-skype"> Google-plus</i></a>
+                </div>
+                <div> <a href="#" class="linkedin"><i class="bx bxl-linkedin"> Linkedin</i></a>
                 </div>
             </div>
         </section>

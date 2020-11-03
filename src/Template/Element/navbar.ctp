@@ -8,8 +8,8 @@
 
         <nav class="nav-menu d-none d-lg-block">
             <ul>
-                <li><?php echo  $this->Html->link('Нүүр', ['controller' => 'Home', 'action' => 'display', 'index']); ?>
-                </li>
+                <!-- <li><?php echo  $this->Html->link('Нүүр', ['controller' => 'Home', 'action' => 'display', 'index']); ?>
+                </li> -->
                 <li><?php echo  $this->Html->link('Мэдээ', ['controller'=>'News', 'action' => 'index']); ?></li>
                 <li><?php echo  $this->Html->link('Японы амьдрал', ['controller'=>'Courses','action' => 'display']); ?>
                 </li>
