@@ -5,13 +5,13 @@
  */
 ?>
 <br /><br /><br />
-<div class="row container m-auto mt-5 pt-4">
+<div class="row container m-auto mt-5 pt-4" id="LOGIN_FORM">
     <div class="col-sm-8 shadow mb-5 p-5">
         <section class="section section-noleft">
             <div class="section-content">
                 <h3 style="margin: 0 0 0px">Create your account for access to other members.</h3>
                 <?= $this->Form->create($user) ?>
-                <input type="hidden" name="_token" value="hLYLMCM5k9aHvJaPQiByWTcNUBK20OFHCpeLykTz">
+                <input id="LOGIN" type="hidden" name="_token" value="hLYLMCM5k9aHvJaPQiByWTcNUBK20OFHCpeLykTz">
                 <div class="js-steps hide-until-steps-init">
                     <div class="form-section">
                         <section>
@@ -20,36 +20,14 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <?php echo $this->Form->control('user_name', ['class' => 'form-control']); ?>
+                                        <?php echo $this->Form->control('email', ['label' => 'Email','class' => 'form-control','placeholder'=>'Enter your email address']); ?>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-group col-sm-6">
-                                    <label for="first_name" class="control-label">First name</label>
-                                    <input data-e2e="first_name" class="form-control" required name="first_name"
-                                        type="text" id="first_name">
-                                </div>
-                                <div class="form-group col-sm-6">
-                                    <a data-trigger="hover" class="pull-right" data-container="body"
-                                        data-placement="auto" data-toggle="popover"
-                                        title="Please provide us with your full legal name."
-                                        data-content="Your full legal name must match the name on your identification card.">
-                                        <i class="icon icon-help-with-circle"></i>
-                                    </a>
-                                    <label for="last_name" class="control-label">Last name</label>
-                                    <input data-e2e="last_name" class="form-control" required name="last_name"
-                                        type="text" id="last_name">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <span class="pull-right js-email-validating"
-                                            style="display:none"><small>validating...</small></span>
-                                        <label class="control-label" for="email">Email</label>
-                                        <input type="email" name="email" id="email" value="" class="form-control"
-                                            required data-e2e="email" placeholder="mongolsenpai@gmail.com">
+                                        <?php echo $this->Form->control('user_name', ['label' => 'Username','class' => 'form-control']); ?>
                                     </div>
                                 </div>
                             </div>
@@ -57,147 +35,76 @@
                                 <div class="col-sm-12">
                                     <div class="form-group primary-password">
                                         <label class="control-label" style="width: 100%;">
-                                            Create password <a data-toggle="modal" data-target="#pass" class="underlink"
+                                            Password <a data-toggle="modal" data-target="#pass" class="underlink"
                                                 href="#" style="float: right; margin-right: 30px;">
                                                 Why do I need a strong password? </a>
                                         </label>
-                                        <div style="position:relative">
-                                            <input type="password" name="password" value="" id="password"
-                                                class="form-control js-password-strength" data-e2e="password"
-                                                data-is-strong-password="1" required>
-                                            <span aria-hidden="true"
-                                                class="icon icon-eye-crossed icon-fw icon-lg text-purple-3"
-                                                data-toggle-password-visibility="password"
-                                                style="position:absolute;top:-32px;right:0;cursor:pointer;padding:8px 0;"></span>
-                                        </div>
-                                        <div class="js-password-strength-rules" style="display: none;">
-                                        </div>
+                                        <?php echo $this->Form->control('password', ['class' => 'form-control','label'=>false]); ?>
                                     </div>
                                 </div>
                             </div>
                         </section>
                     </div>
-                    <p><a data-toggle="collapse" href="#hidden_detail">Detail info</a></p>
-
+                    <p><a data-toggle="collapse" href="#hidden_detail">Add more info</a></p>
                     <div id="hidden_detail" class="collapse">
                         <section>
                             <!-- <h2 class=" text-peach-1">Profile</h2> -->
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label for="birthday_at" class="control-label">Date of
-                                            birth</label>
-                                        <input data-e2e="birthday_at" class="form-control js-dob-mask" im-insert="false"
-                                            name="birthday_at" type="text" id="birthday_at">
+                                        <?php echo $this->Form->control('firstname', ['label' => 'Firstname','class' => 'form-control']); ?>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <a data-trigger="hover" class="pull-right" data-container="body"
-                                            data-placement="auto" data-toggle="popover"
-                                            title="Please provide us with your biological sex at birth."
-                                            data-content="Your biological sex at birth plays an important role in your unique disease risk factors. It helps our doctors provide the best possible care.">
-                                            <i class="icon icon-help-with-circle"></i>
-                                        </a>
-                                        <label for="gender" class="control-label">Sex</label>
-
-                                        <div>
-                                            <div class="btn-group btn-group-stylized btn-group-justified"
-                                                data-toggle="buttons">
-                                                <label class="btn btn-default " data-e2e="gender-female">
-                                                    <input autocomplete="off" name="gender" type="radio" value="female"
-                                                        id="gender"> Female
-                                                </label>
-                                                <label class="btn btn-default " data-e2e="gender-male">
-                                                    <input autocomplete="off" name="gender" type="radio" value="male"
-                                                        id="gender"> Male
-                                                </label>
-                                                <label class="btn btn-default " data-e2e="gender-intersex">
-                                                    <input autocomplete="off" name="gender" type="radio"
-                                                        value="intersex" id="gender"> Intersex
-                                                </label>
-                                            </div>
-                                        </div>
+                                        <?php echo $this->Form->control('lastname', ['label' => 'Lastname','class' => 'form-control']); ?>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label for="province" class="control-label">Residence</label>
-                                        <select data-e2e="province" class="form-control js-reg-province-select" required
-                                            id="province" name="province">
-                                            <option value="Alberta">Alberta</option>
-                                            <option value="British Columbia">British Columbia</option>
-                                            <option value="Manitoba">Manitoba</option>
-                                            <option value="New Brunswick">New Brunswick</option>
-                                            <option value="Newfoundland and Labrador">Newfoundland and
-                                                Labrador</option>
-                                            <option value="Nova Scotia">Nova Scotia</option>
-                                            <option value="Ontario" selected="selected">Ontario</option>
-                                            <option value="Prince Edward Island">Prince Edward Island
-                                            </option>
-                                            <option value="Quebec">Quebec</option>
-                                            <option value="Saskatchewan">Saskatchewan</option>
-                                            <option value="Northwest Territories">Northwest Territories
-                                            </option>
-                                            <option value="Nunavut">Nunavut</option>
-                                            <option value="Yukon Territory">Yukon Territory</option>
-                                            <option value="New York">New York</option>
-                                            <option value="Florida">Florida</option>
-                                            <option value="California">California</option>
-                                            <option value="US State">US State</option>
-                                            <option value="Outside Canada and USA">Outside Canada and
-                                                USA</option>
-                                        </select>
+                                        <?php echo $this->Form->control('birthday',['type' => 'text','class' => 'form-control sp_datepicker','label' => 'Date of birth']); ?>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <a data-trigger="hover" class="pull-right" data-container="body"
-                                            data-placement="auto" data-toggle="popover"
-                                            title="Why do we need your phone number?"
-                                            data-content="SENPAI will only use your phone number to alert you when a doctor is ready to see you. You can change this setting at any time.">
-                                            <i class="icon icon-help-with-circle"></i>
-                                        </a>
-                                        <label for="phone" class="control-label">Phone number <span
-                                                id="phoneOptional"></span></label>
-                                        <div class="input-group">
-                                            <div class="input-group-addon">&nbsp;&nbsp;+1&nbsp;&nbsp;
-                                            </div>
-                                            <input data-e2e="phone" placeholder="(416) 555-5555"
-                                                class="form-control phone"
-                                                data-inputmask="&#039;mask&#039;: &#039;(999) 999-9999&#039;"
-                                                name="phone" type="tel">
-                                        </div>
-                                        <div class="radio" style="margin-bottom: 0">
-                                            <label style="margin-right: 15px"><input type="radio" name="phone_type"
-                                                    value="mobile" data-e2e="phone_type_mobile" checked>
-                                                Mobile</label>
-                                            <label data-trigger="hover" data-container="body" data-placement="auto"
-                                                data-toggle="popover" title="We recommend you use a mobile phone."
-                                                data-content="During consultations, SENPAI sends you text messages when a doctor is ready to see you, or if you have any unread messages. We cannot send these if you provide a landline number, and you will only receive your notifications via email. ">
-                                                <input type="radio" name="phone_type" value="landline"
-                                                    data-e2e="phone_type_landline"> Landline </label>
+                                        <label for="gender" class="control-label">Gender</label>
+                                        <div class="form-group">
+                                            <?php echo $this->Form->radio('gender', ['Male', 'Female', 'No answer'],['style'=>'margin-left: 10px']); ?>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+
+                                    <label for="basic-url">Phone</label>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon3">+81</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="basic-url"
+                                            aria-describedby="basic-addon3">
+                                    </div>
+
+                                </div>
+                                <!-- <div class="col-sm-6">
+                                    <div class="radio" style="margin-bottom: 0">
+                                        <label style="margin-right: 15px"><input type="radio" name="phone_type"
+                                                value="mobile" data-e2e="phone_type_mobile" checked>
+                                            Mobile</label>
+                                        <label data-trigger="hover" data-container="body" data-placement="auto"
+                                            data-toggle="popover" title="We recommend you use a mobile phone."
+                                            data-content="During consultations, SENPAI sends you text messages when a doctor is ready to see you, or if you have any unread messages. We cannot send these if you provide a landline number, and you will only receive your notifications via email. ">
+                                            <input type="radio" name="phone_type" value="landline"
+                                                data-e2e="phone_type_landline"> Landline </label>
+                                    </div>
+                                </div> -->
+                            </div>
                         </section>
                     </div>
                 </div>
-                <!-- <div class="show-for-step2">
-                    <div id="hidden_detail" class="collapse">
-                        <div style="padding: 10px 0">
-                            <div class="form-group" id="check_credit_code_wrapper">
-                                <input data-reg="true" type="text" name="credit_code" id="check_credit_code"
-                                    class="form-control" placeholder="Enter promo code here" value="" />
-                                <div class="text-right" id="credit_code_result" style="height: 40px; padding-top: 10px">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
                 <div class="col-sm-12">
                     <div class="form-section">
                         <div class="form-group">
@@ -301,3 +208,9 @@
         </section>
     </div>
 </div>
+<!-- Datepiker -->
+<script>
+$('.sp_datepicker').attr('type', 'date', {
+    format: "yyyy/mm/dd"
+});
+</script>

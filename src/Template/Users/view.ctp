@@ -5,8 +5,8 @@
  */
 ?>
 <br /><br /><br />
-<div class="row container m-auto">
-    <div class="col-4">
+<div class="row shadow container m-auto mt-5 pt-4">
+    <div class="col-3">
         <ul class="side-nav">
             <li class="heading"><?= __('Actions') ?></li>
             <li><?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->user_id]) ?> </li>
@@ -16,11 +16,13 @@
             <li><?= $this->Html->link(__('New User'), ['action' => 'add']) ?> </li>
         </ul>
     </div>
-    <div class="col-8">
-
-
+    <div class="col-9">
         <h3><?= h($user->user_id) ?></h3>
         <table class="vertical-table table">
+            <tr>
+                <th scope="row"><?= __('User Id') ?></th>
+                <td><?= $this->Number->format($user->user_id) ?></td>
+            </tr>
             <tr>
                 <th scope="row"><?= __('User Name') ?></th>
                 <td><?= h($user->user_name) ?></td>
@@ -28,6 +30,18 @@
             <tr>
                 <th scope="row"><?= __('Password') ?></th>
                 <td><?= h($user->password) ?></td>
+            </tr>
+            <tr>
+                <th scope="row"><?= __('Lastname') ?></th>
+                <td><?= h($user->lastname) ?></td>
+            </tr>
+            <tr>
+                <th scope="row"><?= __('Firstname') ?></th>
+                <td><?= h($user->firstname) ?></td>
+            </tr>
+            <tr>
+                <th scope="row"><?= __('Birthday') ?></th>
+                <td><?= h($user->birthday) ?></td>
             </tr>
             <tr>
                 <th scope="row"><?= __('Country') ?></th>
@@ -62,6 +76,18 @@
                 <td><?= h($user->email1) ?></td>
             </tr>
             <tr>
+                <th scope="row"><?= __('Role') ?></th>
+                <td><?= h($user->role) ?></td>
+            </tr>
+            <tr>
+                <th scope="row"><?= __('Gender') ?></th>
+                <td><?= h($user->gender) ?></td>
+            </tr>
+            <tr>
+                <th scope="row"><?= __('Profile_photo') ?></th>
+                <td><?= h($user->profile_photo) ?></td>
+            </tr>
+            <tr>
                 <th scope="row"><?= __('Status') ?></th>
                 <td><?= h($user->status) ?></td>
             </tr>
@@ -77,10 +103,7 @@
                 <th scope="row"><?= __('Operation') ?></th>
                 <td><?= h($user->operation) ?></td>
             </tr>
-            <tr>
-                <th scope="row"><?= __('User Id') ?></th>
-                <td><?= $this->Number->format($user->user_id) ?></td>
-            </tr>
+
             <tr>
                 <th scope="row"><?= __('Role') ?></th>
                 <td><?= $this->Number->format($user->role) ?></td>

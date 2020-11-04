@@ -9,8 +9,8 @@ use Cake\ORM\Entity;
  * @property int $user_id
  * @property string $user_name
  * @property string $password
- * @property string $lastname
- * @property string $firstname
+ * @property string|null $lastname
+ * @property string|null $firstname
  * @property \Cake\I18n\FrozenDate|null $birthday
  * @property string|null $country
  * @property string|null $postal
@@ -18,10 +18,10 @@ use Cake\ORM\Entity;
  * @property string|null $address1
  * @property string|null $phone
  * @property string|null $phone1
- * @property string|null $email
+ * @property string $email
  * @property string|null $email1
- * @property int|null $role
- * @property int|null $gender
+ * @property string|null $role
+ * @property string|null $gender
  * @property string|resource|null $profile_photo
  * @property string|null $status
  * @property \Cake\I18n\FrozenTime|null $ins_date

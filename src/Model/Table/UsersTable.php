@@ -60,6 +60,16 @@ class UsersTable extends Table
             ->notEmptyString('password');
 
         $validator
+            ->scalar('lastname')
+            ->maxLength('lastname', 30)
+            ->allowEmptyString('lastname');
+
+        $validator
+            ->scalar('firstname')
+            ->maxLength('firstname', 30)
+            ->allowEmptyString('firstname');
+
+        $validator
             ->date('birthday')
             ->allowEmptyDate('birthday');
 
@@ -95,7 +105,8 @@ class UsersTable extends Table
 
         $validator
             ->email('email')
-            ->allowEmptyString('email');
+            ->requirePresence('email', 'create')
+            ->notEmptyString('email');
 
         $validator
             ->scalar('email1')
@@ -103,15 +114,19 @@ class UsersTable extends Table
             ->allowEmptyString('email1');
 
         $validator
+            ->scalar('role')
+            ->allowEmptyString('role');
+
+        $validator
+            ->scalar('gender')
+            ->allowEmptyString('gender');
+
+        $validator
             ->allowEmptyFile('profile_photo');
 
         $validator
             ->scalar('status')
-            ->maxLength('status', 20)
             ->allowEmptyString('status');
-
-        $validator
-            ->allowEmptyString('role');
 
         $validator
             ->dateTime('ins_date')
