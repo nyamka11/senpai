@@ -4,11 +4,11 @@
  * @var \App\Model\Entity\News[]|\Cake\Collection\CollectionInterface $news
  */
 ?>
-<br/><br/><br/><br/>
+<br /><br /><br /><br />
 <div class="row container m-auto mt-5 mb-5">
     <div class="col-12">
         <h1 class="float-left mt-4">Мэдээний жагсаалт</h1>
-        <?= $this->Html->link(__('+ Мэдээ нэмэх'), ['action' => 'add'], ['class'=>'btn btn-info mt-5 float-right mb-4']) ?>
+        <?= $this->Html->link(__('Add news'), ['action' => 'add'], ['class'=>'btn btn-info mt-5 float-right mb-4']) ?>
         <table cellpadding="0" cellspacing="0" class="table w-100">
             <thead class="thead-dark">
                 <tr>
@@ -29,13 +29,17 @@
                 <tr>
                     <td><?= h(++$cnt) ?></td>
                     <td><?= h($news->category) ?></td>
-                    <td><div class="field"><?= h($news->title) ?></div></td>
-                    <td><div class="field"><?= h($news->placeoforigin) ?></div></td>
+                    <td>
+                        <div class="field"><?= h($news->title) ?></div>
+                    </td>
+                    <td>
+                        <div class="field"><?= h($news->placeoforigin) ?></div>
+                    </td>
                     <td><?= h($news->author) ?></td>
                     <td><?= h($news->date) ?></td>
                     <td class="actions w-25">
-                        <?= $this->Html->link(__('Харах'), ['action' => 'view', $news->id],['class'=>'btn btn-outline-info']) ?>
-                        <?= $this->Html->link(__('Засах'), ['action' => 'edit', $news->id],['class'=>'btn btn-outline-dark']) ?>
+                        <?= $this->Html->link(__('View'), ['action' => 'view', $news->id],['class'=>'btn btn-outline-info']) ?>
+                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $news->id],['class'=>'btn btn-outline-dark']) ?>
                         <?= $this->Form->postLink( 'Устгах',
                             ['action' => 'delete', $news->id],
                             ['confirm' => __('Are you sure you want to delete # {0}?'), 'class'=> 'btn btn-outline-danger']

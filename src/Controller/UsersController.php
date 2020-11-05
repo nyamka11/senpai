@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\I18n\I18n; 
 
 /**
  * Users Controller
@@ -19,6 +20,7 @@ class UsersController extends AppController
      */
     public function index()
     {
+        I18n::setLocale('mn_MN'); 
         $users = $this->paginate($this->Users);
 
         $this->set(compact('users'));
@@ -33,6 +35,7 @@ class UsersController extends AppController
      */
     public function view($id = null)
     {
+        I18n::setLocale('mn_MN'); 
         $user = $this->Users->get($id, [
             'contain' => [],
         ]);
@@ -47,6 +50,7 @@ class UsersController extends AppController
      */
     public function add()
     {
+        I18n::setLocale('mn_MN'); 
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
@@ -69,6 +73,7 @@ class UsersController extends AppController
      */
     public function edit($id = null)
     {
+        I18n::setLocale('mn_MN'); 
         $user = $this->Users->get($id, [
             'contain' => [],
         ]);
@@ -93,6 +98,7 @@ class UsersController extends AppController
      */
     public function delete($id = null)
     {
+        I18n::setLocale('mn_MN'); 
         $this->request->allowMethod(['post', 'delete']);
         $user = $this->Users->get($id);
         if ($this->Users->delete($user)) {
@@ -109,8 +115,10 @@ class UsersController extends AppController
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
-    public function signup($id = null)  {
-           $user = $this->Users->newEntity();
+    public function signup($id = null) 
+    {
+        I18n::setLocale('mn_MN'); 
+        $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
@@ -128,6 +136,8 @@ class UsersController extends AppController
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
-    public function signin($id = null)  {
+    public function signin($id = null)
+    {
+        I18n::setLocale('mn_MN'); 
     }
 }

@@ -12,7 +12,7 @@
             <li><?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->user_id]) ?> </li>
             <li><?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->user_id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->user_id)]) ?>
             </li>
-            <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?> </li>
+            <li><?= $this->Html->link(__('List of users'), ['action' => 'index']) ?> </li>
             <li><?= $this->Html->link(__('New User'), ['action' => 'add']) ?> </li>
         </ul>
     </div>
