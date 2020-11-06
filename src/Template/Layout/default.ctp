@@ -17,65 +17,59 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+    <head>
+        <meta charset="utf-8">
+        <title>Senpai.mn</title>
+        <meta content="" name="descriptison">
+        <meta content="" name="keywords">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <!-- CSS Files -->
+        <?= $this->Html->css('normalize.css') ?>
+        <?= $this->Html->css('main.css') ?>
+        <?= $this->Html->css('bootstrap.min.css') ?>
+        <?= $this->Html->css('animate.min.css') ?>
+        <?= $this->Html->css('font-awesome.min.css') ?>
+        <?= $this->Html->css('../vendor/OwlCarousel/owl.carousel.min.css') ?>
+        <?= $this->Html->css('../vendor/OwlCarousel/owl.theme.default.min.css') ?>
+        <?= $this->Html->css('magnific-popup.css') ?>
+        <?= $this->Html->css('hover-min.css') ?>
+        <?= $this->Html->css('../style.css') ?>
+        <?= $this->Html->css('ie-only.css') ?>
+        <?= $this->Html->css('meanmenu.min.css') ?>
+    </head>
 
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <body>
+        <div id="preloader"></div>
+            <div id="wrapper" class="wrapper">
+            <?= $this->element('header') ?> 
+            <?= $this->Flash->render() ?>
+            <?= $this->fetch('content') ?>
+            <?= $this->element('footer') ?>
+            <?= $this->element('loginModal') ?>
+            <?= $this->element('rightMenu') ?>
+        </div>
 
-    <title>Senpai team</title>
-    <meta content="" name="descriptison">
-    <meta content="" name="keywords">
+        <!-- Vendor JS Files -->
+        <?= $this->Html->script('modernizr-2.8.3.min.js') ?>
+        <?= $this->Html->script('jquery-2.2.4.min.js') ?>
+        <?= $this->Html->script('plugins.js') ?>
+        <?= $this->Html->script('popper.js') ?>
+        <?= $this->Html->script('bootstrap.min.js') ?>
+        <?= $this->Html->script('wow.min.js') ?>
+        <?= $this->Html->script('../vendor/OwlCarousel/owl.carousel.min.js') ?>
+        <?= $this->Html->script('jquery.meanmenu.min.js') ?>
 
-    <!-- =======================================================
-  * Template Name: Mentor - v2.1.0
-  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
-    <?= $this->Html->css('../assets/vendor/bootstrap/css/bootstrap.min.css') ?>
-    <?= $this->Html->css('../assets/vendor/icofont/icofont.min.css') ?>
-    <?= $this->Html->css('../assets/vendor/boxicons/css/boxicons.min.css') ?>
-    <?= $this->Html->css('../assets/vendor/remixicon/remixicon.css') ?>
-    <?= $this->Html->css('../assets/vendor/owl.carousel/assets/owl.carousel.min.css') ?>
-    <?= $this->Html->css('../assets/vendor/animate.css/animate.min.css') ?>
-    <?= $this->Html->css('../assets/vendor/aos/aos.css') ?>
-    <?= $this->Html->css('https://use.fontawesome.com/releases/v5.7.0/css/all.css') ?>
-
-    <!-- Vendor JS Files -->
-    <?= $this->Html->script('../assets/vendor/jquery/jquery.min.js') ?>
-    <?= $this->Html->script('../assets/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>
-    <?= $this->Html->script('../assets/vendor/jquery.easing/jquery.easing.min.js') ?>
-    <?= $this->Html->script('../assets/vendor/php-email-form/validate.js') ?>
-    <?= $this->Html->script('../assets/vendor/waypoints/jquery.waypoints.min.js') ?>
-    <?= $this->Html->script('../assets/vendor/counterup/counterup.min.js') ?>
-    <?= $this->Html->script('../assets/vendor/owl.carousel/owl.carousel.min.js') ?>
-    <?= $this->Html->script('../assets/vendor/aos/aos.js') ?>
-
-    <!-- Template Main JS File -->
-    <?= $this->Html->script('../assets/js/main.js') ?>
-
-    <?= $this->Html->css('https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css') ?>
-    <?= $this->Html->script('https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js') ?>
-    <?= $this->Html->script('our.js') ?>
-    <?= $this->Html->css('our.css') ?>
-
-    <!-- Template Main CSS File -->
-    <?= $this->Html->css('../assets/css/style.css') ?>
-
-</head>
-
-<body>
-    <?= $this->element('navbar') ?>
-    <?= $this->Flash->render() ?>
-    <?= $this->fetch('content') ?>
-    <?= $this->element('footer') ?>
-</body>
+        <?= $this->Html->script('jquery.scrollUp.min.js') ?>
+        <?= $this->Html->script('jquery.counterup.min.js') ?>
+        <?= $this->Html->script('waypoints.min.js') ?>
+        <?= $this->Html->script('isotope.pkgd.min.js') ?>
+        <?= $this->Html->script('jquery.magnific-popup.min.js') ?>
+        <?= $this->Html->script('ticker.js') ?>
+        <?= $this->Html->script('main.js?v=10') ?>
+    </body>
 
 </html>

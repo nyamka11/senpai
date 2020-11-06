@@ -1,377 +1,2559 @@
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex justify-content-center align-items-center">
-    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Learning Today,<br>Leading Tomorrow</h1>
-      <h2>Энэхүү сайт нь Япон улсад амьдарч буй Монголчууд бид өөр хоорондоо ажил төрөл, аваа өгөө гээд бүхий л зарын чанартай мэдээллээ солилцох зорилготой.</h2>
-      <a href="courses.html" class="btn-get-started">Get Started</a>
-    </div>
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>About</h2>
-          <p>About Us</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-            <p class="font-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <ul>
-              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="icofont-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-            </ul>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            </p>
-            <a href="about.html" class="learn-more-btn">Learn More</a>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts section-bg">
+  <!-- News Feed Area Start Here -->
+  <section class="bg-accent border-bottom add-top-margin">
       <div class="container">
-
-        <div class="row counters">
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">1232</span>
-            <p>Students</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">64</span>
-            <p>Courses</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">42</span>
-            <p>Events</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">15</span>
-            <p>Trainers</p>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Counts Section -->
-
-    <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row">
-          <div class="col-lg-4 d-flex align-items-stretch">
-            <div class="content">
-              <h3>Why Choose Mentor?</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
-              </p>
-              <div class="text-center">
-                <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+          <div class="row no-gutters d-flex align-items-center">
+              <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                  <div class="topic-box topic-box-margin">Top Stories</div>
               </div>
-            </div>
+              <div class="col-lg-10 col-md-9 col-sm-8 col-6">
+                  <div class="feeding-text-dark">
+                      <ol id="sample" class="ticker">
+                          <li>
+                              <a href="#">McDonell Kanye West highlights difficulties for celebritiesComplimentary decor and
+                                  design advicewith Summit Park homes</a>
+                          </li>
+                          <li>
+                              <a href="#">Magnificent Image Of The New Hoover Dam Bridge Taking Shape</a>
+                          </li>
+                          <li>
+                              <a href="#">If Obama Had Governed Like This in 2017 He'd Be the Transformational.</a>
+                          </li>
+                      </ol>
+                  </div>
+              </div>
           </div>
-          <div class="col-lg-8 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-boxes d-flex flex-column justify-content-center">
+      </div>
+  </section>
+  <!-- News Feed Area End Here -->
+  <!-- News Info List Area Start Here -->
+  <section class="bg-body">
+      <div class="container">
+          <ul class="news-info-list text-center--md">
+              <li>
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>Australia</li>
+              <li>
+                  <i class="fa fa-calendar" aria-hidden="true"></i><span id="current_date"></span></li>
+              <li>
+                  <i class="fa fa-clock-o" aria-hidden="true"></i>Last Update 11.30 am</li>
+              <li>
+                  <i class="fa fa-cloud" aria-hidden="true"></i>29&#8451; Sydney, Australia</li>
+          </ul>
+      </div>
+  </section>
+  <!-- News Info List Area End Here -->
+  <!-- News Slider Area Start Here -->
+  <section class="bg-accent section-space-less2">
+      <div class="container">
+          <div class="row tab-space1">
+              <div class="col-lg-6 col-md-12">
+                  <div class="img-overlay-70 img-scale-animate mb-2">
+                      <img src="img/news/news1.jpg" alt="news" class="img-fluid width-100">
+                      <div class="mask-content-lg">
+                          <div class="topic-box-sm color-cinnabar mb-20">Politics</div>
+                          <div class="post-date-light">
+                              <ul>
+                                  <li>
+                                      <span>by</span>
+                                      <a href="single-news-1.html">Mark Willy</a>
+                                  </li>
+                                  <li>
+                                      <span>
+                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                      </span>February 10, 2017</li>
+                              </ul>
+                          </div>
+                          <h1 class="title-medium-light">
+                              <a href="single-news-1.html">If Obama Had Governed Like This in 2017 He'd Be the Transformational.</a>
+                          </h1>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-12">
+                  <div class="row tab-space1">
+                      <div class="col-12">
+                          <div class="img-overlay-70 img-scale-animate mb-2">
+                              <div class="mask-content-sm">
+                                  <div class="topic-box-sm color-azure-radiance mb-10">Sports</div>
+                                  <h2 class="title-medium-light">
+                                      <a href="single-news-2.html">Magnificent Image Of The New Hoover Dam Bridge Taking Shape</a>
+                                  </h2>
+                              </div>
+                              <img src="img/news/news2.jpg" alt="news" class="img-fluid width-100">
+                          </div>
+                      </div>
+                      <div class="col-sm-6 col-12">
+                          <div class="img-overlay-70 img-scale-animate mb-2">
+                              <div class="mask-content-sm">
+                                  <div class="topic-box-sm color-apple mb-10">Fashion</div>
+                                  <h3 class="title-medium-light">
+                                      <a href="single-news-3.html">Magnificent Image shaper dam bridge taking </a>
+                                  </h3>
+                              </div>
+                              <img src="img/news/news3.jpg" alt="news" class="img-fluid width-100">
+                          </div>
+                      </div>
+                      <div class="col-sm-6 col-12">
+                          <div class="img-overlay-70 img-scale-animate mb-2">
+                              <div class="mask-content-sm">
+                                  <div class="topic-box-sm color-razzmatazz mb-10">Music</div>
+                                  <h3 class="title-medium-light">
+                                      <a href="single-news-1.html">The New hoover dam bridge Magnificen Imag.</a>
+                                  </h3>
+                              </div>
+                              <img src="img/news/news4.jpg" alt="news" class="img-fluid width-100">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- News Slider Area End Here -->
+  <!-- Top Story Area Start Here -->
+  <section class="bg-body section-space-default">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-md-12">
+                  <div class="mb-20-r ne-isotope">
+                      <div class="topic-border color-cinnabar mb-30">
+                          <div class="topic-box-lg color-cinnabar">Top Stories</div>
+                          <div class="isotope-classes-tab isotop-btn">
+                              <a href="#" data-filter=".politics" class="current">Politics</a>
+                              <a href="#" data-filter=".fashion">Fashion</a>
+                              <a href="#" data-filter=".travel">Travel</a>
+                              <a href="#" data-filter=".gadget">Gadget</a>
+                          </div>
+                          <div class="more-info-link">
+                              <a href="post-style-1.html">More
+                                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                              </a>
+                          </div>
+                      </div>
+                      <div class="featuredContainer">
+                          <div class="row politics">
+                              <div class="col-md-6 col-sm-12">
+                                  <div class="img-overlay-70 img-scale-animate mb-30">
+                                      <a href="single-news-1.html">
+                                          <img src="img/news/news5.jpg" alt="news" class="img-fluid width-100">
+                                      </a>
+                                      <div class="mask-content-lg">
+                                          <div class="topic-box-sm color-cinnabar mb-20">Politics</div>
+                                          <div class="post-date-light">
+                                              <ul>
+                                                  <li>
+                                                      <span>by</span>
+                                                      <a href="single-news-1.html">Adams</a>
+                                                  </li>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>March 22, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h2 class="title-medium-light size-lg">
+                                              <a href="single-news-1.html">Government launches are inquiry into tainted ...</a>
+                                          </h2>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-6 col-sm-12">
+                                  <div class="media mb-30">
+                                      <a class="width38-lg width40-md img-opacity-hover" href="single-news-1.html">
+                                          <img src="img/news/news6.jpg" alt="news" class="img-fluid">
+                                      </a>
+                                      <div class="media-body">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>February 10, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-medium-dark size-md mb-none">
+                                              <a href="single-news-2.html">Blog post look better they are with a featured.</a>
+                                          </h3>
+                                      </div>
+                                  </div>
+                                  <div class="media mb-30">
+                                      <a class="width38-lg width40-md img-opacity-hover" href="single-news-2.html">
+                                          <img src="img/news/news7.jpg" alt="news" class="img-fluid">
+                                      </a>
+                                      <div class="media-body">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>January 10, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-medium-dark size-md mb-none">
+                                              <a href="single-news-3.html">UAE athlete dies after inden London training ground.</a>
+                                          </h3>
+                                      </div>
+                                  </div>
+                                  <div class="media mb-30">
+                                      <a class="width38-lg width40-md img-opacity-hover" href="single-news-3.html">
+                                          <img src="img/news/news8.jpg" alt="news" class="img-fluid">
+                                      </a>
+                                      <div class="media-body">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>December 15, 2016</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-medium-dark size-md mb-none">
+                                              <a href="single-news-1.html">Blog post look better they are with a featured.</a>
+                                          </h3>
+                                      </div>
+                                  </div>
+                                  <div class="media mb-30">
+                                      <a class="width38-lg width40-md img-opacity-hover" href="single-news-1.html">
+                                          <img src="img/news/news9.jpg" alt="news" class="img-fluid">
+                                      </a>
+                                      <div class="media-body">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>November 23, 2016</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-medium-dark size-md mb-none">
+                                              <a href="single-news-2.html">Blog post look better they are with a featured.</a>
+                                          </h3>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row fashion">
+                              <div class="col-md-6 col-sm-12">
+                                  <div class="img-overlay-70 img-scale-animate mb-30">
+                                      <a href="single-news-1.html">
+                                          <img src="img/news/news46.jpg" alt="news" class="img-fluid width-100">
+                                      </a>
+                                      <div class="mask-content-lg">
+                                          <div class="topic-box-sm color-azure-radiance mb-20">Fashion</div>
+                                          <div class="post-date-light">
+                                              <ul>
+                                                  <li>
+                                                      <span>by</span>
+                                                      <a href="single-news-1.html">Adams</a>
+                                                  </li>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>March 22, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h2 class="title-medium-light size-lg">
+                                              <a href="single-news-1.html">Government launches are inquiry into tainted ...</a>
+                                          </h2>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-6 col-sm-12">
+                                  <div class="media mb-30">
+                                      <a class="width38-lg width40-md img-opacity-hover" href="single-news-1.html">
+                                          <img src="img/news/news6.jpg" alt="news" class="img-fluid">
+                                      </a>
+                                      <div class="media-body">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>February 10, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-medium-dark size-md mb-none">
+                                              <a href="single-news-2.html">Blog post look better they are with a featured.</a>
+                                          </h3>
+                                      </div>
+                                  </div>
+                                  <div class="media mb-30">
+                                      <a class="width38-lg width40-md img-opacity-hover" href="single-news-2.html">
+                                          <img src="img/news/news7.jpg" alt="news" class="img-fluid">
+                                      </a>
+                                      <div class="media-body">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>January 10, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-medium-dark size-md mb-none">
+                                              <a href="single-news-3.html">UAE athlete dies after inden London training ground.</a>
+                                          </h3>
+                                      </div>
+                                  </div>
+                                  <div class="media mb-30">
+                                      <a class="width38-lg width40-md img-opacity-hover" href="single-news-3.html">
+                                          <img src="img/news/news8.jpg" alt="news" class="img-fluid">
+                                      </a>
+                                      <div class="media-body">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>December 15, 2016</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-medium-dark size-md mb-none">
+                                              <a href="single-news-1.html">Blog post look better they are with a featured.</a>
+                                          </h3>
+                                      </div>
+                                  </div>
+                                  <div class="media mb-30">
+                                      <a class="width38-lg width40-md img-opacity-hover" href="single-news-1.html">
+                                          <img src="img/news/news9.jpg" alt="news" class="img-fluid">
+                                      </a>
+                                      <div class="media-body">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>November 23, 2016</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-medium-dark size-md mb-none">
+                                              <a href="single-news-2.html">Blog post look better they are with a featured.</a>
+                                          </h3>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row travel">
+                              <div class="col-md-6 col-sm-12">
+                                  <div class="img-overlay-70 img-scale-animate mb-30">
+                                      <a href="single-news-1.html">
+                                          <img src="img/news/news48.jpg" alt="news" class="img-fluid width-100">
+                                      </a>
+                                      <div class="mask-content-lg">
+                                          <div class="topic-box-sm color-web-orange mb-20">Gadget</div>
+                                          <div class="post-date-light">
+                                              <ul>
+                                                  <li>
+                                                      <span>by</span>
+                                                      <a href="single-news-1.html">Adams</a>
+                                                  </li>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>March 22, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h2 class="title-medium-light size-lg">
+                                              <a href="single-news-1.html">Government launches are inquiry into tainted ...</a>
+                                          </h2>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-6 col-sm-12">
+                                  <div class="media mb-30">
+                                      <a class="width38-lg width40-md img-opacity-hover" href="single-news-1.html">
+                                          <img src="img/news/news6.jpg" alt="news" class="img-fluid">
+                                      </a>
+                                      <div class="media-body">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>February 10, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-medium-dark size-md mb-none">
+                                              <a href="single-news-2.html">Blog post look better they are with a featured.</a>
+                                          </h3>
+                                      </div>
+                                  </div>
+                                  <div class="media mb-30">
+                                      <a class="width38-lg width40-md img-opacity-hover" href="single-news-2.html">
+                                          <img src="img/news/news7.jpg" alt="news" class="img-fluid">
+                                      </a>
+                                      <div class="media-body">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>January 10, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-medium-dark size-md mb-none">
+                                              <a href="single-news-3.html">UAE athlete dies after inden London training ground.</a>
+                                          </h3>
+                                      </div>
+                                  </div>
+                                  <div class="media mb-30">
+                                      <a class="width38-lg width40-md img-opacity-hover" href="single-news-3.html">
+                                          <img src="img/news/news8.jpg" alt="news" class="img-fluid">
+                                      </a>
+                                      <div class="media-body">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>December 15, 2016</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-medium-dark size-md mb-none">
+                                              <a href="single-news-1.html">Blog post look better they are with a featured.</a>
+                                          </h3>
+                                      </div>
+                                  </div>
+                                  <div class="media mb-30">
+                                      <a class="width38-lg width40-md img-opacity-hover" href="single-news-1.html">
+                                          <img src="img/news/news9.jpg" alt="news" class="img-fluid">
+                                      </a>
+                                      <div class="media-body">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>November 23, 2016</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-medium-dark size-md mb-none">
+                                              <a href="single-news-2.html">Blog post look better they are with a featured.</a>
+                                          </h3>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row gadget">
+                              <div class="col-md-6 col-sm-12">
+                                  <div class="img-overlay-70 img-scale-animate mb-30">
+                                      <a href="single-news-1.html">
+                                          <img src="img/news/news49.jpg" alt="news" class="img-fluid width-100">
+                                      </a>
+                                      <div class="mask-content-lg">
+                                          <div class="topic-box-sm color-web-orange mb-20">Gadget</div>
+                                          <div class="post-date-light">
+                                              <ul>
+                                                  <li>
+                                                      <span>by</span>
+                                                      <a href="single-news-1.html">Adams</a>
+                                                  </li>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>March 22, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h2 class="title-medium-light size-lg">
+                                              <a href="single-news-1.html">Government launches are inquiry into tainted ...</a>
+                                          </h2>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-6 col-sm-12">
+                                  <div class="media mb-30">
+                                      <a class="width38-lg width40-md img-opacity-hover" href="single-news-1.html">
+                                          <img src="img/news/news6.jpg" alt="news" class="img-fluid">
+                                      </a>
+                                      <div class="media-body">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>February 10, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-medium-dark size-md mb-none">
+                                              <a href="single-news-2.html">Blog post look better they are with a featured.</a>
+                                          </h3>
+                                      </div>
+                                  </div>
+                                  <div class="media mb-30">
+                                      <a class="width38-lg width40-md img-opacity-hover" href="single-news-2.html">
+                                          <img src="img/news/news7.jpg" alt="news" class="img-fluid">
+                                      </a>
+                                      <div class="media-body">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>January 10, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-medium-dark size-md mb-none">
+                                              <a href="single-news-3.html">UAE athlete dies after inden London training ground.</a>
+                                          </h3>
+                                      </div>
+                                  </div>
+                                  <div class="media mb-30">
+                                      <a class="width38-lg width40-md img-opacity-hover" href="single-news-3.html">
+                                          <img src="img/news/news8.jpg" alt="news" class="img-fluid">
+                                      </a>
+                                      <div class="media-body">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>December 15, 2016</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-medium-dark size-md mb-none">
+                                              <a href="single-news-1.html">Blog post look better they are with a featured.</a>
+                                          </h3>
+                                      </div>
+                                  </div>
+                                  <div class="media mb-30">
+                                      <a class="width38-lg width40-md img-opacity-hover" href="single-news-1.html">
+                                          <img src="img/news/news9.jpg" alt="news" class="img-fluid">
+                                      </a>
+                                      <div class="media-body">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>November 23, 2016</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-medium-dark size-md mb-none">
+                                              <a href="single-news-2.html">Blog post look better they are with a featured.</a>
+                                          </h3>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row tab-space1 mb-25">
+                      <div class="col-12">
+                          <div class="topic-border color-apple mb-30 width-100">
+                              <div class="topic-box-lg color-apple">Life Style</div>
+                          </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                          <div class="img-overlay-70 img-scale-animate mb-2">
+                              <div class="mask-content-xs">
+                                  <div class="post-date-light">
+                                      <ul>
+                                          <li>
+                                              <span>
+                                                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                                              </span>February 10, 2017</li>
+                                      </ul>
+                                  </div>
+                                  <h3 class="title-medium-light">
+                                      <a href="single-news-3.html">Rosie Huntington Whitel Habits Career Art </a>
+                                  </h3>
+                              </div>
+                              <img src="img/news/news10.jpg" alt="news" class="img-fluid width-100">
+                          </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                          <div class="img-overlay-70 img-scale-animate mb-2">
+                              <div class="mask-content-xs">
+                                  <div class="post-date-light">
+                                      <ul>
+                                          <li>
+                                              <span>
+                                                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                                              </span>February 10, 2017</li>
+                                      </ul>
+                                  </div>
+                                  <h3 class="title-medium-light">
+                                      <a href="single-news-3.html">Smart packs parking beeps sensor </a>
+                                  </h3>
+                              </div>
+                              <img src="img/news/news11.jpg" alt="news" class="img-fluid width-100">
+                          </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                          <div class="img-overlay-70 img-scale-animate mb-2">
+                              <div class="mask-content-xs">
+                                  <div class="post-date-light">
+                                      <ul>
+                                          <li>
+                                              <span>
+                                                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                                              </span>February 10, 2017</li>
+                                      </ul>
+                                  </div>
+                                  <h3 class="title-medium-light">
+                                      <a href="single-news-3.html">Budget issues force the our to be cancelled </a>
+                                  </h3>
+                              </div>
+                              <img src="img/news/news12.jpg" alt="news" class="img-fluid width-100">
+                          </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                          <div class="img-overlay-70 img-scale-animate mb-2">
+                              <div class="mask-content-xs">
+                                  <div class="post-date-light">
+                                      <ul>
+                                          <li>
+                                              <span>
+                                                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                                              </span>February 10, 2017</li>
+                                      </ul>
+                                  </div>
+                                  <h3 class="title-medium-light">
+                                      <a href="single-news-3.html">Here What’s in Battlefield $80 Deluxe Edition </a>
+                                  </h3>
+                              </div>
+                              <img src="img/news/news13.jpg" alt="news" class="img-fluid width-100">
+                          </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                          <div class="img-overlay-70 img-scale-animate mb-2">
+                              <div class="mask-content-xs">
+                                  <div class="post-date-light">
+                                      <ul>
+                                          <li>
+                                              <span>
+                                                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                                              </span>February 10, 2017</li>
+                                      </ul>
+                                  </div>
+                                  <h3 class="title-medium-light">
+                                      <a href="single-news-3.html">Rosie Huntington Whitel Habits Career Art </a>
+                                  </h3>
+                              </div>
+                              <img src="img/news/news14.jpg" alt="news" class="img-fluid width-100">
+                          </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                          <div class="img-overlay-70 img-scale-animate mb-2">
+                              <div class="mask-content-xs">
+                                  <div class="post-date-light">
+                                      <ul>
+                                          <li>
+                                              <span>
+                                                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                                              </span>February 10, 2017</li>
+                                      </ul>
+                                  </div>
+                                  <h3 class="title-medium-light">
+                                      <a href="single-news-3.html">Rosie Huntington Whitel Habits Career Art </a>
+                                  </h3>
+                              </div>
+                              <img src="img/news/news15.jpg" alt="news" class="img-fluid width-100">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="ne-sidebar sidebar-break-md col-lg-4 col-md-12">
+                  <div class="sidebar-box">
+                      <div class="topic-border color-cod-gray mb-30">
+                          <div class="topic-box-lg color-cod-gray">Stay Connected</div>
+                      </div>
+                      <ul class="stay-connected overflow-hidden">
+                          <li class="facebook">
+                              <i class="fa fa-facebook" aria-hidden="true"></i>
+                              <div class="connection-quantity">50.2 k</div>
+                              <p>Fans</p>
+                          </li>
+                          <li class="twitter">
+                              <i class="fa fa-twitter" aria-hidden="true"></i>
+                              <div class="connection-quantity">10.3 k</div>
+                              <p>Followers</p>
+                          </li>
+                          <li class="linkedin">
+                              <i class="fa fa-linkedin" aria-hidden="true"></i>
+                              <div class="connection-quantity">25.4 k</div>
+                              <p>Fans</p>
+                          </li>
+                          <li class="rss">
+                              <i class="fa fa-rss" aria-hidden="true"></i>
+                              <div class="connection-quantity">20.8 k</div>
+                              <p>Subscriber</p>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="sidebar-box">
+                      <div class="ne-banner-layout1 text-center">
+                          <a href="#">
+                              <img src="img/banner/banner3.jpg" alt="ad" class="img-fluid">
+                          </a>
+                      </div>
+                  </div>
+                  <div class="sidebar-box">
+                      <div class="topic-border color-scampi mb-5">
+                          <div class="topic-box-lg color-scampi">Recent News</div>
+                      </div>
+                      <div class="row">
+                          <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                              <div class="mt-25">
+                                  <a href="single-news-1.html" class="img-opacity-hover">
+                                      <img src="img/news/news42.jpg" alt="ad" class="img-fluid mb-10 width-100">
+                                  </a>
+                                  <h3 class="title-medium-dark size-md mb-none">
+                                      <a href="single-news-1.html">Rosie Huntington Whitl Habits Career Art Rosie.</a>
+                                  </h3>
+                              </div>
+                          </div>
+                          <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                              <div class="mt-25">
+                                  <a href="single-news-2.html" class="img-opacity-hover">
+                                      <img src="img/news/news43.jpg" alt="ad" class="img-fluid mb-10 width-100">
+                                  </a>
+                                  <h3 class="title-medium-dark size-md mb-none">
+                                      <a href="single-news-2.html">Brings air of distinction to Delafield tist.</a>
+                                  </h3>
+                              </div>
+                          </div>
+                          <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                              <div class="mt-25">
+                                  <a href="single-news-3.html" class="img-opacity-hover">
+                                      <img src="img/news/news44.jpg" alt="ad" class="img-fluid mb-10 width-100">
+                                  </a>
+                                  <h3 class="title-medium-dark size-md mb-none">
+                                      <a href="single-news-3.html">Haunts of the Hea Lans capes of Lynn Zirman Career.</a>
+                                  </h3>
+                              </div>
+                          </div>
+                          <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                              <div class="mt-25">
+                                  <a href="single-news-1.html" class="img-opacity-hover">
+                                      <img src="img/news/news45.jpg" alt="ad" class="img-fluid mb-10 width-100">
+                                  </a>
+                                  <h3 class="title-medium-dark size-md mb-none">
+                                      <a href="single-news-1.html">Rosie Huntington Whitl Habits Career Art.Rosie Habits.</a>
+                                  </h3>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-12">
+                  <div class="ne-banner-layout1 mt-20-r text-center">
+                      <a href="#">
+                          <img src="img/banner/banner2.jpg" alt="ad" class="img-fluid">
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- Top Story Area End Here -->
+  <!-- Video Area Start Here -->
+  <section class="bg-accent section-space-less4">
+      <div class="container">
+          <div class="row tab-space2">
+              <div class="col-lg-4 col-md-12 mb-4">
+                  <div class="img-overlay-70">
+                      <div class="mask-content-sm">
+                          <div class="topic-box-sm color-pomegranate mb-20">Fitness</div>
+                          <h3 class="title-medium-light">
+                              <a href="single-news-3.html">Gym Fitness area coverded they Governed this in 2017</a>
+                          </h3>
+                      </div>
+                      <div class="text-center">
+                          <a class="play-btn popup-youtube" href="http://www.youtube.com/watch?v=1iIZeIy7TqM">
+                              <img src="img/banner/play.png" alt="play" class="img-fluid">
+                          </a>
+                      </div>
+                      <img src="img/news/news16.jpg" alt="news" class="img-fluid width-100">
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-12 mb-4">
+                  <div class="img-overlay-70">
+                      <div class="mask-content-sm">
+                          <div class="topic-box-sm color-persian-green mb-20">Business</div>
+                          <h3 class="title-medium-light">
+                              <a href="single-news-3.html">Patricia Urquiola transparent furney Italia with iridescent</a>
+                          </h3>
+                      </div>
+                      <div class="text-center">
+                          <a class="play-btn popup-youtube" href="http://www.youtube.com/watch?v=1iIZeIy7TqM">
+                              <img src="img/banner/play.png" alt="play" class="img-fluid">
+                          </a>
+                      </div>
+                      <img src="img/news/news17.jpg" alt="news" class="img-fluid width-100">
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-12 mb-4">
+                  <div class="img-overlay-70">
+                      <div class="mask-content-sm">
+                          <div class="topic-box-sm color-web-orange mb-20">Food</div>
+                          <h3 class="title-medium-light">
+                              <a href="single-news-3.html">Denton Corker Marshall the myste biennale pavilion</a>
+                          </h3>
+                      </div>
+                      <div class="text-center">
+                          <a class="play-btn popup-youtube" href="http://www.youtube.com/watch?v=1iIZeIy7TqM">
+                              <img src="img/banner/play.png" alt="play" class="img-fluid">
+                          </a>
+                      </div>
+                      <img src="img/news/news18.jpg" alt="news" class="img-fluid width-100">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- Video Area End Here -->
+  <!-- Latest News Area Start Here -->
+  <section class="bg-body section-space-less30">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-4 col-md-12">
+                  <div class="topic-border color-cutty-sark mb-30 width-100">
+                      <div class="topic-box-lg color-cutty-sark">Tech World</div>
+                  </div>
+                  <div class="img-overlay-70 img-scale-animate mb-30">
+                      <div class="mask-content-sm">
+                          <div class="post-date-light">
+                              <ul>
+                                  <li>
+                                      <span>by</span>
+                                      <a href="single-news-1.html">Adams</a>
+                                  </li>
+                                  <li>
+                                      <span>
+                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                      </span>May 30, 2017</li>
+                              </ul>
+                          </div>
+                          <h3 class="title-medium-light">
+                              <a href="single-news-3.html">Oppo Find 7 is the world need first phone that can take</a>
+                          </h3>
+                      </div>
+                      <img src="img/news/news19.jpg" alt="news" class="img-fluid width-100">
+                  </div>
+                  <div class="media mb-30">
+                      <a class="img-opacity-hover" href="single-news-3.html">
+                          <img src="img/news/news20.jpg" alt="news" class="img-fluid">
+                      </a>
+                      <div class="media-body">
+                          <div class="post-date-dark">
+                              <ul>
+                                  <li>
+                                      <span>
+                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                      </span>February 10, 2017</li>
+                              </ul>
+                          </div>
+                          <h3 class="title-medium-dark size-md mb-none">
+                              <a href="single-news-3.html">Dogs Can Be Monito road with Hi Tech Program</a>
+                          </h3>
+                      </div>
+                  </div>
+                  <div class="media mb-30">
+                      <a class="img-opacity-hover" href="single-news-2.html">
+                          <img src="img/news/news21.jpg" alt="news" class="img-fluid">
+                      </a>
+                      <div class="media-body">
+                          <div class="post-date-dark">
+                              <ul>
+                                  <li>
+                                      <span>
+                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                      </span>February 10, 2017</li>
+                              </ul>
+                          </div>
+                          <h3 class="title-medium-dark size-md mb-none">
+                              <a href="single-news-2.html">Microsoft Subsumes Open nside Mothership</a>
+                          </h3>
+                      </div>
+                  </div>
+                  <div class="media mb-30">
+                      <a class="img-opacity-hover" href="single-news-1.html">
+                          <img src="img/news/news22.jpg" alt="news" class="img-fluid">
+                      </a>
+                      <div class="media-body">
+                          <div class="post-date-dark">
+                              <ul>
+                                  <li>
+                                      <span>
+                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                      </span>February 10, 2017</li>
+                              </ul>
+                          </div>
+                          <h3 class="title-medium-dark size-md mb-none">
+                              <a href="single-news-1.html">Dogs Can Be Monito road with Hi Tech Program.</a>
+                          </h3>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-12">
+                  <div class="topic-border color-pomegranate mb-30 width-100">
+                      <div class="topic-box-lg color-pomegranate">Health &amp; Fitness</div>
+                  </div>
+                  <div class="img-overlay-70 img-scale-animate mb-30">
+                      <div class="mask-content-sm">
+                          <div class="post-date-light">
+                              <ul>
+                                  <li>
+                                      <span>by</span>
+                                      <a href="single-news-1.html">Adams</a>
+                                  </li>
+                                  <li>
+                                      <span>
+                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                      </span>March 22, 2017</li>
+                              </ul>
+                          </div>
+                          <h3 class="title-medium-light">
+                              <a href="single-news-3.html">Oppo Find 7 is the world need first phone that can take</a>
+                          </h3>
+                      </div>
+                      <img src="img/news/news23.jpg" alt="news" class="img-fluid width-100">
+                  </div>
+                  <div class="media mb-30">
+                      <a class="img-opacity-hover" href="single-news-1.html">
+                          <img src="img/news/news24.jpg" alt="news" class="img-fluid">
+                      </a>
+                      <div class="media-body">
+                          <div class="post-date-dark">
+                              <ul>
+                                  <li>
+                                      <span>
+                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                      </span>February 10, 2017</li>
+                              </ul>
+                          </div>
+                          <h3 class="title-medium-dark size-md mb-none">
+                              <a href="single-news-1.html">Dogs Can Be Monito road with Hi Tech Program</a>
+                          </h3>
+                      </div>
+                  </div>
+                  <div class="media mb-30">
+                      <a class="img-opacity-hover" href="single-news-2.html">
+                          <img src="img/news/news25.jpg" alt="news" class="img-fluid">
+                      </a>
+                      <div class="media-body">
+                          <div class="post-date-dark">
+                              <ul>
+                                  <li>
+                                      <span>
+                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                      </span>February 10, 2017</li>
+                              </ul>
+                          </div>
+                          <h3 class="title-medium-dark size-md mb-none">
+                              <a href="single-news-2.html">Microsoft Subsumes Open nside Mothership</a>
+                          </h3>
+                      </div>
+                  </div>
+                  <div class="media mb-30">
+                      <a class="img-opacity-hover" href="single-news-3.html">
+                          <img src="img/news/news26.jpg" alt="news" class="img-fluid">
+                      </a>
+                      <div class="media-body">
+                          <div class="post-date-dark">
+                              <ul>
+                                  <li>
+                                      <span>
+                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                      </span>February 10, 2017</li>
+                              </ul>
+                          </div>
+                          <h3 class="title-medium-dark size-md mb-none">
+                              <a href="single-news-3.html">Dogs Can Be Monito road with Hi Tech Program.</a>
+                          </h3>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-12">
+                  <div class="topic-border color-web-orange mb-30 width-100">
+                      <div class="topic-box-lg color-web-orange">Tech World</div>
+                  </div>
+                  <div class="img-overlay-70 img-scale-animate mb-30">
+                      <div class="mask-content-sm">
+                          <div class="post-date-light">
+                              <ul>
+                                  <li>
+                                      <span>by</span>
+                                      <a href="single-news-1.html">Adams</a>
+                                  </li>
+                                  <li>
+                                      <span>
+                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                      </span>April 16, 2017</li>
+                              </ul>
+                          </div>
+                          <h3 class="title-medium-light">
+                              <a href="single-news-3.html">SpringFest One Fashion Show at the University of Michigan</a>
+                          </h3>
+                      </div>
+                      <img src="img/news/news27.jpg" alt="news" class="img-fluid width-100">
+                  </div>
+                  <div class="media mb-30">
+                      <a class="img-opacity-hover" href="single-news-1.html">
+                          <img src="img/news/news28.jpg" alt="news" class="img-fluid">
+                      </a>
+                      <div class="media-body">
+                          <div class="post-date-dark">
+                              <ul>
+                                  <li>
+                                      <span>
+                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                      </span>February 10, 2017</li>
+                              </ul>
+                          </div>
+                          <h3 class="title-medium-dark size-md mb-none">
+                              <a href="single-news-1.html">Dogs Can Be Monito road with Hi Tech Program</a>
+                          </h3>
+                      </div>
+                  </div>
+                  <div class="media mb-30">
+                      <a class="img-opacity-hover" href="single-news-2.html">
+                          <img src="img/news/news29.jpg" alt="news" class="img-fluid">
+                      </a>
+                      <div class="media-body">
+                          <div class="post-date-dark">
+                              <ul>
+                                  <li>
+                                      <span>
+                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                      </span>February 10, 2017</li>
+                              </ul>
+                          </div>
+                          <h3 class="title-medium-dark size-md mb-none">
+                              <a href="single-news-2.html">Microsoft Subsumes Open nside Mothership</a>
+                          </h3>
+                      </div>
+                  </div>
+                  <div class="media mb-30">
+                      <a class="img-opacity-hover" href="single-news-3.html">
+                          <img src="img/news/news30.jpg" alt="news" class="img-fluid">
+                      </a>
+                      <div class="media-body">
+                          <div class="post-date-dark">
+                              <ul>
+                                  <li>
+                                      <span>
+                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                      </span>February 10, 2017</li>
+                              </ul>
+                          </div>
+                          <h3 class="title-medium-dark size-md mb-none">
+                              <a href="single-news-3.html">Dogs Can Be Monito road with Hi Tech Program.</a>
+                          </h3>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-12">
+                  <div class="ne-banner-layout1 mb-50 mt-20-r text-center">
+                      <a href="#">
+                          <img src="img/banner/banner2.jpg" alt="ad" class="img-fluid">
+                      </a>
+                  </div>
+              </div>
+          </div>
+          <div class="ne-isotope">
               <div class="row">
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-receipt"></i>
-                    <h4>Corporis voluptates sit</h4>
-                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                  <div class="col-12">
+                      <div class="topic-border color-azure-radiance mb-30">
+                          <div class="topic-box-lg color-azure-radiance">Sports</div>
+                          <div class="isotope-classes-tab isotop-btn">
+                              <a href="#" data-filter=".tenies" class="current">Tenies</a>
+                              <a href="#" data-filter=".cricket">Cricket</a>
+                              <a href="#" data-filter=".football">Football</a>
+                              <a href="#" data-filter=".cycling">Cycling</a>
+                          </div>
+                          <div class="more-info-link">
+                              <a href="post-style-1.html">More
+                                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                              </a>
+                          </div>
+                      </div>
                   </div>
-                </div>
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-cube-alt"></i>
-                    <h4>Ullamco laboris ladore pan</h4>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                  </div>
-                </div>
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-images"></i>
-                    <h4>Labore consequatur</h4>
-                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-                  </div>
-                </div>
               </div>
-            </div><!-- End .content-->
+              <div class="featuredContainer">
+                  <div class="row tenies">
+                      <div class="col-xl-4 col-lg-7 col-md-6 col-sm-12">
+                          <div class="img-overlay-70 img-scale-animate mb-30">
+                              <img src="img/news/news31.jpg" alt="news" class="img-fluid width-100">
+                              <div class="topic-box-top-lg">
+                                  <div class="topic-box-sm color-cod-gray mb-20">Tenis</div>
+                              </div>
+                              <div class="mask-content-lg">
+                                  <div class="post-date-light">
+                                      <ul>
+                                          <li>
+                                              <span>by</span>
+                                              <a href="single-news-1.html">Adams</a>
+                                          </li>
+                                          <li>
+                                              <span>
+                                                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                                              </span>May 30, 2017</li>
+                                      </ul>
+                                  </div>
+                                  <h2 class="title-medium-light size-lg">
+                                      <a href="single-news-1.html">10 Best Water Parks In Theya World you Have to...</a>
+                                  </h2>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xl-8 col-lg-5 col-md-6 col-sm-12">
+                          <div class="row keep-items-4-md">
+                              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                  <div class="mb-25 position-relative">
+                                      <a class="img-opacity-hover" href="single-news-1.html">
+                                          <img src="img/news/news32.jpg" alt="news" class="img-fluid width-100 mb-15">
+                                      </a>
+                                      <div class="topic-box-top-xs">
+                                          <div class="topic-box-sm color-cod-gray mb-20">Ragbe</div>
+                                      </div>
+                                      <div class="post-date-dark">
+                                          <ul>
+                                              <li>
+                                                  <span>
+                                                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                  </span>January 17, 2017</li>
+                                          </ul>
+                                      </div>
+                                      <h3 class="title-medium-dark size-md">
+                                          <a href="single-news-2.html">Brooke Shields Casts a New Dress Model</a>
+                                      </h3>
+                                  </div>
+                              </div>
+                              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                  <div class="mb-25 position-relative">
+                                      <a class="img-opacity-hover" href="single-news-1.html">
+                                          <img src="img/news/news33.jpg" alt="news" class="img-fluid width-100 mb-15">
+                                      </a>
+                                      <div class="topic-box-top-xs">
+                                          <div class="topic-box-sm color-cod-gray mb-20">Boxing</div>
+                                      </div>
+                                      <div class="post-date-dark">
+                                          <ul>
+                                              <li>
+                                                  <span>
+                                                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                  </span>February 10, 2017</li>
+                                          </ul>
+                                      </div>
+                                      <h3 class="title-medium-dark size-md">
+                                          <a href="single-news-2.html">Brooke Shields Casts a New Dress Model</a>
+                                      </h3>
+                                  </div>
+                              </div>
+                              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                  <div class="mb-25 position-relative">
+                                      <a class="img-opacity-hover" href="single-news-3.html">
+                                          <img src="img/news/news34.jpg" alt="news" class="img-fluid width-100 mb-15">
+                                      </a>
+                                      <div class="topic-box-top-xs">
+                                          <div class="topic-box-sm color-cod-gray mb-20">Diving</div>
+                                      </div>
+                                      <div class="post-date-dark">
+                                          <ul>
+                                              <li>
+                                                  <span>
+                                                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                  </span>March 06, 2017</li>
+                                          </ul>
+                                      </div>
+                                      <h3 class="title-medium-dark size-md">
+                                          <a href="single-news-3.html">Music Evolution, the Most Advanced Audio Mixer</a>
+                                      </h3>
+                                  </div>
+                              </div>
+                              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                  <div class="mb-25 position-relative">
+                                      <a class="img-opacity-hover" href="single-news-1.html">
+                                          <img src="img/news/news35.jpg" alt="news" class="img-fluid width-100 mb-15">
+                                      </a>
+                                      <div class="topic-box-top-xs">
+                                          <div class="topic-box-sm color-cod-gray mb-20">Cycling</div>
+                                      </div>
+                                      <div class="post-date-dark">
+                                          <ul>
+                                              <li>
+                                                  <span>
+                                                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                  </span>May 17, 2017</li>
+                                          </ul>
+                                      </div>
+                                      <h3 class="title-medium-dark size-md">
+                                          <a href="single-news-1.html">Hexagon is the new circle but we need to know in 2017</a>
+                                      </h3>
+                                  </div>
+                              </div>
+                              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                  <div class="mb-25 position-relative">
+                                      <a class="img-opacity-hover" href="single-news-2.html">
+                                          <img src="img/news/news36.jpg" alt="news" class="img-fluid width-100 mb-15">
+                                      </a>
+                                      <div class="topic-box-top-xs">
+                                          <div class="topic-box-sm color-cod-gray mb-20">Riding</div>
+                                      </div>
+                                      <div class="post-date-dark">
+                                          <ul>
+                                              <li>
+                                                  <span>
+                                                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                  </span>August 22, 2017</li>
+                                          </ul>
+                                      </div>
+                                      <h3 class="title-medium-dark size-md">
+                                          <a href="single-news-2.html">Keep a long-haul flight from ruining mood health...</a>
+                                      </h3>
+                                  </div>
+                              </div>
+                              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                  <div class="mb-25 position-relative">
+                                      <a class="img-opacity-hover" href="single-news-3.html">
+                                          <img src="img/news/news37.jpg" alt="news" class="img-fluid width-100 mb-15">
+                                      </a>
+                                      <div class="topic-box-top-xs">
+                                          <div class="topic-box-sm color-cod-gray mb-20">Cycling</div>
+                                      </div>
+                                      <div class="post-date-dark">
+                                          <ul>
+                                              <li>
+                                                  <span>
+                                                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                  </span>December 30, 2017</li>
+                                          </ul>
+                                      </div>
+                                      <h3 class="title-medium-dark size-md">
+                                          <a href="single-news-3.html">Keep a long-haul flight from ruining mood health...</a>
+                                      </h3>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row cricket">
+                      <div class="col-xl-4 col-lg-7 col-md-6 col-sm-12">
+                          <div class="img-overlay-70 img-scale-animate mb-30">
+                              <img src="img/news/news51.jpg" alt="news" class="img-fluid width-100">
+                              <div class="topic-box-top-lg">
+                                  <div class="topic-box-sm color-cod-gray mb-20">Cricket</div>
+                              </div>
+                              <div class="mask-content-lg">
+                                  <div class="post-date-light">
+                                      <ul>
+                                          <li>
+                                              <span>by</span>
+                                              <a href="single-news-1.html">Adams</a>
+                                          </li>
+                                          <li>
+                                              <span>
+                                                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                                              </span>May 30, 2017</li>
+                                      </ul>
+                                  </div>
+                                  <h2 class="title-medium-light size-lg">
+                                      <a href="single-news-1.html">10 Best Water Parks In Theya World you Have to...</a>
+                                  </h2>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xl-8 col-lg-5 col-md-6 col-sm-12">
+                          <div class="row keep-items-4-md">
+                              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                  <div class="mb-25 position-relative">
+                                      <a class="img-opacity-hover" href="single-news-1.html">
+                                          <img src="img/news/news32.jpg" alt="news" class="img-fluid width-100 mb-15">
+                                      </a>
+                                      <div class="topic-box-top-xs">
+                                          <div class="topic-box-sm color-cod-gray mb-20">Ragbe</div>
+                                      </div>
+                                      <div class="post-date-dark">
+                                          <ul>
+                                              <li>
+                                                  <span>
+                                                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                  </span>January 17, 2017</li>
+                                          </ul>
+                                      </div>
+                                      <h3 class="title-medium-dark size-md">
+                                          <a href="single-news-2.html">Brooke Shields Casts a New Dress Model</a>
+                                      </h3>
+                                  </div>
+                              </div>
+                              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                  <div class="mb-25 position-relative">
+                                      <a class="img-opacity-hover" href="single-news-1.html">
+                                          <img src="img/news/news33.jpg" alt="news" class="img-fluid width-100 mb-15">
+                                      </a>
+                                      <div class="topic-box-top-xs">
+                                          <div class="topic-box-sm color-cod-gray mb-20">Boxing</div>
+                                      </div>
+                                      <div class="post-date-dark">
+                                          <ul>
+                                              <li>
+                                                  <span>
+                                                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                  </span>February 10, 2017</li>
+                                          </ul>
+                                      </div>
+                                      <h3 class="title-medium-dark size-md">
+                                          <a href="single-news-2.html">Brooke Shields Casts a New Dress Model</a>
+                                      </h3>
+                                  </div>
+                              </div>
+                              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                  <div class="mb-25 position-relative">
+                                      <a class="img-opacity-hover" href="single-news-3.html">
+                                          <img src="img/news/news34.jpg" alt="news" class="img-fluid width-100 mb-15">
+                                      </a>
+                                      <div class="topic-box-top-xs">
+                                          <div class="topic-box-sm color-cod-gray mb-20">Diving</div>
+                                      </div>
+                                      <div class="post-date-dark">
+                                          <ul>
+                                              <li>
+                                                  <span>
+                                                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                  </span>March 06, 2017</li>
+                                          </ul>
+                                      </div>
+                                      <h3 class="title-medium-dark size-md">
+                                          <a href="single-news-3.html">Music Evolution, the Most Advanced Audio Mixer</a>
+                                      </h3>
+                                  </div>
+                              </div>
+                              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                  <div class="mb-25 position-relative">
+                                      <a class="img-opacity-hover" href="single-news-1.html">
+                                          <img src="img/news/news35.jpg" alt="news" class="img-fluid width-100 mb-15">
+                                      </a>
+                                      <div class="topic-box-top-xs">
+                                          <div class="topic-box-sm color-cod-gray mb-20">Cycling</div>
+                                      </div>
+                                      <div class="post-date-dark">
+                                          <ul>
+                                              <li>
+                                                  <span>
+                                                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                  </span>May 17, 2017</li>
+                                          </ul>
+                                      </div>
+                                      <h3 class="title-medium-dark size-md">
+                                          <a href="single-news-1.html">Hexagon is the new circle but we need to know in 2017</a>
+                                      </h3>
+                                  </div>
+                              </div>
+                              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                  <div class="mb-25 position-relative">
+                                      <a class="img-opacity-hover" href="single-news-2.html">
+                                          <img src="img/news/news36.jpg" alt="news" class="img-fluid width-100 mb-15">
+                                      </a>
+                                      <div class="topic-box-top-xs">
+                                          <div class="topic-box-sm color-cod-gray mb-20">Riding</div>
+                                      </div>
+                                      <div class="post-date-dark">
+                                          <ul>
+                                              <li>
+                                                  <span>
+                                                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                  </span>August 22, 2017</li>
+                                          </ul>
+                                      </div>
+                                      <h3 class="title-medium-dark size-md">
+                                          <a href="single-news-2.html">Keep a long-haul flight from ruining mood health...</a>
+                                      </h3>
+                                  </div>
+                              </div>
+                              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                  <div class="mb-25 position-relative">
+                                      <a class="img-opacity-hover" href="single-news-3.html">
+                                          <img src="img/news/news37.jpg" alt="news" class="img-fluid width-100 mb-15">
+                                      </a>
+                                      <div class="topic-box-top-xs">
+                                          <div class="topic-box-sm color-cod-gray mb-20">Cycling</div>
+                                      </div>
+                                      <div class="post-date-dark">
+                                          <ul>
+                                              <li>
+                                                  <span>
+                                                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                  </span>December 30, 2017</li>
+                                          </ul>
+                                      </div>
+                                      <h3 class="title-medium-dark size-md">
+                                          <a href="single-news-3.html">Keep a long-haul flight from ruining mood health...</a>
+                                      </h3>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row football">
+                      <div class="col-xl-4 col-lg-7 col-md-6 col-sm-12">
+                          <div class="img-overlay-70 img-scale-animate mb-30">
+                              <img src="img/news/news50.jpg" alt="news" class="img-fluid width-100">
+                              <div class="topic-box-top-lg">
+                                  <div class="topic-box-sm color-cod-gray mb-20">Football</div>
+                              </div>
+                              <div class="mask-content-lg">
+                                  <div class="post-date-light">
+                                      <ul>
+                                          <li>
+                                              <span>by</span>
+                                              <a href="single-news-1.html">Adams</a>
+                                          </li>
+                                          <li>
+                                              <span>
+                                                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                                              </span>May 30, 2017</li>
+                                      </ul>
+                                  </div>
+                                  <h2 class="title-medium-light size-lg">
+                                      <a href="single-news-1.html">10 Best Water Parks In Theya World you Have to...</a>
+                                  </h2>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xl-8 col-lg-5 col-md-6 col-sm-12">
+                          <div class="row keep-items-4-md">
+                              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                  <div class="mb-25 position-relative">
+                                      <a class="img-opacity-hover" href="single-news-1.html">
+                                          <img src="img/news/news32.jpg" alt="news" class="img-fluid width-100 mb-15">
+                                      </a>
+                                      <div class="topic-box-top-xs">
+                                          <div class="topic-box-sm color-cod-gray mb-20">Ragbe</div>
+                                      </div>
+                                      <div class="post-date-dark">
+                                          <ul>
+                                              <li>
+                                                  <span>
+                                                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                  </span>January 17, 2017</li>
+                                          </ul>
+                                      </div>
+                                      <h3 class="title-medium-dark size-md">
+                                          <a href="single-news-2.html">Brooke Shields Casts a New Dress Model</a>
+                                      </h3>
+                                  </div>
+                              </div>
+                              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                  <div class="mb-25 position-relative">
+                                      <a class="img-opacity-hover" href="single-news-1.html">
+                                          <img src="img/news/news33.jpg" alt="news" class="img-fluid width-100 mb-15">
+                                      </a>
+                                      <div class="topic-box-top-xs">
+                                          <div class="topic-box-sm color-cod-gray mb-20">Boxing</div>
+                                      </div>
+                                      <div class="post-date-dark">
+                                          <ul>
+                                              <li>
+                                                  <span>
+                                                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                  </span>February 10, 2017</li>
+                                          </ul>
+                                      </div>
+                                      <h3 class="title-medium-dark size-md">
+                                          <a href="single-news-2.html">Brooke Shields Casts a New Dress Model</a>
+                                      </h3>
+                                  </div>
+                              </div>
+                              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                  <div class="mb-25 position-relative">
+                                      <a class="img-opacity-hover" href="single-news-3.html">
+                                          <img src="img/news/news34.jpg" alt="news" class="img-fluid width-100 mb-15">
+                                      </a>
+                                      <div class="topic-box-top-xs">
+                                          <div class="topic-box-sm color-cod-gray mb-20">Diving</div>
+                                      </div>
+                                      <div class="post-date-dark">
+                                          <ul>
+                                              <li>
+                                                  <span>
+                                                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                  </span>March 06, 2017</li>
+                                          </ul>
+                                      </div>
+                                      <h3 class="title-medium-dark size-md">
+                                          <a href="single-news-3.html">Music Evolution, the Most Advanced Audio Mixer</a>
+                                      </h3>
+                                  </div>
+                              </div>
+                              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                  <div class="mb-25 position-relative">
+                                      <a class="img-opacity-hover" href="single-news-1.html">
+                                          <img src="img/news/news35.jpg" alt="news" class="img-fluid width-100 mb-15">
+                                      </a>
+                                      <div class="topic-box-top-xs">
+                                          <div class="topic-box-sm color-cod-gray mb-20">Cycling</div>
+                                      </div>
+                                      <div class="post-date-dark">
+                                          <ul>
+                                              <li>
+                                                  <span>
+                                                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                  </span>May 17, 2017</li>
+                                          </ul>
+                                      </div>
+                                      <h3 class="title-medium-dark size-md">
+                                          <a href="single-news-1.html">Hexagon is the new circle but we need to know in 2017</a>
+                                      </h3>
+                                  </div>
+                              </div>
+                              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                  <div class="mb-25 position-relative">
+                                      <a class="img-opacity-hover" href="single-news-2.html">
+                                          <img src="img/news/news36.jpg" alt="news" class="img-fluid width-100 mb-15">
+                                      </a>
+                                      <div class="topic-box-top-xs">
+                                          <div class="topic-box-sm color-cod-gray mb-20">Riding</div>
+                                      </div>
+                                      <div class="post-date-dark">
+                                          <ul>
+                                              <li>
+                                                  <span>
+                                                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                  </span>August 22, 2017</li>
+                                          </ul>
+                                      </div>
+                                      <h3 class="title-medium-dark size-md">
+                                          <a href="single-news-2.html">Keep a long-haul flight from ruining mood health...</a>
+                                      </h3>
+                                  </div>
+                              </div>
+                              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                  <div class="mb-25 position-relative">
+                                      <a class="img-opacity-hover" href="single-news-3.html">
+                                          <img src="img/news/news37.jpg" alt="news" class="img-fluid width-100 mb-15">
+                                      </a>
+                                      <div class="topic-box-top-xs">
+                                          <div class="topic-box-sm color-cod-gray mb-20">Cycling</div>
+                                      </div>
+                                      <div class="post-date-dark">
+                                          <ul>
+                                              <li>
+                                                  <span>
+                                                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                  </span>December 30, 2017</li>
+                                          </ul>
+                                      </div>
+                                      <h3 class="title-medium-dark size-md">
+                                          <a href="single-news-3.html">Keep a long-haul flight from ruining mood health...</a>
+                                      </h3>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row cycling">
+                      <div class="col-xl-4 col-lg-7 col-md-6 col-sm-12">
+                          <div class="img-overlay-70 img-scale-animate mb-30">
+                              <img src="img/news/news52.jpg" alt="news" class="img-fluid width-100">
+                              <div class="topic-box-top-lg">
+                                  <div class="topic-box-sm color-cod-gray mb-20">Cycling</div>
+                              </div>
+                              <div class="mask-content-lg">
+                                  <div class="post-date-light">
+                                      <ul>
+                                          <li>
+                                              <span>by</span>
+                                              <a href="single-news-1.html">Adams</a>
+                                          </li>
+                                          <li>
+                                              <span>
+                                                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                                              </span>May 30, 2017</li>
+                                      </ul>
+                                  </div>
+                                  <h2 class="title-medium-light size-lg">
+                                      <a href="single-news-1.html">10 Best Water Parks In Theya World you Have to...</a>
+                                  </h2>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xl-8 col-lg-5 col-md-6 col-sm-12">
+                          <div class="row keep-items-4-md">
+                              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                  <div class="mb-25 position-relative">
+                                      <a class="img-opacity-hover" href="single-news-1.html">
+                                          <img src="img/news/news32.jpg" alt="news" class="img-fluid width-100 mb-15">
+                                      </a>
+                                      <div class="topic-box-top-xs">
+                                          <div class="topic-box-sm color-cod-gray mb-20">Ragbe</div>
+                                      </div>
+                                      <div class="post-date-dark">
+                                          <ul>
+                                              <li>
+                                                  <span>
+                                                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                  </span>January 17, 2017</li>
+                                          </ul>
+                                      </div>
+                                      <h3 class="title-medium-dark size-md">
+                                          <a href="single-news-2.html">Brooke Shields Casts a New Dress Model</a>
+                                      </h3>
+                                  </div>
+                              </div>
+                              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                  <div class="mb-25 position-relative">
+                                      <a class="img-opacity-hover" href="single-news-1.html">
+                                          <img src="img/news/news33.jpg" alt="news" class="img-fluid width-100 mb-15">
+                                      </a>
+                                      <div class="topic-box-top-xs">
+                                          <div class="topic-box-sm color-cod-gray mb-20">Boxing</div>
+                                      </div>
+                                      <div class="post-date-dark">
+                                          <ul>
+                                              <li>
+                                                  <span>
+                                                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                  </span>February 10, 2017</li>
+                                          </ul>
+                                      </div>
+                                      <h3 class="title-medium-dark size-md">
+                                          <a href="single-news-2.html">Brooke Shields Casts a New Dress Model</a>
+                                      </h3>
+                                  </div>
+                              </div>
+                              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                  <div class="mb-25 position-relative">
+                                      <a class="img-opacity-hover" href="single-news-3.html">
+                                          <img src="img/news/news34.jpg" alt="news" class="img-fluid width-100 mb-15">
+                                      </a>
+                                      <div class="topic-box-top-xs">
+                                          <div class="topic-box-sm color-cod-gray mb-20">Diving</div>
+                                      </div>
+                                      <div class="post-date-dark">
+                                          <ul>
+                                              <li>
+                                                  <span>
+                                                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                  </span>March 06, 2017</li>
+                                          </ul>
+                                      </div>
+                                      <h3 class="title-medium-dark size-md">
+                                          <a href="single-news-3.html">Music Evolution, the Most Advanced Audio Mixer</a>
+                                      </h3>
+                                  </div>
+                              </div>
+                              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                  <div class="mb-25 position-relative">
+                                      <a class="img-opacity-hover" href="single-news-1.html">
+                                          <img src="img/news/news35.jpg" alt="news" class="img-fluid width-100 mb-15">
+                                      </a>
+                                      <div class="topic-box-top-xs">
+                                          <div class="topic-box-sm color-cod-gray mb-20">Cycling</div>
+                                      </div>
+                                      <div class="post-date-dark">
+                                          <ul>
+                                              <li>
+                                                  <span>
+                                                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                  </span>May 17, 2017</li>
+                                          </ul>
+                                      </div>
+                                      <h3 class="title-medium-dark size-md">
+                                          <a href="single-news-1.html">Hexagon is the new circle but we need to know in 2017</a>
+                                      </h3>
+                                  </div>
+                              </div>
+                              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                  <div class="mb-25 position-relative">
+                                      <a class="img-opacity-hover" href="single-news-2.html">
+                                          <img src="img/news/news36.jpg" alt="news" class="img-fluid width-100 mb-15">
+                                      </a>
+                                      <div class="topic-box-top-xs">
+                                          <div class="topic-box-sm color-cod-gray mb-20">Riding</div>
+                                      </div>
+                                      <div class="post-date-dark">
+                                          <ul>
+                                              <li>
+                                                  <span>
+                                                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                  </span>August 22, 2017</li>
+                                          </ul>
+                                      </div>
+                                      <h3 class="title-medium-dark size-md">
+                                          <a href="single-news-2.html">Keep a long-haul flight from ruining mood health...</a>
+                                      </h3>
+                                  </div>
+                              </div>
+                              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                  <div class="mb-25 position-relative">
+                                      <a class="img-opacity-hover" href="single-news-3.html">
+                                          <img src="img/news/news37.jpg" alt="news" class="img-fluid width-100 mb-15">
+                                      </a>
+                                      <div class="topic-box-top-xs">
+                                          <div class="topic-box-sm color-cod-gray mb-20">Cycling</div>
+                                      </div>
+                                      <div class="post-date-dark">
+                                          <ul>
+                                              <li>
+                                                  <span>
+                                                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                  </span>December 30, 2017</li>
+                                          </ul>
+                                      </div>
+                                      <h3 class="title-medium-dark size-md">
+                                          <a href="single-news-3.html">Keep a long-haul flight from ruining mood health...</a>
+                                      </h3>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
       </div>
-    </section><!-- End Why Us Section -->
-
-    <!-- ======= Features Section ======= -->
-    <section id="features" class="features">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-lg-3 col-md-4">
-            <div class="icon-box">
-              <i class="ri-store-line" style="color: #ffbb2c;"></i>
-              <h3><a href="">Lorem Ipsum</a></h3>
-            </div>
+  </section>
+  <!-- Latest News Area End Here -->
+  <!-- More News Area Start Here -->
+  <section class="bg-accent section-space-less30">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-md-12">
+                  <div class="ne-isotope">
+                      <div class="topic-border color-scampi mb-30">
+                          <div class="topic-box-lg color-scampi">More News</div>
+                          <div class="isotope-classes-tab isotop-btn">
+                              <a href="#" data-filter=".politics" class="current">Politics</a>
+                              <a href="#" data-filter=".fashion">Fashion</a>
+                              <a href="#" data-filter=".health">Health &amp; Fitness</a>
+                              <a href="#" data-filter=".travel">Travel</a>
+                              <a href="#" data-filter=".gadget">Gadget</a>
+                          </div>
+                          <div class="more-info-link">
+                              <a href="post-style-1.html">More
+                                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                              </a>
+                          </div>
+                      </div>
+                      <div class="featuredContainer">
+                          <div class="row politics">
+                              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12">
+                                  <div class="media media-none--lg mb-30">
+                                      <div class="position-relative width-40">
+                                          <a href="single-news-1.html" class="img-opacity-hover">
+                                              <img src="img/news/news38.jpg" alt="news" class="img-fluid">
+                                          </a>
+                                          <div class="topic-box-top-xs">
+                                              <div class="topic-box-sm color-cinnabar mb-20">Politics</div>
+                                          </div>
+                                      </div>
+                                      <div class="media-body p-mb-none-child media-margin30">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>by</span>
+                                                      <a href="single-news-1.html">Makr Willy</a>
+                                                  </li>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>May 30, 2017
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-semibold-dark size-lg mb-15">
+                                              <a href="single-news-1.html">Erik Jones has day he won’t soon forget as Denny backup at Bristol</a>
+                                          </h3>
+                                          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics,
+                                              a large ocean. A small river named Duden flows by their place and
+                                              ...
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12">
+                                  <div class="media media-none--lg mb-30">
+                                      <div class="position-relative width-40">
+                                          <a href="single-news-2.html" class="img-opacity-hover">
+                                              <img src="img/news/news39.jpg" alt="news" class="img-fluid">
+                                          </a>
+                                          <div class="topic-box-top-xs">
+                                              <div class="topic-box-sm color-web-orange mb-20">Food</div>
+                                          </div>
+                                      </div>
+                                      <div class="media-body p-mb-none-child media-margin30">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>by</span>
+                                                      <a href="single-news-1.html">Makr Willy</a>
+                                                  </li>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>May 30, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-semibold-dark size-lg mb-15">
+                                              <a href="single-news-2.html">TG G6 will have 13-mgpx cameras on the back Separated theytics.</a>
+                                          </h3>
+                                          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics,
+                                              a large ocean. A small river named Duden flows by their place and
+                                              ...
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12">
+                                  <div class="media media-none--lg mb-30">
+                                      <div class="position-relative width-40">
+                                          <a href="single-news-3.html" class="img-opacity-hover">
+                                              <img src="img/news/news40.jpg" alt="news" class="img-fluid">
+                                          </a>
+                                          <div class="topic-box-top-xs">
+                                              <div class="topic-box-sm color-azure-radiance mb-20">Sports</div>
+                                          </div>
+                                      </div>
+                                      <div class="media-body p-mb-none-child media-margin30">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>by</span>
+                                                      <a href="single-news-1.html">Makr Willy</a>
+                                                  </li>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>May 30, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-semibold-dark size-lg mb-15">
+                                              <a href="single-news-3.html">A taste of what we like this week at CookA like this current week</a>
+                                          </h3>
+                                          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics,
+                                              a large ocean. A small river named Duden flows by their place and
+                                              ...
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12">
+                                  <div class="media media-none--lg mb-30">
+                                      <div class="position-relative width-40">
+                                          <a href="single-news-1.html" class="img-opacity-hover">
+                                              <img src="img/news/news41.jpg" alt="news" class="img-fluid">
+                                          </a>
+                                          <div class="topic-box-top-xs">
+                                              <div class="topic-box-sm color-apple mb-20">Life Style</div>
+                                          </div>
+                                      </div>
+                                      <div class="media-body p-mb-none-child media-margin30">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>by</span>
+                                                      <a href="single-news-1.html">Makr Willy</a>
+                                                  </li>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>May 30, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-semibold-dark size-lg mb-15">
+                                              <a href="single-news-1.html">TG G6 will have 13-mgpx cameras on the back Separated theytics.</a>
+                                          </h3>
+                                          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics,
+                                              a large ocean. A small river named Duden flows by their place and
+                                              ...
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row fashion">
+                              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12">
+                                  <div class="media media-none--lg mb-30">
+                                      <div class="position-relative width-40">
+                                          <a href="single-news-2.html" class="img-opacity-hover">
+                                              <img src="img/news/news39.jpg" alt="news" class="img-fluid">
+                                          </a>
+                                          <div class="topic-box-top-xs">
+                                              <div class="topic-box-sm color-web-orange mb-20">Food</div>
+                                          </div>
+                                      </div>
+                                      <div class="media-body p-mb-none-child media-margin30">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>by</span>
+                                                      <a href="single-news-1.html">Makr Willy</a>
+                                                  </li>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>May 30, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-semibold-dark size-lg mb-15">
+                                              <a href="single-news-2.html">TG G6 will have 13-mgpx cameras on the back Separated theytics.</a>
+                                          </h3>
+                                          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics,
+                                              a large ocean. A small river named Duden flows by their place and
+                                              ...
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12">
+                                  <div class="media media-none--lg mb-30">
+                                      <div class="position-relative width-40">
+                                          <a href="single-news-3.html" class="img-opacity-hover">
+                                              <img src="img/news/news40.jpg" alt="news" class="img-fluid">
+                                          </a>
+                                          <div class="topic-box-top-xs">
+                                              <div class="topic-box-sm color-azure-radiance mb-20">Sports</div>
+                                          </div>
+                                      </div>
+                                      <div class="media-body p-mb-none-child media-margin30">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>by</span>
+                                                      <a href="single-news-1.html">Makr Willy</a>
+                                                  </li>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>May 30, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-semibold-dark size-lg mb-15">
+                                              <a href="single-news-3.html">A taste of what we like this week at CookA like this current week</a>
+                                          </h3>
+                                          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics,
+                                              a large ocean. A small river named Duden flows by their place and
+                                              ...
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12">
+                                  <div class="media media-none--lg mb-30">
+                                      <div class="position-relative width-40">
+                                          <a href="single-news-1.html" class="img-opacity-hover">
+                                              <img src="img/news/news38.jpg" alt="news" class="img-fluid">
+                                          </a>
+                                          <div class="topic-box-top-xs">
+                                              <div class="topic-box-sm color-cinnabar mb-20">Politics</div>
+                                          </div>
+                                      </div>
+                                      <div class="media-body p-mb-none-child media-margin30">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>by</span>
+                                                      <a href="single-news-1.html">Makr Willy</a>
+                                                  </li>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>May 30, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-semibold-dark size-lg mb-15">
+                                              <a href="single-news-1.html">Erik Jones has day he won’t soon forget as Denny backup at Bristol</a>
+                                          </h3>
+                                          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics,
+                                              a large ocean. A small river named Duden flows by their place and
+                                              ...
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12">
+                                  <div class="media media-none--lg mb-30">
+                                      <div class="position-relative width-40">
+                                          <a href="single-news-1.html" class="img-opacity-hover">
+                                              <img src="img/news/news41.jpg" alt="news" class="img-fluid">
+                                          </a>
+                                          <div class="topic-box-top-xs">
+                                              <div class="topic-box-sm color-apple mb-20">Life Style</div>
+                                          </div>
+                                      </div>
+                                      <div class="media-body p-mb-none-child media-margin30">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>by</span>
+                                                      <a href="single-news-1.html">Makr Willy</a>
+                                                  </li>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>May 30, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-semibold-dark size-lg mb-15">
+                                              <a href="single-news-1.html">TG G6 will have 13-mgpx cameras on the back Separated theytics.</a>
+                                          </h3>
+                                          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics,
+                                              a large ocean. A small river named Duden flows by their place and
+                                              ...
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row health">
+                              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12">
+                                  <div class="media media-none--lg mb-30">
+                                      <div class="position-relative width-40">
+                                          <a href="single-news-3.html" class="img-opacity-hover">
+                                              <img src="img/news/news40.jpg" alt="news" class="img-fluid">
+                                          </a>
+                                          <div class="topic-box-top-xs">
+                                              <div class="topic-box-sm color-azure-radiance mb-20">Sports</div>
+                                          </div>
+                                      </div>
+                                      <div class="media-body p-mb-none-child media-margin30">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>by</span>
+                                                      <a href="single-news-1.html">Makr Willy</a>
+                                                  </li>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>May 30, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-semibold-dark size-lg mb-15">
+                                              <a href="single-news-3.html">A taste of what we like this week at CookA like this current week</a>
+                                          </h3>
+                                          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics,
+                                              a large ocean. A small river named Duden flows by their place and
+                                              ...
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12">
+                                  <div class="media media-none--lg mb-30">
+                                      <div class="position-relative width-40">
+                                          <a href="single-news-1.html" class="img-opacity-hover">
+                                              <img src="img/news/news41.jpg" alt="news" class="img-fluid">
+                                          </a>
+                                          <div class="topic-box-top-xs">
+                                              <div class="topic-box-sm color-apple mb-20">Life Style</div>
+                                          </div>
+                                      </div>
+                                      <div class="media-body p-mb-none-child media-margin30">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>by</span>
+                                                      <a href="single-news-1.html">Makr Willy</a>
+                                                  </li>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>May 30, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-semibold-dark size-lg mb-15">
+                                              <a href="single-news-1.html">TG G6 will have 13-mgpx cameras on the back Separated theytics.</a>
+                                          </h3>
+                                          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics,
+                                              a large ocean. A small river named Duden flows by their place and
+                                              ...
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12">
+                                  <div class="media media-none--lg mb-30">
+                                      <div class="position-relative width-40">
+                                          <a href="single-news-1.html" class="img-opacity-hover">
+                                              <img src="img/news/news38.jpg" alt="news" class="img-fluid">
+                                          </a>
+                                          <div class="topic-box-top-xs">
+                                              <div class="topic-box-sm color-cinnabar mb-20">Politics</div>
+                                          </div>
+                                      </div>
+                                      <div class="media-body p-mb-none-child media-margin30">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>by</span>
+                                                      <a href="single-news-1.html">Makr Willy</a>
+                                                  </li>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>May 30, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-semibold-dark size-lg mb-15">
+                                              <a href="single-news-1.html">Erik Jones has day he won’t soon forget as Denny backup at Bristol</a>
+                                          </h3>
+                                          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics,
+                                              a large ocean. A small river named Duden flows by their place and
+                                              ...
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12">
+                                  <div class="media media-none--lg mb-30">
+                                      <div class="position-relative width-40">
+                                          <a href="single-news-2.html" class="img-opacity-hover">
+                                              <img src="img/news/news39.jpg" alt="news" class="img-fluid">
+                                          </a>
+                                          <div class="topic-box-top-xs">
+                                              <div class="topic-box-sm color-web-orange mb-20">Food</div>
+                                          </div>
+                                      </div>
+                                      <div class="media-body p-mb-none-child media-margin30">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>by</span>
+                                                      <a href="single-news-1.html">Makr Willy</a>
+                                                  </li>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>May 30, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-semibold-dark size-lg mb-15">
+                                              <a href="single-news-2.html">TG G6 will have 13-mgpx cameras on the back Separated theytics.</a>
+                                          </h3>
+                                          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics,
+                                              a large ocean. A small river named Duden flows by their place and
+                                              ...
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row travel">
+                              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12">
+                                  <div class="media media-none--lg mb-30">
+                                      <div class="position-relative width-40">
+                                          <a href="single-news-3.html" class="img-opacity-hover">
+                                              <img src="img/news/news40.jpg" alt="news" class="img-fluid">
+                                          </a>
+                                          <div class="topic-box-top-xs">
+                                              <div class="topic-box-sm color-azure-radiance mb-20">Sports</div>
+                                          </div>
+                                      </div>
+                                      <div class="media-body p-mb-none-child media-margin30">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>by</span>
+                                                      <a href="single-news-1.html">Makr Willy</a>
+                                                  </li>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>May 30, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-semibold-dark size-lg mb-15">
+                                              <a href="single-news-3.html">A taste of what we like this week at CookA like this current week</a>
+                                          </h3>
+                                          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics,
+                                              a large ocean. A small river named Duden flows by their place and
+                                              ...
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12">
+                                  <div class="media media-none--lg mb-30">
+                                      <div class="position-relative width-40">
+                                          <a href="single-news-1.html" class="img-opacity-hover">
+                                              <img src="img/news/news38.jpg" alt="news" class="img-fluid">
+                                          </a>
+                                          <div class="topic-box-top-xs">
+                                              <div class="topic-box-sm color-cinnabar mb-20">Politics</div>
+                                          </div>
+                                      </div>
+                                      <div class="media-body p-mb-none-child media-margin30">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>by</span>
+                                                      <a href="single-news-1.html">Makr Willy</a>
+                                                  </li>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>May 30, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-semibold-dark size-lg mb-15">
+                                              <a href="single-news-1.html">Erik Jones has day he won’t soon forget as Denny backup at Bristol</a>
+                                          </h3>
+                                          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics,
+                                              a large ocean. A small river named Duden flows by their place and
+                                              ...
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12">
+                                  <div class="media media-none--lg mb-30">
+                                      <div class="position-relative width-40">
+                                          <a href="single-news-2.html" class="img-opacity-hover">
+                                              <img src="img/news/news39.jpg" alt="news" class="img-fluid">
+                                          </a>
+                                          <div class="topic-box-top-xs">
+                                              <div class="topic-box-sm color-web-orange mb-20">Food</div>
+                                          </div>
+                                      </div>
+                                      <div class="media-body p-mb-none-child media-margin30">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>by</span>
+                                                      <a href="single-news-1.html">Makr Willy</a>
+                                                  </li>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>May 30, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-semibold-dark size-lg mb-15">
+                                              <a href="single-news-2.html">TG G6 will have 13-mgpx cameras on the back Separated theytics.</a>
+                                          </h3>
+                                          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics,
+                                              a large ocean. A small river named Duden flows by their place and
+                                              ...
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12">
+                                  <div class="media media-none--lg mb-30">
+                                      <div class="position-relative width-40">
+                                          <a href="single-news-1.html" class="img-opacity-hover">
+                                              <img src="img/news/news41.jpg" alt="news" class="img-fluid">
+                                          </a>
+                                          <div class="topic-box-top-xs">
+                                              <div class="topic-box-sm color-apple mb-20">Life Style</div>
+                                          </div>
+                                      </div>
+                                      <div class="media-body p-mb-none-child media-margin30">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>by</span>
+                                                      <a href="single-news-1.html">Makr Willy</a>
+                                                  </li>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>May 30, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-semibold-dark size-lg mb-15">
+                                              <a href="single-news-1.html">TG G6 will have 13-mgpx cameras on the back Separated theytics.</a>
+                                          </h3>
+                                          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics,
+                                              a large ocean. A small river named Duden flows by their place and
+                                              ...
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row gadget">
+                              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12">
+                                  <div class="media media-none--lg mb-30">
+                                      <div class="position-relative width-40">
+                                          <a href="single-news-1.html" class="img-opacity-hover">
+                                              <img src="img/news/news41.jpg" alt="news" class="img-fluid">
+                                          </a>
+                                          <div class="topic-box-top-xs">
+                                              <div class="topic-box-sm color-apple mb-20">Life Style</div>
+                                          </div>
+                                      </div>
+                                      <div class="media-body p-mb-none-child media-margin30">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>by</span>
+                                                      <a href="single-news-1.html">Makr Willy</a>
+                                                  </li>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>May 30, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-semibold-dark size-lg mb-15">
+                                              <a href="single-news-1.html">TG G6 will have 13-mgpx cameras on the back Separated theytics.</a>
+                                          </h3>
+                                          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics,
+                                              a large ocean. A small river named Duden flows by their place and
+                                              ...
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12">
+                                  <div class="media media-none--lg mb-30">
+                                      <div class="position-relative width-40">
+                                          <a href="single-news-1.html" class="img-opacity-hover">
+                                              <img src="img/news/news38.jpg" alt="news" class="img-fluid">
+                                          </a>
+                                          <div class="topic-box-top-xs">
+                                              <div class="topic-box-sm color-cinnabar mb-20">Politics</div>
+                                          </div>
+                                      </div>
+                                      <div class="media-body p-mb-none-child media-margin30">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>by</span>
+                                                      <a href="single-news-1.html">Makr Willy</a>
+                                                  </li>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>May 30, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-semibold-dark size-lg mb-15">
+                                              <a href="single-news-1.html">Erik Jones has day he won’t soon forget as Denny backup at Bristol</a>
+                                          </h3>
+                                          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics,
+                                              a large ocean. A small river named Duden flows by their place and
+                                              ...
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12">
+                                  <div class="media media-none--lg mb-30">
+                                      <div class="position-relative width-40">
+                                          <a href="single-news-2.html" class="img-opacity-hover">
+                                              <img src="img/news/news39.jpg" alt="news" class="img-fluid">
+                                          </a>
+                                          <div class="topic-box-top-xs">
+                                              <div class="topic-box-sm color-web-orange mb-20">Food</div>
+                                          </div>
+                                      </div>
+                                      <div class="media-body p-mb-none-child media-margin30">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>by</span>
+                                                      <a href="single-news-1.html">Makr Willy</a>
+                                                  </li>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>May 30, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-semibold-dark size-lg mb-15">
+                                              <a href="single-news-2.html">TG G6 will have 13-mgpx cameras on the back Separated theytics.</a>
+                                          </h3>
+                                          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics,
+                                              a large ocean. A small river named Duden flows by their place and
+                                              ...
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12">
+                                  <div class="media media-none--lg mb-30">
+                                      <div class="position-relative width-40">
+                                          <a href="single-news-3.html" class="img-opacity-hover">
+                                              <img src="img/news/news40.jpg" alt="news" class="img-fluid">
+                                          </a>
+                                          <div class="topic-box-top-xs">
+                                              <div class="topic-box-sm color-azure-radiance mb-20">Sports</div>
+                                          </div>
+                                      </div>
+                                      <div class="media-body p-mb-none-child media-margin30">
+                                          <div class="post-date-dark">
+                                              <ul>
+                                                  <li>
+                                                      <span>by</span>
+                                                      <a href="single-news-1.html">Makr Willy</a>
+                                                  </li>
+                                                  <li>
+                                                      <span>
+                                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                      </span>May 30, 2017</li>
+                                              </ul>
+                                          </div>
+                                          <h3 class="title-semibold-dark size-lg mb-15">
+                                              <a href="single-news-3.html">A taste of what we like this week at CookA like this current week</a>
+                                          </h3>
+                                          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics,
+                                              a large ocean. A small river named Duden flows by their place and
+                                              ...
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="ne-sidebar sidebar-break-md col-lg-4 col-md-12">
+                  <div class="sidebar-box">
+                      <div class="ne-banner-layout1 text-center">
+                          <a href="#">
+                              <img src="img/banner/banner6.jpg" alt="ad" class="img-fluid">
+                          </a>
+                      </div>
+                  </div>
+                  <div class="sidebar-box">
+                      <div class="topic-border color-cod-gray mb-30">
+                          <div class="topic-box-lg color-cod-gray">Newsletter</div>
+                      </div>
+                      <div class="newsletter-area bg-primary">
+                          <h2 class="title-medium-light size-xl">Subscribe to our mailing list to get the new updates!</h2>
+                          <img src="img/banner/newsletter.png" alt="newsletter" class="img-fluid mb-40">
+                          <p>Subscribe our newsletter to stay updated every moment</p>
+                          <div class="input-group stylish-input-group">
+                              <input type="text" placeholder="Enter your mail" class="form-control">
+                              <span class="input-group-addon">
+                                  <button type="submit">
+                                      <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                  </button>
+                              </span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
-              <h3><a href="">Dolor Sitema</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
-              <h3><a href="">Sed perspiciatis</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
-            <div class="icon-box">
-              <i class="ri-paint-brush-line" style="color: #e361ff;"></i>
-              <h3><a href="">Magni Dolores</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="">Nemo Enim</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-gradienter-line" style="color: #ffa76e;"></i>
-              <h3><a href="">Eiusmod Tempor</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-file-list-3-line" style="color: #11dbcf;"></i>
-              <h3><a href="">Midela Teren</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-price-tag-2-line" style="color: #4233ff;"></i>
-              <h3><a href="">Pira Neve</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="">Dirada Pack</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-disc-line" style="color: #b20969;"></i>
-              <h3><a href="">Moton Ideal</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-base-station-line" style="color: #ff5828;"></i>
-              <h3><a href="">Verdo Park</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-fingerprint-line" style="color: #29cc61;"></i>
-              <h3><a href="">Flavor Nivelanda</a></h3>
-            </div>
-          </div>
-        </div>
-
       </div>
-    </section><!-- End Features Section -->
-
-    <!-- ======= Popular Courses Section ======= -->
-    <section id="popular-courses" class="courses">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Courses</h2>
-          <p>Popular Courses</p>
-        </div>
-
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="course-item">
-              <img src="assets/img/course-1.jpg" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>Web Development</h4>
-                  <p class="price">$169</p>
-                </div>
-
-                <h3><a href="course-details.html">Website Design</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
-                  <div class="trainer-profile d-flex align-items-center">
-                    <img src="assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
-                    <span>Antonio</span>
+  </section>
+  <!-- More News Area End Here -->
+  <!-- Category Area Start Here -->
+  <section class="bg-body section-space-less2">
+      <div class="container">
+          <div class="row tab-space1">
+              <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                  <div class="category-box-layout1 overlay-dark-level-2 img-scale-animate text-center mb-2">
+                      <img src="img/category/ctg1.jpg" alt="news" class="img-fluid width-100">
+                      <div class="content p-30-r">
+                          <div class="ctg-title-xs">Music</div>
+                          <h3 class="title-regular-light size-lg">
+                              <a href="post-style-1.html">Microsoft and Autodesk help industrial designers…</a>
+                          </h3>
+                          <div class="post-date-light">
+                              <ul>
+                                  <li>
+                                      <span>
+                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                      </span>March 22, 2017</li>
+                              </ul>
+                          </div>
+                      </div>
                   </div>
-                  <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;50
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;65
-                  </div>
-                </div>
               </div>
-            </div>
-          </div> <!-- End Course Item-->
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div class="course-item">
-              <img src="assets/img/course-2.jpg" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>Marketing</h4>
-                  <p class="price">$250</p>
-                </div>
-
-                <h3><a href="course-details.html">Search Engine Optimization</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
-                  <div class="trainer-profile d-flex align-items-center">
-                    <img src="assets/img/trainers/trainer-2.jpg" class="img-fluid" alt="">
-                    <span>Lana</span>
+              <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                  <div class="category-box-layout1 overlay-dark-level-2 img-scale-animate text-center mb-2">
+                      <img src="img/category/ctg2.jpg" alt="news" class="img-fluid width-100">
+                      <div class="content p-30-r">
+                          <div class="ctg-title-xs">Education</div>
+                          <h3 class="title-regular-light size-lg">
+                              <a href="post-style-2.html">Apple’s new AirPods are feature rich but fugly</a>
+                          </h3>
+                          <div class="post-date-light">
+                              <ul>
+                                  <li>
+                                      <span>
+                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                      </span>April 20, 2017</li>
+                              </ul>
+                          </div>
+                      </div>
                   </div>
-                  <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;35
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;42
-                  </div>
-                </div>
               </div>
-            </div>
-          </div> <!-- End Course Item-->
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-            <div class="course-item">
-              <img src="assets/img/course-3.jpg" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>Content</h4>
-                  <p class="price">$180</p>
-                </div>
-
-                <h3><a href="course-details.html">Copywriting</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
-                  <div class="trainer-profile d-flex align-items-center">
-                    <img src="assets/img/trainers/trainer-3.jpg" class="img-fluid" alt="">
-                    <span>Brandon</span>
+              <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                  <div class="category-box-layout1 overlay-dark-level-2 img-scale-animate text-center mb-2">
+                      <img src="img/category/ctg3.jpg" alt="news" class="img-fluid width-100">
+                      <div class="content p-30-r">
+                          <div class="ctg-title-xs">Travel</div>
+                          <h3 class="title-regular-light size-lg">
+                              <a href="post-style-3.html">All People Gather Strategic Supplies of Vegetables</a>
+                          </h3>
+                          <div class="post-date-light">
+                              <ul>
+                                  <li>
+                                      <span>
+                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                      </span>May 03, 2017</li>
+                              </ul>
+                          </div>
+                      </div>
                   </div>
-                  <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;20
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;85
-                  </div>
-                </div>
               </div>
-            </div>
-          </div> <!-- End Course Item-->
-
-        </div>
-
+              <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                  <div class="category-box-layout1 overlay-dark-level-2 img-scale-animate text-center mb-2">
+                      <img src="img/category/ctg4.jpg" alt="news" class="img-fluid width-100">
+                      <div class="content p-30-r">
+                          <div class="ctg-title-xs">Sprts</div>
+                          <h3 class="title-regular-light size-lg">
+                              <a href="post-style-4.html">The Whole World is Expecting the Best iPhone Ever Created</a>
+                          </h3>
+                          <div class="post-date-light">
+                              <ul>
+                                  <li>
+                                      <span>
+                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                      </span>July 09, 2017</li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                  <div class="category-box-layout1 overlay-dark-level-2 img-scale-animate text-center mb-2">
+                      <img src="img/category/ctg5.jpg" alt="news" class="img-fluid width-100">
+                      <div class="content p-30-r">
+                          <div class="ctg-title-xs">Food</div>
+                          <h3 class="title-regular-light size-lg">
+                              <a href="post-style-1.html">Gym Fitness area coverded Governed this in 2017</a>
+                          </h3>
+                          <div class="post-date-light">
+                              <ul>
+                                  <li>
+                                      <span>
+                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                      </span>October 28, 2017</li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                  <div class="category-box-layout1 overlay-dark-level-2 img-scale-animate text-center mb-2">
+                      <img src="img/category/ctg6.jpg" alt="news" class="img-fluid width-100">
+                      <div class="content p-30-r">
+                          <div class="ctg-title-xs">Education</div>
+                          <h3 class="title-regular-light size-lg">
+                              <a href="post-style-2.html">What To Avoid When Planning Your Honeymoon</a>
+                          </h3>
+                          <div class="post-date-light">
+                              <ul>
+                                  <li>
+                                      <span>
+                                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                                      </span>December 19, 2017</li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
-    </section><!-- End Popular Courses Section -->
-
-    <!-- ======= Trainers Section ======= -->
-    <section id="trainers" class="trainers">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Trainers</h2>
-          <p>Our Professional Trainers</p>
-        </div>
-
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <img src="assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
-              <div class="member-content">
-                <h4>Walter White</h4>
-                <span>Web Development</span>
-                <p>
-                  Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
-                </p>
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <img src="assets/img/trainers/trainer-2.jpg" class="img-fluid" alt="">
-              <div class="member-content">
-                <h4>Sarah Jhinson</h4>
-                <span>Marketing</span>
-                <p>
-                  Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
-                </p>
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <img src="assets/img/trainers/trainer-3.jpg" class="img-fluid" alt="">
-              <div class="member-content">
-                <h4>William Anderson</h4>
-                <span>Content</span>
-                <p>
-                  Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
-                </p>
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Trainers Section -->
-
-  </main><!-- End #main -->
-  <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
-  <div id="preloader"></div>
+  </section>
+  <!-- Category Area End Here -->
