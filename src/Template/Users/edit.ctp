@@ -14,7 +14,7 @@
             <div class="col">
                 <?= $this->Form->postLink(__('Delete'),['action' => 'delete', $user->user_id]
                                                       ,['confirm' => __('Are you sure you want to delete # {0}?', $user->user_id), 'class'=>'btn btn-danger float-right']) ?>
-                <?= $this->Html->link(__('List Users'),['action' => 'index'], ['class'=>'btn btn-info float-right mr-2']) ?>
+                <?= $this->Html->link(__('List of users'),['action' => 'index'], ['class'=>'btn btn-info float-right mr-2']) ?>
             </div>
 
             <div class="table-responsive mt-3">

@@ -12,7 +12,7 @@
                 <h3 class="float-left mt-4">Add new User</h3>
             </div>
             <div class="col">
-                <?= $this->Html->link(__('List Users'), ['action' => 'index'], ['class'=>'btn btn-info float-right']) ?>
+                <?= $this->Html->link(__('List of users'), ['action' => 'index'], ['class'=>'btn btn-info float-right']) ?>
                 <?= $this->Html->link(__('Sign in'), ['action' => 'signin'], ['class'=>'btn btn-info float-right mr-2']) ?>
             </div>
         </div>

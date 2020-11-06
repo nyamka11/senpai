@@ -5,7 +5,7 @@
  */
 ?>
 
-<br/><br/><br/><br/>
+<br /><br /><br /><br />
 
 <div class="row container m-auto mt-5 pt-4">
     <div class="col-12 mb-5">
@@ -14,7 +14,7 @@
                 <h1 class="float-left">Мэдээ нэмэх</h1>
             </div>
             <div class="col">
-                <?= $this->Html->link(__('Мэдээний жагсаалт харах'), ['action' => 'list'], ['class'=>'btn btn-info float-right mb-4']) ?>
+                <?= $this->Html->link(__('View news list'), ['action' => 'list'], ['class'=>'btn btn-info float-right mb-4']) ?>
             </div>
         </div>
         <?= $this->Form->create($news) ?>
@@ -45,13 +45,8 @@
             ?>
             <div id="summernote"></div>
         </fieldset>
-        <br/>
-        <?= $this->Form->button(__('Нэмэх'),['class'=>'btn btn-success newsAdd']) ?>
+        <br />
+        <?= $this->Form->button(__('Add'),['class'=>'btn btn-success newsAdd']) ?>
         <?= $this->Form->end() ?>
     </div>
 </div>
-
-
-
-
-

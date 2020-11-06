@@ -15,10 +15,10 @@
                     ['action' => 'delete', $news->id],
                     ['confirm' => __('Are you sure you want to delete # {0}?'), 'class'=> 'btn btn-danger float-right']
                 )?>
-                <?= $this->Html->link(__('Мэдээний жагсаалт харах'), ['action' => 'list'], ['class'=>'btn btn-info float-right mr-2']) ?>
+                <?= $this->Html->link(__('View news list'), ['action' => 'list'], ['class'=>'btn btn-info float-right mr-2']) ?>
             </div>
         </div>
-        <br/><br/>
+        <br /><br />
         <?= $this->Form->create($news) ?>
         <fieldset>
             <?php
@@ -48,15 +48,15 @@
             ?>
             <div id="summernote"></div>
         </fieldset>
-        <br/>
-        <?= $this->Form->button(__('Хадаглах'),['class'=>'btn btn-success newsAdd']) ?>
+        <br />
+        <?= $this->Form->button(__('Save'),['class'=>'btn btn-success newsAdd']) ?>
         <?= $this->Form->end() ?>
     </div>
 </div>
 <script>
-    $(function(){
-        $('#summernote').summernote("code",$("#body").val());
+$(function() {
+    $('#summernote').summernote("code", $("#body").val());
 
 
-    });
+});
 </script>
