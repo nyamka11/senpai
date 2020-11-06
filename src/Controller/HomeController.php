@@ -37,7 +37,7 @@ class HomeController extends AppController  {
      *   be found
      * @throws \Cake\View\Exception\MissingTemplateException In debug mode.
      */
-    public function display()  {
+    public function index()  {
         
     }
 }

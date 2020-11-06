@@ -35,16 +35,17 @@
         <?= $this->Html->css('font-awesome.min.css') ?>
         <?= $this->Html->css('../vendor/OwlCarousel/owl.carousel.min.css') ?>
         <?= $this->Html->css('../vendor/OwlCarousel/owl.theme.default.min.css') ?>
+        <?= $this->Html->css('meanmenu.min.css') ?>
         <?= $this->Html->css('magnific-popup.css') ?>
         <?= $this->Html->css('hover-min.css') ?>
         <?= $this->Html->css('../style.css') ?>
         <?= $this->Html->css('ie-only.css') ?>
-        <?= $this->Html->css('meanmenu.min.css') ?>
+        <?= $this->Html->script('modernizr-2.8.3.min.js') ?>
     </head>
 
     <body>
         <div id="preloader"></div>
-            <div id="wrapper" class="wrapper">
+        <div id="wrapper" class="wrapper">
             <?= $this->element('header') ?> 
             <?= $this->Flash->render() ?>
             <?= $this->fetch('content') ?>
@@ -54,7 +55,6 @@
         </div>
 
         <!-- Vendor JS Files -->
-        <?= $this->Html->script('modernizr-2.8.3.min.js') ?>
         <?= $this->Html->script('jquery-2.2.4.min.js') ?>
         <?= $this->Html->script('plugins.js') ?>
         <?= $this->Html->script('popper.js') ?>
@@ -62,7 +62,6 @@
         <?= $this->Html->script('wow.min.js') ?>
         <?= $this->Html->script('../vendor/OwlCarousel/owl.carousel.min.js') ?>
         <?= $this->Html->script('jquery.meanmenu.min.js') ?>
-
         <?= $this->Html->script('jquery.scrollUp.min.js') ?>
         <?= $this->Html->script('jquery.counterup.min.js') ?>
         <?= $this->Html->script('waypoints.min.js') ?>
