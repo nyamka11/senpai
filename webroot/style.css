@@ -808,7 +808,7 @@ ul.item2-inline li:last-child {
   background-color: #e6e8eb;
 }
 .bg-primarytextcolor {
-  background-color: #111111;
+  background-color: #e53935;
 }
 .bg-primarytextcolor p {
   color: #ffffff;
@@ -3951,7 +3951,7 @@ div#wrapper.open > .offcanvas-mask {
   content: "";
   height: 100%;
   width: 100%;
-  background-color: #111111;
+  background-color: #e53935;
   z-index: -1;
   top: 0;
   left: 0;
