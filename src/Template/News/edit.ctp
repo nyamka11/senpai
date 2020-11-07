@@ -4,13 +4,17 @@
  * @var \App\Model\Entity\News $news
  */
 ?>
-<div class="row container m-auto mt-5 pt-5">
-    <div class="col-12 mb-5 pt-5 mt-4">
-        <div class="row">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+
+<div class="row container m-auto mt-5 pt-5 mb-5 pb-5">
+    <div class="col-12 mb-5 pt-5 mt-5">
+        <div class="row mt-5">
             <div class="col">
                 <h1 class="float-left">Мэдээ засах цонх</h1>
             </div>
-            <div class="col">
+            <div class="col pt-4">
                 <?= $this->Form->postLink( 'Устгах',
                     ['action' => 'delete', $news->id],
                     ['confirm' => __('Are you sure you want to delete # {0}?'), 'class'=> 'btn btn-danger float-right']
@@ -44,6 +48,8 @@
                     // 'empty'=>'Choose'
                     // 'value'=>2
                 ));
+                
+                echo $this->Form->input('summary',  array('type'=>'textarea','label' => "Товч утга",'class'=>"w-100 form-control mb-4"));
                 echo $this->Form->input('body',  array('type'=>'text','class'=>"w-100 form-control mb-4 d-none"));
             ?>
             <div id="summernote"></div>
@@ -53,6 +59,7 @@
         <?= $this->Form->end() ?>
     </div>
 </div>
+
 <script>
 $(function() {
     $('#summernote').summernote("code", $("#body").val());

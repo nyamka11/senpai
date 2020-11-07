@@ -7,7 +7,7 @@
                         <div class="col-lg-2 d-none d-lg-block">
                             <div class="logo-area">
                                 <a href="index.html">
-                                    <img src="img/logo.png" alt="logo" class="img-fluid">
+                                    <img src=<?= $this->Url->build('/img/logo.png'); ?> alt="logo" class="img-fluid">
                                 </a>
                             </div>
                         </div>

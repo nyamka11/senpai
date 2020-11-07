@@ -10,7 +10,7 @@
                               <li>
                                   <div class="media">
                                       <a href="post-style-1.html">
-                                          <img src="img/footer/post1.jpg" alt="post" class="img-fluid">
+                                          <img src=<?= $this->Url->image('footer/post1.jpg') ?> alt="post" class="img-fluid">
                                       </a>
                                       <div class="media-body">
                                           <h3 class="title-medium-light size-md mb-10">
@@ -30,7 +30,7 @@
                               <li>
                                   <div class="media">
                                       <a href="post-style-2.html">
-                                          <img src="img/footer/post2.jpg" alt="post" class="img-fluid">
+                                          <img src=<?= $this->Url->image('footer/post2.jpg') ?> alt="post" class="img-fluid">
                                       </a>
                                       <div class="media-body">
                                           <h3 class="title-medium-light size-md mb-10">
@@ -50,7 +50,7 @@
                               <li>
                                   <div class="media">
                                       <a href="post-style-3.html">
-                                          <img src="img/footer/post3.jpg" alt="post" class="img-fluid">
+                                          <img src=<?= $this->Url->image('footer/post3.jpg') ?> alt="post" class="img-fluid">
                                       </a>
                                       <div class="media-body">
                                           <h3 class="title-medium-light size-md mb-10">
@@ -124,63 +124,63 @@
                               <li>
                                   <a href="gallery-style1.html">
                                       <figure>
-                                          <img src="img/footer/post4.jpg" alt="post" class="img-fluid">
+                                          <img src=<?= $this->Url->image('footer/post1.jpg') ?> alt="post" class="img-fluid">
                                       </figure>
                                   </a>
                               </li>
                               <li>
                                   <a href="gallery-style2.html">
                                       <figure>
-                                          <img src="img/footer/post5.jpg" alt="post" class="img-fluid">
+                                          <img src=<?= $this->Url->image('footer/post1.jpg') ?> alt="post" class="img-fluid">
                                       </figure>
                                   </a>
                               </li>
                               <li>
                                   <a href="gallery-style1.html">
                                       <figure>
-                                          <img src="img/footer/post6.jpg" alt="post" class="img-fluid">
+                                          <img src=<?= $this->Url->image('footer/post1.jpg') ?> alt="post" class="img-fluid">
                                       </figure>
                                   </a>
                               </li>
                               <li>
                                   <a href="gallery-style2.html">
                                       <figure>
-                                          <img src="img/footer/post7.jpg" alt="post" class="img-fluid">
+                                          <img src=<?= $this->Url->image('footer/post1.jpg') ?> alt="post" class="img-fluid">
                                       </figure>
                                   </a>
                               </li>
                               <li>
                                   <a href="gallery-style1.html">
                                       <figure>
-                                          <img src="img/footer/post8.jpg" alt="post" class="img-fluid">
+                                          <img src=<?= $this->Url->image('footer/post1.jpg') ?> alt="post" class="img-fluid">
                                       </figure>
                                   </a>
                               </li>
                               <li>
                                   <a href="gallery-style2.html">
                                       <figure>
-                                          <img src="img/footer/post9.jpg" alt="post" class="img-fluid">
+                                          <img src=<?= $this->Url->image('footer/post1.jpg') ?> alt="post" class="img-fluid">
                                       </figure>
                                   </a>
                               </li>
                               <li>
                                   <a href="gallery-style1.html">
                                       <figure>
-                                          <img src="img/footer/post10.jpg" alt="post" class="img-fluid">
+                                          <img src=<?= $this->Url->image('footer/post10.jpg') ?> alt="post" class="img-fluid">
                                       </figure>
                                   </a>
                               </li>
                               <li>
                                   <a href="gallery-style2.html">
                                       <figure>
-                                          <img src="img/footer/post11.jpg" alt="post" class="img-fluid">
+                                          <img src=<?= $this->Url->image('footer/post1.jpg') ?> alt="post" class="img-fluid">
                                       </figure>
                                   </a>
                               </li>
                               <li>
                                   <a href="gallery-style1.html">
                                       <figure>
-                                          <img src="img/footer/post12.jpg" alt="post" class="img-fluid">
+                                          <img src=<?= $this->Url->image('footer/post1.jpg') ?> alt="post" class="img-fluid">
                                       </figure>
                                   </a>
                               </li>
@@ -195,7 +195,7 @@
               <div class="row">
                   <div class="col-12 text-center">
                       <a href="index.html" class="footer-logo img-fluid">
-                          <img src="img/logo.png" alt="logo" class="img-fluid">
+                          <img src=<?= $this->Url->image('logo.png') ?> alt="logo" class="img-fluid">
                       </a>
                       <ul class="footer-social">
                           <li>

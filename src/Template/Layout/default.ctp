@@ -41,6 +41,7 @@
         <?= $this->Html->css('../style.css') ?>
         <?= $this->Html->css('ie-only.css') ?>
         <?= $this->Html->script('modernizr-2.8.3.min.js') ?>
+        <?= $this->Html->script('jquery-2.2.4.min.js') ?>
     </head>
 
     <body>
@@ -55,7 +56,7 @@
         </div>
 
         <!-- Vendor JS Files -->
-        <?= $this->Html->script('jquery-2.2.4.min.js') ?>
+        
         <?= $this->Html->script('plugins.js') ?>
         <?= $this->Html->script('popper.js') ?>
         <?= $this->Html->script('bootstrap.min.js') ?>
