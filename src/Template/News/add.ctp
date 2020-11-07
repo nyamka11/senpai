@@ -9,9 +9,9 @@
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 
-<div class="row container m-auto mt-5 mb-5 pt-4">
-    <div class="col-12 mb-5 mt-5 pt-5">
-        <div class="row mt-5 mb-5 pb-5 pt-5">
+<div class="row container m-auto mt-5 mb-5">
+    <div class="col-12 mb-5 mt-5">
+        <div class="row mb-5 pb-5">
             <div class="col">
                 <h3 class="float-left"><?=h("Шинэ мэдээ нэмэх")?></h3>
             </div>
@@ -22,8 +22,8 @@
         <?= $this->Form->create($news) ?>
         <fieldset>
             <?php
-                echo $this->Form->input('title',  array('type'=>'text','label' => "Гарчиг",'class'=>"w-100 form-control mb-4 form-control-lg"));
-                echo $this->Form->input('placeoforigin',  array('type'=>'text','label' => "Эх сурвалж",'class'=>"w-100 form-control mb-4 form-control-lg"));
+                echo $this->Form->input('title',  array('type'=>'text','label' => "Гарчиг",'class'=>"w-100 form-control mb-5 form-control-lg"));
+                echo $this->Form->input('placeoforigin',  array('type'=>'text','label' => "Эх сурвалж",'class'=>"w-100 form-control mb-5 form-control-lg"));
                 echo $this->Form->input('category', array(
                     'type'=>'select',
                     'label'=>'Бүлэг',
@@ -39,14 +39,16 @@
                         "Түүх"=>"Түүх",
                         "Танин мэдэхүй"=>"Танин мэдэхүй"
                     ),
-                    'class'=>"w-100 form-control mb-4 form-control-lg",
+                    'class'=>"w-100 form-control mb-5 form-control-lg",
                     'style'=>"height:33px"
                     // 'empty'=>'Choose'
                     // 'value'=>2
                 ));
-                echo $this->Form->input('summary',  array('type'=>'textarea','label' => "Товч утга",'class'=>"w-100 form-control mb-4"));
-                echo $this->Form->input('body',  array('type'=>'text','class'=>"w-100 form-control mb-4 d-none"));
+                echo $this->Form->input('summary',  array('type'=>'textarea','label' => "Товч агуулга",'class'=>"w-100 form-control mb-5"));
             ?>
+            <input type="text" id="body" name="body" class="w-100 form-control mb-4 d-none" />
+            <input type="text" id="image" name="image" class="w-100 form-control mb-4 d-none" />
+
             <div id="summernote"></div>
         </fieldset>
         <br />
@@ -59,8 +61,16 @@
 <script>
     $(document).ready(function()  {
         $('#summernote').summernote({
-            height: 700,
-            tabsize: 2
+            tabsize: 2,
+            height: 1000,
+            callbacks: {
+                onBlur: function()  {
+                    let dataCode = $('#summernote').summernote('code');
+                    $('#body').val(dataCode);
+                    let imgStr = $('.note-editable img:first').attr('src');
+                    $("#image").val(imgStr);
+                }
+            }
         });
     });
 </script>

@@ -234,7 +234,8 @@
                               </a>
                           </li>
                       </ul>
-                      <p>© 2017 newsedge Designed by RadiusTheme. All Rights Reserved</p>
+                      <p></p>
+                      <p>© 2020 SENPAI.MN All Rights Reserved</p>
                   </div>
               </div>
           </div>

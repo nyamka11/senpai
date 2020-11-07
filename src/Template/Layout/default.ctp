@@ -48,6 +48,7 @@
         <div id="preloader"></div>
         <div id="wrapper" class="wrapper">
             <?= $this->element('header') ?> 
+            <?= $this->element('topStories') ?> 
             <?= $this->Flash->render() ?>
             <?= $this->fetch('content') ?>
             <?= $this->element('footer') ?>

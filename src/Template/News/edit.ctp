@@ -8,9 +8,9 @@
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 
-<div class="row container m-auto mt-5 pt-5 mb-5 pb-5">
-    <div class="col-12 mb-5 pt-5 mt-5">
-        <div class="row mt-5">
+<div class="row container m-auto mt-5 mb-5 pb-5">
+    <div class="col-12 mb-5 mt-5">
+        <div class="row">
             <div class="col">
                 <h1 class="float-left">Мэдээ засах цонх</h1>
             </div>
@@ -44,13 +44,15 @@
                         "Түүх"=>"Түүх",
                         "Танин мэдэхүй"=>"Танин мэдэхүй"
                     ),
-                    'class'=>"w-100 form-control mb-4"
+                    'class'=>"w-100 form-control mb-4",
+                    'style'=>"height:33px"
                     // 'empty'=>'Choose'
                     // 'value'=>2
                 ));
-                
-                echo $this->Form->input('summary',  array('type'=>'textarea','label' => "Товч утга",'class'=>"w-100 form-control mb-4"));
+
+                echo $this->Form->input('summary',  array('type'=>'textarea','label' => "Товч агуулга",'class'=>"w-100 form-control mb-4"));
                 echo $this->Form->input('body',  array('type'=>'text','class'=>"w-100 form-control mb-4 d-none"));
+                echo $this->Form->input('image',  array('type'=>'text','class'=>"w-100 form-control mb-4"));
             ?>
             <div id="summernote"></div>
         </fieldset>
@@ -62,8 +64,21 @@
 
 <script>
 $(function() {
-    $('#summernote').summernote("code", $("#body").val());
+    $('#summernote').summernote({   
+        tabsize: 2,
+        height: 1000,
+        callbacks: {
+            onBlur: function()  {
+                console.log("datadd");
+                let dataCode = $('#summernote').summernote('code');
+                $('#body').val(dataCode);
+                let imgStr = $('.note-editable img:first').attr('src');
+                $("#editForm #image").val(imgStr);
+            }
+        }
+    });
 
-
+    let dataCode = $("#body").val();
+    $('#summernote').summernote("code", dataCode);
 });
 </script>
