@@ -2,8 +2,12 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-use Cake\I18n\I18n; 
-
+use Cake\I18n\I18n;
+use Cake\Mailer\Email;
+use Cake\Auth\DefaultPasswordHasher;
+use Cake\Utility\Security;
+use Cake\ORM\TableRegistry;
+use Illuminate\Http\Request;
 /**
  * Users Controller
  *
@@ -13,11 +17,53 @@ use Cake\I18n\I18n;
  */
 class UsersController extends AppController  {
 
-    public function index()  {
+    public function list()  {
         I18n::setLocale('mn_MN'); 
         $users = $this->paginate($this->Users);
 
         $this->set(compact('users'));
+    }
+
+    public function login()  {
+        if($this->request->is('post'))  {
+            $user = $this->Auth->identify();
+            $this->viewBuilder()->setLayout(false);
+
+            if($user)  {
+                $this->Auth->setUser($user);
+                return $this->redirect($this->Auth->redirectUrl());
+            }
+            $this->Flash->error('Your username or password is incorrect');
+        }
+    }
+
+    public function logout() {
+        return $this->redirect($this->Auth->logout());
+    }
+
+    public function register()  {
+        if($this->request->is('post'))  {
+            $usersTable = tableRegistry::get('Users');
+            $user = $usersTable -> newEntity();
+
+            $hasher = new DefaultPasswordHasher();
+            $myname = $this->request->getData('name');
+            $myemail = $this->request->getData('email');
+            $mypass = $this->request->getData('password');
+           
+
+            $user->username = $myname;
+            $user->email = $myemail;
+            $user->password = $hasher->hash($mypass);
+            $user->ins_date = time();
+
+            if($usersTable->save($user))  {
+                $this->Flash->set('Амжилттай бүртгэгдлээ', ['element'=>'success']);
+            }
+            else {
+                $this->Flash->set('Алдаа гарлаа дахин оролдоно уу', ['element'=>'error']);
+            }
+        }
     }
 
     public function view($id = null)  {
