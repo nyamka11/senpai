@@ -2,8 +2,12 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-use Cake\I18n\I18n; 
-
+use Cake\I18n\I18n;
+use Cake\Mailer\Email;
+use Cake\Auth\DefaultPasswordHasher;
+use Cake\Utility\Security;
+use Cake\ORM\TableRegistry;
+use Illuminate\Http\Request;
 /**
  * Users Controller
  *
@@ -11,30 +15,58 @@ use Cake\I18n\I18n;
  *
  * @method \App\Model\Entity\User[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
-class UsersController extends AppController
-{
-    /**
-     * Index method
-     *
-     * @return \Cake\Http\Response|null
-     */
-    public function index()
-    {
+class UsersController extends AppController  {
+
+    public function list()  {
         I18n::setLocale('mn_MN'); 
         $users = $this->paginate($this->Users);
 
         $this->set(compact('users'));
     }
 
-    /**
-     * View method
-     *
-     * @param string|null $id User id.
-     * @return \Cake\Http\Response|null
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function view($id = null)
-    {
+    public function login()  {
+        if($this->request->is('post'))  {
+            $user = $this->Auth->identify();
+            $this->viewBuilder()->setLayout(false);
+
+            if($user)  {
+                $this->Auth->setUser($user);
+                return $this->redirect($this->Auth->redirectUrl());
+            }
+            $this->Flash->error('Your username or password is incorrect');
+        }
+    }
+
+    public function logout() {
+        return $this->redirect($this->Auth->logout());
+    }
+
+    public function register()  {
+        if($this->request->is('post'))  {
+            $usersTable = tableRegistry::get('Users');
+            $user = $usersTable -> newEntity();
+
+            $hasher = new DefaultPasswordHasher();
+            $myname = $this->request->getData('name');
+            $myemail = $this->request->getData('email');
+            $mypass = $this->request->getData('password');
+           
+
+            $user->username = $myname;
+            $user->email = $myemail;
+            $user->password = $hasher->hash($mypass);
+            $user->ins_date = time();
+
+            if($usersTable->save($user))  {
+                $this->Flash->set('Амжилттай бүртгэгдлээ', ['element'=>'success']);
+            }
+            else {
+                $this->Flash->set('Алдаа гарлаа дахин оролдоно уу', ['element'=>'error']);
+            }
+        }
+    }
+
+    public function view($id = null)  {
         I18n::setLocale('mn_MN'); 
         $user = $this->Users->get($id, [
             'contain' => [],
@@ -43,13 +75,7 @@ class UsersController extends AppController
         $this->set('user', $user);
     }
 
-    /**
-     * Add method
-     *
-     * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
-     */
-    public function add()
-    {
+    public function add()  {
         I18n::setLocale('mn_MN'); 
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
@@ -64,15 +90,7 @@ class UsersController extends AppController
         $this->set(compact('user'));
     }
 
-    /**
-     * Edit method
-     *
-     * @param string|null $id User id.
-     * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function edit($id = null)
-    {
+    public function edit($id = null)  {
         I18n::setLocale('mn_MN'); 
         $user = $this->Users->get($id, [
             'contain' => [],
@@ -89,15 +107,7 @@ class UsersController extends AppController
         $this->set(compact('user'));
     }
 
-    /**
-     * Delete method
-     *
-     * @param string|null $id User id.
-     * @return \Cake\Http\Response|null Redirects to index.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function delete($id = null)
-    {
+    public function delete($id = null)  {
         I18n::setLocale('mn_MN'); 
         $this->request->allowMethod(['post', 'delete']);
         $user = $this->Users->get($id);
@@ -110,13 +120,7 @@ class UsersController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
-    /**
-     * Sign up method
-     *
-     * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
-     */
-    public function signup($id = null) 
-    {
+    public function signup($id = null)  {
         I18n::setLocale('mn_MN'); 
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
@@ -131,13 +135,7 @@ class UsersController extends AppController
         $this->set(compact('user'));
     }
 
-    /**
-     * Sign in method
-     *
-     * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
-     */
-    public function signin($id = null)
-    {
+    public function signin($id = null)  {
         I18n::setLocale('mn_MN'); 
     }
 }

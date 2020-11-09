@@ -37,8 +37,7 @@ class AppController extends Controller
      *
      * @return void
      */
-    public function initialize()
-    {
+    public function initialize()  {
         parent::initialize();
 
         $this->loadComponent('RequestHandler', [
@@ -46,10 +45,57 @@ class AppController extends Controller
         ]);
         $this->loadComponent('Flash');
 
+        $this->loadComponent('Auth',  [
+            'authenticate' => [
+                'Form'=> [
+                    'fields' => ['username'=>'username','password'=>'password'],
+                    'userModel' => 'Users'
+                ]
+            ],
+            'loginRedirect' => [
+                'controller' => 'News',
+                'action' => 'list'
+            ],
+            'logoutRedirect' => [
+                'controller' => 'Users',
+                'action' => 'login'
+            ],
+            'storage'=>'Session'
+            ]
+        );
+
         /*
          * Enable the following component for recommended CakePHP security settings.
          * see https://book.cakephp.org/3/en/controllers/components/security.html
          */
         //$this->loadComponent('Security');
     }
+
+    public function beforeFilter(event $event)  {
+        parent::beforeFilter($event);
+          $this->Auth->allow([
+            'verification', 
+            'register', 
+            'logout', 
+            'forgotpassword',
+            'resetpassword',
+            'index',
+            'view',
+        ]);
+    }
+
+    public function beforeRender(Event $event)  {
+        parent::beforeFilter($event);
+        $this->set('userData', $this->Auth->user());
+    }
+
+    // public function isAuthorized($user)  {
+    //    //admin full akses
+    //     if(isset($user['Role']) && $user['Role'] === 'Administrator')  {
+    //         return true;
+    //     } 
+    //     else  {
+	//         return false;
+	//     }
+    // }
 }

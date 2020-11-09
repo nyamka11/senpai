@@ -1,6 +1,6 @@
 
 <?php
-    $newsData = [];
+    $newsData = ['Дэлхийд','Эрүүл мэнд'];
     foreach($news as $item)  {
         if($item->category == "Дэлхийд")  {
             $newsData['Дэлхийд'] = array($item);
