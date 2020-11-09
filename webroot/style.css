@@ -809,6 +809,7 @@ ul.item2-inline li:last-child {
 }
 .bg-primarytextcolor {
   background-color: #e53935;
+  background-color: black;
 }
 .bg-primarytextcolor p {
   color: #ffffff;

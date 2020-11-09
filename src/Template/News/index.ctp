@@ -9,6 +9,14 @@
         if($item->category == "Эрүүл мэнд")  {
             $newsData['Эрүүл мэнд'] = array($item);
         }
+
+        if($item->category == "Улс төр")  {
+            $newsData['Улс төр'] = array($item);
+        }
+
+        if($item->category == "Нийгэм")  {
+            $newsData['Нийгэм'] = array($item);
+        }
     }
 ?>
 
@@ -71,9 +79,9 @@
                     <div class="col-sm-6 col-12">
                         <div class="img-overlay-70 img-scale-animate mb-2">
                             <div class="mask-content-sm">
-                                <div class="topic-box-sm color-apple mb-10">Fashion</div>
+                                <div class="topic-box-sm color-apple mb-10">Улс төр</div>
                                 <h3 class="title-medium-light">
-                                    <a href="single-news-3.html">Magnificent Image shaper dam bridge taking </a>
+                                    <a href="news/view/<?= $newsData['Улс төр'][0]->id ?>" ><?= $newsData['Улс төр'][0]->title ?></a>
                                 </h3>
                             </div>
                             <img src="img/news/news3.jpg" alt="news" class="img-fluid width-100">
@@ -82,9 +90,9 @@
                     <div class="col-sm-6 col-12">
                         <div class="img-overlay-70 img-scale-animate mb-2">
                             <div class="mask-content-sm">
-                                <div class="topic-box-sm color-razzmatazz mb-10">Music</div>
+                                <div class="topic-box-sm color-razzmatazz mb-10">Нийгэм</div>
                                 <h3 class="title-medium-light">
-                                    <a href="single-news-1.html">The New hoover dam bridge Magnificen Imag.</a>
+                                    <a href="news/view/<?= $newsData['Нийгэм'][0]->id ?>" ><?= $newsData['Нийгэм'][0]->title ?></a>
                                 </h3>
                             </div>
                             <img src="img/news/news4.jpg" alt="news" class="img-fluid width-100">
