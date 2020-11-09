@@ -24,6 +24,7 @@ class UsersController extends AppController  {
     }
 
     public function login()  {
+        I18n::setLocale('mn_MN'); 
         if($this->request->is('post'))  {
             $user = $this->Auth->identify();
             // $this->viewBuilder()->setLayout(false);
@@ -46,7 +47,7 @@ class UsersController extends AppController  {
             $user = $usersTable -> newEntity();
 
             $hasher = new DefaultPasswordHasher();
-            $myname = $this->request->getData('name');
+            $myname = $this->request->getData('username');
             $myemail = $this->request->getData('email');
             $mypass = $this->request->getData('password');
            
@@ -77,11 +78,10 @@ class UsersController extends AppController  {
     public function add()  {
         I18n::setLocale('mn_MN'); 
         $user = $this->Users->newEntity();
-        if ($this->request->is('post')) {
+        if ($this->request->is('post'))  {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
-
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
@@ -98,7 +98,6 @@ class UsersController extends AppController  {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
-
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));

@@ -8,7 +8,7 @@
             <div class="card-body">
                 <?php echo $this->Form->create() ?>
                 <div class="form-group">
-                    <?php echo $this->Form->input('name',['class'=>'form-control','required']) ?>
+                    <?php echo $this->Form->input('username',['class'=>'form-control','required']) ?>
                 </div>
                 <div class="form-group">
                     <?php echo $this->Form->input('email',['class'=>'form-control','required']) ?>
