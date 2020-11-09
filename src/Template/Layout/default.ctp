@@ -40,6 +40,7 @@
         <?= $this->Html->css('hover-min.css') ?>
         <?= $this->Html->css('../style.css') ?>
         <?= $this->Html->css('ie-only.css') ?>
+        <?= $this->Html->css('senpai.css') ?>
         <?= $this->Html->script('modernizr-2.8.3.min.js') ?>
         <?= $this->Html->script('jquery-2.2.4.min.js') ?>
     </head>
@@ -49,6 +50,7 @@
         <div id="wrapper" class="wrapper">
             <?= $this->element('header') ?> 
             <?= $this->element('topStories') ?> 
+            <?= $this->element('statusInfo') ?> 
             <?= $this->Flash->render() ?>
             <?= $this->fetch('content') ?>
             <?= $this->element('footer') ?>

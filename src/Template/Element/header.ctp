@@ -80,7 +80,7 @@
                                         <a href="post-style-4.html">Fashion</a>
                                     </li>
                                     <?php if($userData != null)   { ?>
-                                        <li style="background-color:red;">
+                                        <li style="background-color:#b11919;">
                                             <a href="#">Admin pages</a>
                                             <ul class="ne-dropdown-menu">
                                                 <li>
@@ -108,31 +108,31 @@
                                     </form>
                                 </li>
                                 <li>
-                                    <!-- <button type="button" class="login-btn">
-                                        <i class="fa fa-user" aria-hidden="true"></i>Sign in'
-                                    </button> -->
+                                  
 
                                     <?php
-                                        if($userData == null) {echo $this->Html->link(
-                                                'Sign in',['controller'=>'Users','action'=>'login'],['class'=>'login-btn']
-                                            );
+                                        if($userData == null) {
+                                            echo 
+                                            "<a href=".$this->Url->build(array('controller'=>'Users','action'=>'login'))." class='login-btn'>
+                                                <button type='button' class='login-btn'>
+                                                    <i class='fa fa-user' aria-hidden='true'></i>Sign in
+                                                </button>
+                                            </a>";
                                         }
                                         else  {
-                                            echo $this->Html->link(
-                                                'logout',['controller'=>'Users','action'=>'logout'],['class'=>'login-btn']
-                                            );
+                                            echo 
+                                            "<a href=".$this->Url->build(array('controller'=>'Users','action'=>'logout'))." class='login-btn'>
+                                                <button type='button' class='login-btn'>
+                                                    ".$userData['username']."
+                                                </button>
+                                            </a>";
+                                            
+                                            
+                                            
 
-                                            // echo 
-                                            // '<div class="btn-group">
-                                            //     <button type="button" class="btn btn-danger dropdown-toggle btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            //         '.$userData['username'].'
-                                            //     </button>
-                                            //     <div class="dropdown-menu btn-lg">
-                                            //         <a class="dropdown-item btn-lg" href='.$this->Url->build(array('controller'=>'Users','action'=>'logout')).'>logout</a>
-                                            //     </div>
-                                            // </div>';
                                         }
-                                    ?>
+                                        
+                                    ?>                                        
                                 </li>
                                 <li>
                                     <div id="side-menu-trigger" class="offcanvas-menu-btn">
