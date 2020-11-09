@@ -68,29 +68,6 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#">Pages</a>
-                                        <ul class="ne-dropdown-menu">
-                                            <li>
-                                                <a href="author-post.html">Author Post Page</a>
-                                            </li>
-                                            <li>
-                                                <a href="archive.html">Archive Page</a>
-                                            </li>
-                                            <li>
-                                                <a href="gallery-style-1.html">Gallery Style 1</a>
-                                            </li>
-                                            <li>
-                                                <a href="gallery-style-2.html">Gallery Style 2</a>
-                                            </li>
-                                            <li>
-                                                <a href="404.html">404 Error Page</a>
-                                            </li>
-                                            <li>
-                                                <a href="contact.html">Contact Page</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
                                         <a href="post-style-1.html">Politics</a>
                                     </li>
                                     <li>
@@ -102,6 +79,19 @@
                                     <li>
                                         <a href="post-style-4.html">Fashion</a>
                                     </li>
+                                    <?php if($userData != null)   { ?>
+                                        <li style="background-color:red;">
+                                            <a href="#">Admin pages</a>
+                                            <ul class="ne-dropdown-menu">
+                                                <li>
+                                                    <a href=<?= $this->Url->build(array('controller'=>'Users','action'=>'list')) ?> >Users control</a>
+                                                </li>
+                                                <li>
+                                                    <a href=<?= $this->Url->build(array('controller'=>'News','action'=>'list')) ?> >News control</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    <?php } ?>
                                 </ul>
                             </nav>
                         </div>
@@ -128,19 +118,19 @@
                                             );
                                         }
                                         else  {
-                                            // echo $this->Html->link(
-                                                // 'logout',['controller'=>'Users','action'=>'logout'],['class'=>'login-btn']
-                                            // );
+                                            echo $this->Html->link(
+                                                'logout',['controller'=>'Users','action'=>'logout'],['class'=>'login-btn']
+                                            );
 
-                                            echo 
-                                            '<div class="btn-group">
-                                                <button type="button" class="btn btn-danger dropdown-toggle btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    '.$userData['username'].'
-                                                </button>
-                                                <div class="dropdown-menu btn-lg">
-                                                    <a class="dropdown-item btn-lg" href='.$this->Url->build(array('controller'=>'Users','action'=>'logout')).'>logout</a>
-                                                </div>
-                                            </div>';
+                                            // echo 
+                                            // '<div class="btn-group">
+                                            //     <button type="button" class="btn btn-danger dropdown-toggle btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            //         '.$userData['username'].'
+                                            //     </button>
+                                            //     <div class="dropdown-menu btn-lg">
+                                            //         <a class="dropdown-item btn-lg" href='.$this->Url->build(array('controller'=>'Users','action'=>'logout')).'>logout</a>
+                                            //     </div>
+                                            // </div>';
                                         }
                                     ?>
                                 </li>
