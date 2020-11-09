@@ -20,14 +20,13 @@ class UsersController extends AppController  {
     public function list()  {
         I18n::setLocale('mn_MN'); 
         $users = $this->paginate($this->Users);
-
         $this->set(compact('users'));
     }
 
     public function login()  {
         if($this->request->is('post'))  {
             $user = $this->Auth->identify();
-            $this->viewBuilder()->setLayout(false);
+            // $this->viewBuilder()->setLayout(false);
 
             if($user)  {
                 $this->Auth->setUser($user);
