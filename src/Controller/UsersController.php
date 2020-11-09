@@ -11,30 +11,16 @@ use Cake\I18n\I18n;
  *
  * @method \App\Model\Entity\User[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
-class UsersController extends AppController
-{
-    /**
-     * Index method
-     *
-     * @return \Cake\Http\Response|null
-     */
-    public function index()
-    {
+class UsersController extends AppController  {
+
+    public function index()  {
         I18n::setLocale('mn_MN'); 
         $users = $this->paginate($this->Users);
 
         $this->set(compact('users'));
     }
 
-    /**
-     * View method
-     *
-     * @param string|null $id User id.
-     * @return \Cake\Http\Response|null
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function view($id = null)
-    {
+    public function view($id = null)  {
         I18n::setLocale('mn_MN'); 
         $user = $this->Users->get($id, [
             'contain' => [],
@@ -43,13 +29,7 @@ class UsersController extends AppController
         $this->set('user', $user);
     }
 
-    /**
-     * Add method
-     *
-     * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
-     */
-    public function add()
-    {
+    public function add()  {
         I18n::setLocale('mn_MN'); 
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
@@ -64,15 +44,7 @@ class UsersController extends AppController
         $this->set(compact('user'));
     }
 
-    /**
-     * Edit method
-     *
-     * @param string|null $id User id.
-     * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function edit($id = null)
-    {
+    public function edit($id = null)  {
         I18n::setLocale('mn_MN'); 
         $user = $this->Users->get($id, [
             'contain' => [],
@@ -89,15 +61,7 @@ class UsersController extends AppController
         $this->set(compact('user'));
     }
 
-    /**
-     * Delete method
-     *
-     * @param string|null $id User id.
-     * @return \Cake\Http\Response|null Redirects to index.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function delete($id = null)
-    {
+    public function delete($id = null)  {
         I18n::setLocale('mn_MN'); 
         $this->request->allowMethod(['post', 'delete']);
         $user = $this->Users->get($id);
@@ -110,13 +74,7 @@ class UsersController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
-    /**
-     * Sign up method
-     *
-     * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
-     */
-    public function signup($id = null) 
-    {
+    public function signup($id = null)  {
         I18n::setLocale('mn_MN'); 
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
@@ -131,13 +89,7 @@ class UsersController extends AppController
         $this->set(compact('user'));
     }
 
-    /**
-     * Sign in method
-     *
-     * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
-     */
-    public function signin($id = null)
-    {
+    public function signin($id = null)  {
         I18n::setLocale('mn_MN'); 
     }
 }
