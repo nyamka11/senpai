@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\User $user
  */
 ?>
-<br /><br /><br />
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
 <div class="row  container m-auto mt-5 pt-4 mb-5">
     <div class="col-sm-12 shadow mb-5 p-5">
         <div class="row">

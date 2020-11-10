@@ -4,17 +4,16 @@
  * @var \App\Model\Entity\User[]|\Cake\Collection\CollectionInterface $users
  */
 ?>
-<br /><br /><br />
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
 <div class="row container m-auto mt-5 pt-4 mb-5">
-    <div class="col-12 shadow mb-5 p-5">
+    <div class="col-12 mb-5 p-5">
         <h3 class="float-left mt-4"><?=__('List of users')?></h3>
         <?= $this->Html->link(__('Add user'), ['action' => 'add'], ['class'=>'btn btn-info mt-5 float-right mb-4']) ?>
-        <table cellpadding="0" cellspacing="0" class="border w-100 table">
+        <table cellpadding="0" cellspacing="0" class="w-100 table">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col"><?= $this->Paginator->sort('user_id') ?></th>
-                    <th scope="col"><?= $this->Paginator->sort('user_name') ?></th>
-                    <th scope="col"><?= $this->Paginator->sort('password') ?></th>
+                    <th scope="col"><?= $this->Paginator->sort('username') ?></th>
                     <th scope="col"><?= $this->Paginator->sort('lastname') ?></th>
                     <th scope="col"><?= $this->Paginator->sort('firstname') ?></th>
                     <th scope="col"><?= $this->Paginator->sort('birthday') ?></th>
@@ -26,8 +25,7 @@
                 <?php foreach ($users as $user): ?>
                 <tr class="border">
                     <td><?= $this->Number->format($user->user_id) ?></td>
-                    <td><?= h($user->user_name) ?></td>
-                    <td><?= h($user->password) ?></td>
+                    <td><?= h($user->username) ?></td>
                     <td><?= h($user->lastname) ?></td>
                     <td><?= h($user->firstname) ?></td>
                     <td><?= h($user->birthday) ?></td>
