@@ -72,7 +72,6 @@ class AppController extends Controller
     }
 
     public function beforeFilter(event $event)  {
-        parent::beforeFilter($event);
           $this->Auth->allow([
             'verification', 
             'register', 
@@ -80,7 +79,7 @@ class AppController extends Controller
             'forgotpassword',
             'resetpassword',
             'index',
-            'view',
+            'view'
         ]);
     }
 

@@ -151,6 +151,11 @@ class UsersTable extends Table
             ->maxLength('operation', 30)
             ->allowEmptyString('operation');
 
+        $validator
+            ->scalar('token')
+            ->maxLength('token', 255)
+            ->allowEmptyString('token');
+
         return $validator;
     }
 

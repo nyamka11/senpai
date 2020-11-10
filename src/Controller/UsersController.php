@@ -66,6 +66,54 @@ class UsersController extends AppController  {
         }
     }
 
+    public function forgotpassword()  {
+        if($this->request->is('post'))  {
+            $myemail = $this->request->getData('email');
+            $mytoken = Security::hash(Security::randomBytes(25));
+    
+            $userTable = TableRegistry::get('Users');
+            $user = $userTable->find('all')->where(['email'=>$myemail])->first();
+            $user->password = '';
+            $user->token = $mytoken;
+
+            if($userTable->save($user))  {
+                $this->Flash->success('Нууц үг шинэчлэх холбоосыг таны ('.$myemail.') мэйл хаягт илгээсэн. Та мэйл хаягаа шалгана уу.');
+                Email::configTransport('mailtrap', [
+                    'host' => 'smtp.mailtrap.io',
+                    'port' => 2525,
+                    'username' => '507e5493f6ad0c',
+                    'password' => '855f891440d4c8',
+                    'className' => 'Smtp'
+                ]);
+
+                $email = new Email('default');
+                $email -> transport('mailtrap');
+                $email -> emailFormat('html');
+                $email -> from('unyamka@gmail.com', 'U.N');
+                $email -> subject('Шинэчлэгдсэн нууц үгээ баталгаажуулна уу');
+                $email -> to($myemail);
+                $email -> send(
+                    'Сайн байна уу '.$myemail.'<br/>Нууц үгээ шинэчлэхийн тулд доорх линк дээр дарна уу<br/>
+                    <a href="http://localhost:8765/users/resetpassword/'.$mytoken.'">Нууц үг солих</a>'
+                );
+            }
+        }
+    }
+
+    public function resetpassword($token)  {
+        if($this->request->is('post'))  {
+            $hasher = new DefaultPasswordHasher();
+            $mypass = $hasher->hash($this->request->getData('password'));
+
+            $userTable = TableRegistry::get('Users');
+            $user = $userTable->find('all')->where(['token'=>$token])->first();
+            $user->password =$mypass;
+            if($userTable->save($user))  {
+                return $this->redirect(['action'=>'login']);
+            }
+        }
+    }
+
     public function view($id = null)  {
         I18n::setLocale('mn_MN'); 
         $user = $this->Users->get($id, [

@@ -17,7 +17,8 @@
                     <?php echo $this->Form->input('password',['class'=>'form-control','required']) ?>
                 </div>
                 <?php
-                    echo $this->Form->button('Бүртгүүлэх',['class'=>'btn btn-primary']);
+                    echo $this->Form->button('Бүртгүүлэх',['class'=>'btn btn-primary mr-3']);
+                    echo $this->Html->link('Нэвтрэх цонхруу очих',['action'=>'login'],['class'=>'btn btn-success']);
                     echo $this->Form->end();
                 ?>
             </div>

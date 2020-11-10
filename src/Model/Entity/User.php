@@ -64,6 +64,7 @@ class User extends Entity
         'upd_date' => true,
         'upd_user_name' => true,
         'operation' => true,
+        'token' => true
     ];
 
     /**
