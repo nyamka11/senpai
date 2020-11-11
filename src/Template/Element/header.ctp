@@ -11,7 +11,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-xl-8 col-lg-7 position-static min-height-none">
+                    <div class="col-xl-7 col-lg-7 position-static min-height-none">
                         <div class="ne-main-menu">
                             <nav id="dropdown">
                                 <ul>
@@ -79,24 +79,11 @@
                                     <li>
                                         <a href="post-style-4.html">Fashion</a>
                                     </li>
-                                    <?php if($userData != null)   { ?>
-                                        <li style="background-color:#b11919;">
-                                            <a href="#">Admin pages</a>
-                                            <ul class="ne-dropdown-menu">
-                                                <li>
-                                                    <a href=<?= $this->Url->build(array('controller'=>'Users','action'=>'list')) ?> >Users control</a>
-                                                </li>
-                                                <li>
-                                                    <a href=<?= $this->Url->build(array('controller'=>'News','action'=>'list')) ?> >News control</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    <?php } ?>
                                 </ul>
                             </nav>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-lg-3 col-md-12 text-right position-static">
+                    <div class="col-xl-3 col-lg-3 col-md-12 position-static">
                         <div class="header-action-item">
                             <ul>
                                 <li>
@@ -108,11 +95,9 @@
                                     </form>
                                 </li>
                                 <li>
-                                  
-
                                     <?php
-                                        if($userData == null) {
-                                            echo 
+                                        if($userData == null)  {
+                                            echo
                                             "<a href=".$this->Url->build(array('controller'=>'Users','action'=>'login'))." class='login-btn'>
                                                 <button type='button' class='login-btn'>
                                                     <i class='fa fa-user' aria-hidden='true'></i>Sign in
@@ -121,18 +106,21 @@
                                         }
                                         else  {
                                             echo 
-                                            "<a href=".$this->Url->build(array('controller'=>'Users','action'=>'logout'))." class='login-btn'>
-                                                <button type='button' class='login-btn'>
-                                                    ".$userData['username']."
+                                            '<div class="btn-group">
+                                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    '.$userData['username'].'
                                                 </button>
-                                            </a>";
-                                            
-                                            
-                                            
-
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href='.$this->Url->build(array('controller'=>'Users','action'=>'view', $userData['user_id'])).' >Profile</a>
+                                                    <a class="dropdown-item" href='.$this->Url->build(array('controller'=>'News','action'=>'list')).' >News control</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" href='.$this->Url->build(array('controller'=>'Users','action'=>'logout')).'>Logout</a>
+                                                </div>
+                                            </div>';
                                         }
                                         
-                                    ?>                                        
+                                    ?>
+                                    
                                 </li>
                                 <li>
                                     <div id="side-menu-trigger" class="offcanvas-menu-btn">

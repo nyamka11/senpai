@@ -2954,7 +2954,7 @@ ul.header-social li a {
   box-shadow: inset 4px 0px 15px 2px rgba(255, 255, 255, 0.3);
 }
 .offcanvas-body-wrapper .offcanvas-main-body ul.offcanvas-nav {
-  margin-top: 40px;
+  margin-top: 40px !important;
 }
 .offcanvas-body-wrapper .offcanvas-main-body ul.offcanvas-nav > li {
   display: block;
