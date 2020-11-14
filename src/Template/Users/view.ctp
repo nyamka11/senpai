@@ -22,7 +22,7 @@
             <span><?= h($user->username) ?></span>
         </div>
     </div>
-    <div class="col-5 pl-5">
+    <div class="col-6 pl-5">
         <h3>Хэрэглэгчийн</h3>
         <br/>
         <span class="text-muted"><?= __('User Name') ?></span>
@@ -39,8 +39,21 @@
                 <p><?= h($user->lastname) !="" ? h($user->lastname) : "[?]" ?></p>
             </div>
         </div>
-        <span class="text-muted"><?= __('Birthday') ?></span>
-        <p><?= h($user->birthday) !="" ? h($user->birthday) : "[?]"  ?></p>
+
+        <div class="row">
+            <div class="col-6">
+                <span class="text-muted"><?= __('Birthday') ?></span>
+                <p><?= h($user->birthday) !="" ? h($user->birthday) : "[?]"  ?></p>
+            </div>
+            <div class="col-6">
+                <span class="text-muted"><?= __('Gender') ?></span>
+                <p><?php 
+                    $gender =array(""=>"[?]","M"=>"Эр","F"=>"Эм","I"=>"Бусад");
+                    echo $gender[$user->gender];
+                ?></p>
+            </div>
+        </div>
+
         <span class="text-muted"><?= __('Country') ?></span>
         <p><?= h($user->country) !="" ? h($user->country) : "[?]" ?></p>
         <span class="text-muted"><?= __('Postal') ?></span>

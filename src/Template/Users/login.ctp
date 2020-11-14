@@ -4,8 +4,15 @@
     <div class="col-md-4 pb-5 pt-5 mb-5">
         <?= $this->Flash->render() ?>
         <div class="card">
-            <h3 class="card-header m-0">Нэвтрэх</h3>
-            <div class="card-body">
+                <div class="card-body p-5">
+                <h3 class="m-0 p-2">Нэвтрэх</h3>
+                <br/>
+                <div class="text-center social-btn">
+                    <a href="#" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i> Sign in with <b>Facebook</b></a>
+                    <a href="#" class="btn btn-info btn-block"><i class="fa fa-twitter"></i> Sign in with <b>Twitter</b></a>
+                    <a href="#" class="btn btn-danger btn-block"><i class="fa fa-google"></i> Sign in with <b>Google</b></a>
+                </div>
+                <br/>
                 <?php echo $this->Form->create() ?>
                 <div class="form-group">
                     <?php echo $this->Form->input('username',['class'=>'form-control']) ?>

@@ -4,10 +4,10 @@ namespace App\Controller;
 use App\Controller\AppController;
 use Cake\I18n\I18n;
 use Cake\Mailer\Email;
-use Cake\Auth\DefaultPasswordHasher;
 use Cake\Utility\Security;
 use Cake\ORM\TableRegistry;
 use Illuminate\Http\Request;
+
 /**
  * Users Controller
  *
@@ -46,15 +46,13 @@ class UsersController extends AppController  {
             $usersTable = tableRegistry::get('Users');
             $user = $usersTable -> newEntity();
 
-            $hasher = new DefaultPasswordHasher();
             $myname = $this->request->getData('username');
             $myemail = $this->request->getData('email');
             $mypass = $this->request->getData('password');
-           
 
             $user->username = $myname;
             $user->email = $myemail;
-            $user->password = $hasher->hash($mypass);
+            $user->password = $mypass;
             $user->ins_date = time();
 
             if($usersTable->save($user))  {
@@ -142,6 +140,7 @@ class UsersController extends AppController  {
         $user = $this->Users->get($id, [
             'contain' => [],
         ]);
+
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             $user->upd_date = time();
