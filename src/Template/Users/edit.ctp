@@ -9,15 +9,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css" integrity="sha512-2eMmukTZtvwlfQoG8ztapwAH5fXaQBzaMqdljLopRSA0i6YKM8kBAOrSSykxu9NN9HrtD45lIqfONLII2AFL/Q==" crossorigin="anonymous" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.js" integrity="sha512-vUJTqeDCu0MKkOhuI83/MEX5HSNPW+Lw46BA775bAWIp1Zwgz3qggia/t2EnSGB9GoS2Ln6npDmbJTdNhHy1Yw==" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css" integrity="sha512-zxBiDORGDEAYDdKLuYU9X/JaJo/DPzE42UubfBw9yg8Qvb2YRRIQ8v4KsGHOx2H1/+sdSXyXxLXv5r7tHc9ygg==" crossorigin="anonymous" />
-<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 
 <div class="row container m-auto border">
     <div class="col-3 mt-30 mb-30" style="border-right:1px solid #cacaca">
         <div class="row">
             <div class="col-12 d-flex justify-content-center">
                 <?php
-                    $photoUrl = "https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG";
+                    $photoUrl = $this->Url->image('noneProfile.png');
                     if($user->profile_photo != "")  {
                         $photoUrl = $user->profile_photo;
                     }
@@ -165,7 +163,7 @@
         $('#deletePhoto').click(function()  {
             $(".upi").val("");
             $("#upload_image").val("");
-            $('.img-thumbnail').attr('src',"https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG");
+            $('.img-thumbnail').attr('src',"<?php echo $this->Url->image('noneProfile.png'); ?>");
         });
 
         $('#upload_image').on('change', function()  {

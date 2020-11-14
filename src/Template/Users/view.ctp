@@ -7,7 +7,7 @@
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
 <div class="row container border m-auto mt-5 mb-5 pt-5 pb-5">
     <?php
-            $photoUrl = "https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG";
+            $photoUrl = $this->Url->image('noneProfile.png');
             if($user->profile_photo != "")  {
                 $photoUrl = $user->profile_photo;
             }
