@@ -4,22 +4,6 @@
  * @var \App\Model\Entity\News $news
  */
 ?>
-<!-- News Info List Area Start Here -->
-<section class="bg-body">
-    <div class="container">
-        <ul class="news-info-list text-center--sm">
-            <li>
-                <i class="fa fa-map-marker" aria-hidden="true"></i>Australia</li>
-            <li>
-                <i class="fa fa-calendar" aria-hidden="true"></i><span id="current_date"></span></li>
-            <li>
-                <i class="fa fa-clock-o" aria-hidden="true"></i>Last Update 11.30 am</li>
-            <li>
-                <i class="fa fa-cloud" aria-hidden="true"></i>29&#8451; Sydney, Australia</li>
-        </ul>
-    </div>
-</section>
-<!-- News Info List Area End Here -->
 <!-- Breadcrumb Area Start Here -->
 <section class="breadcrumbs-area" style="background-image: url(<?= $this->Url->build('img/banner/breadcrumbs-banner.jpg') ?>);">
     <div class="container">
@@ -228,28 +212,24 @@
             <div class="ne-sidebar sidebar-break-md col-lg-4 col-md-12">
                 <div class="sidebar-box">
                     <div class="topic-border color-cod-gray mb-30">
-                        <div class="topic-box-lg color-cod-gray">Stay Connected</div>
+                        <div class="topic-box-lg color-cod-gray">Хуваалцах</div>
                     </div>
                     <ul class="stay-connected overflow-hidden">
                         <li class="facebook">
                             <i class="fa fa-facebook" aria-hidden="true"></i>
-                            <div class="connection-quantity">50.2 k</div>
-                            <p>Fans</p>
+                            <div class="connection-quantity">10</div>
                         </li>
                         <li class="twitter">
                             <i class="fa fa-twitter" aria-hidden="true"></i>
-                            <div class="connection-quantity">10.3 k</div>
-                            <p>Followers</p>
+                            <div class="connection-quantity">230</div>
                         </li>
                         <li class="linkedin">
                             <i class="fa fa-linkedin" aria-hidden="true"></i>
-                            <div class="connection-quantity">25.4 k</div>
-                            <p>Fans</p>
+                            <div class="connection-quantity">23</div>
                         </li>
                         <li class="rss">
                             <i class="fa fa-rss" aria-hidden="true"></i>
-                            <div class="connection-quantity">20.8 k</div>
-                            <p>Subscriber</p>
+                            <div class="connection-quantity">22</div>
                         </li>
                     </ul>
                 </div>

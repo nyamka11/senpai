@@ -16,7 +16,7 @@
                             <nav id="dropdown">
                                 <ul>
                                     <li class="active">
-                                        <a href="#">Нүүр</a>
+                                        <a href=<?= $this->Url->build(array('controller'=>'News','action'=>'index')) ?>>Нүүр</a>
                                     </li>
                                     <li>
                                         <a href="#">Виз</a>
@@ -42,10 +42,10 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="post-style-1.html">Элчин сайдын яам</a>
+                                        <a href="post-style-2.html">Зар</a>
                                     </li>
                                     <li>
-                                        <a href="post-style-2.html">Зар</a>
+                                        <a href="post-style-1.html">Элчин сайдын яам</a>
                                     </li>
                                 </ul>
                             </nav>
