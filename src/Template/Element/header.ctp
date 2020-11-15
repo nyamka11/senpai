@@ -16,68 +16,36 @@
                             <nav id="dropdown">
                                 <ul>
                                     <li class="active">
-                                        <a href="#">Home</a>
+                                        <a href="#">Нүүр</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Виз</a>
                                         <ul class="ne-dropdown-menu">
-                                            <li class="active">
-                                                <a href="index.html">Home 1</a>
+                                            <li>
+                                                <a href="post-style-1.html">Үндсэн ажилтны виз</a>
                                             </li>
                                             <li>
-                                                <a href="index2.html">Home 2</a>
+                                                <a href="post-style-2.html">Аялалын виз</a>
                                             </li>
                                             <li>
-                                                <a href="index3.html">Home 3</a>
+                                                <a href="post-style-4.html">Сургалтын виз</a>
                                             </li>
                                             <li>
-                                                <a href="index4.html">Home 4</a>
+                                                <a href="single-news-1.html">Гэр бүлийн виз</a>
                                             </li>
                                             <li>
-                                                <a href="index5.html">Home 5</a>
+                                                <a href="post-style-3.html">Урилага</a>
                                             </li>
                                             <li>
-                                                <a href="index6.html">Home 6</a>
-                                            </li>
-                                            <li>
-                                                <a href="index7.html">Home 7</a>
+                                                <a href="post-style-4.html">Сунгалт</a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#">Post</a>
-                                        <ul class="ne-dropdown-menu">
-                                            <li>
-                                                <a href="post-style-1.html">Post Style 1</a>
-                                            </li>
-                                            <li>
-                                                <a href="post-style-2.html">Post Style 2</a>
-                                            </li>
-                                            <li>
-                                                <a href="post-style-3.html">Post Style 3</a>
-                                            </li>
-                                            <li>
-                                                <a href="post-style-4.html">Post Style 4</a>
-                                            </li>
-                                            <li>
-                                                <a href="single-news-1.html">News Details 1</a>
-                                            </li>
-                                            <li>
-                                                <a href="single-news-2.html">News Details 2</a>
-                                            </li>
-                                            <li>
-                                                <a href="single-news-3.html">News Details 3</a>
-                                            </li>
-                                        </ul>
+                                        <a href="post-style-1.html">Элчин сайдын яам</a>
                                     </li>
                                     <li>
-                                        <a href="post-style-1.html">Politics</a>
-                                    </li>
-                                    <li>
-                                        <a href="post-style-2.html">Business</a>
-                                    </li>
-                                    <li>
-                                        <a href="post-style-3.html">Sports</a>
-                                    </li>
-                                    <li>
-                                        <a href="post-style-4.html">Fashion</a>
+                                        <a href="post-style-2.html">Зар</a>
                                     </li>
                                 </ul>
                             </nav>

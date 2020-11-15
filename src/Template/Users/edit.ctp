@@ -10,8 +10,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.js" integrity="sha512-vUJTqeDCu0MKkOhuI83/MEX5HSNPW+Lw46BA775bAWIp1Zwgz3qggia/t2EnSGB9GoS2Ln6npDmbJTdNhHy1Yw==" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css" integrity="sha512-zxBiDORGDEAYDdKLuYU9X/JaJo/DPzE42UubfBw9yg8Qvb2YRRIQ8v4KsGHOx2H1/+sdSXyXxLXv5r7tHc9ygg==" crossorigin="anonymous" />
 
-<div class="row container m-auto border">
-    <div class="col-3 mt-30 mb-30" style="border-right:1px solid #cacaca">
+<div class="row container m-auto border p-0">
+    <div class="col-sm-12 col-md-3 mt-30 mb-30" style="border-right:1px dashed #cacaca">
         <div class="row">
             <div class="col-12 d-flex justify-content-center">
                 <?php
@@ -29,7 +29,7 @@
             </div>
         </div>
     </div>
-    <div class="col-6 mt-30 mb-30">
+    <div class="col-sm-12 col-md-6 mt-30 mb-30">
         <h3>Хувийн мэдээлэл засах</h3><br/>
         <?= $this->Form->create($user) ?>
             <?php echo $this->Form->control('username', ['class' => 'form-control mb-15']); ?>
@@ -38,7 +38,7 @@
                     <input id="toggle-event" type="checkbox" data-toggle="toggle" />
                 </div>
                 <div class="col-4">
-                    <label for="password">Шинэ нууц үг</label>
+                    <label for="password">Нууц үг</label>
                     <input type="password" name="password" class="form-control mb-15" id="password" readonly/>
                 </div>
                 <div class="col-6">
@@ -109,7 +109,7 @@
         <?= $this->Form->button(__('Save'),['class'=>'btn btn-success mt-3']) ?>
         <?= $this->Form->end() ?>
     </div>
-    <div class="col-3 mt-30 mb-30" style="border-left:1px solid #cacaca">
+    <div class="col-sm-12 col-md-3 mt-30 mb-30" style="border-left:1px dashed #cacaca">
         <div class="text-center social-btn">
             <a href="#" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i> Sign in with <b>Facebook</b></a>
             <a href="#" class="btn btn-info btn-block"><i class="fa fa-twitter"></i> Sign in with <b>Twitter</b></a>

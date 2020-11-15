@@ -13,7 +13,7 @@
             }
         ?>
 
-    <div class="col-3 d-flex justify-content-center" style="border-right:1px solid #cacaca">
+    <div class="col-3 d-flex justify-content-center" style="border-right:1px dashed #cacaca">
         <div class="text-center">
             <img src=<?= $photoUrl ?> style="height:200px; border-radius: 50%" class="img-thumbnail"  alt="...">
             <br/><br/>
@@ -70,7 +70,7 @@
         </div>
         <br/><br/>
     </div>
-    <div style="border-left:1px solid #cacaca" class="col-3 pl-5">
+    <div style="border-left:1px dashed #cacaca" class="col-3 pl-5">
         <h3>Системийн</h3><br/>
         <span class="text-muted"><?= __('Системийн хандалт') ?></span>
         <!-- <p><?= h($user->role) ?></p> -->
