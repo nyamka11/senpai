@@ -53,11 +53,6 @@ class NewsTable extends Table
             ->notEmptyString('title');
 
         $validator
-            ->scalar('summary')
-            ->maxLength('summary', 255)
-            ->notEmptyString('summary');
-
-        $validator
             ->scalar('body')
             ->allowEmptyString('body');
 

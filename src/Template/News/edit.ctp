@@ -46,14 +46,28 @@
                     ),
                     'class'=>"w-100 form-control mb-4",
                     'style'=>"height:33px"
-                    // 'empty'=>'Choose'
-                    // 'value'=>2
                 ));
 
-                echo $this->Form->input('summary',  array('type'=>'textarea','label' => "Товч агуулга",'class'=>"w-100 form-control mb-4"));
-                echo $this->Form->input('body',  array('type'=>'text','class'=>"w-100 form-control mb-4 d-none"));
-                echo $this->Form->input('image',  array('type'=>'text','class'=>"w-100 form-control mb-4"));
+                echo $this->Form->input('body',  array('type'=>'text','class'=>"w-100 form-control mb-4 d-none", "label"=>false));
             ?>
+            <label>Мэдээний зураг</label>
+            <div class="row">
+                <div class="col-12">
+                <?php
+                    $isPictureAru = $news->newsImg == "" ? false : true;
+                ?>
+                    <div id="picNone" <?php echo ($news->newsImg != "") ? "style='display:none;'" : ""; ?> ></div>
+                    <img id="image" name="image" <?php echo ($news->newsImg == "") ? "style='display:none;'" : ""; ?> src=<?= $news->newsImg ?> />
+                    
+                </div>
+                <div class="col-12">
+                    <a id="pictureAdd" class="btn btn-primary text-light mt-3">Зураг оруулах</a>
+                    <a id="pictureCancel" class="btn btn-secondary text-light mt-3">Цуцлах</a>
+                    <input type="text" id="newsImg" name="newsImg" class="w-100 form-control d-none" />
+                    <input class="fileBtn d-none" type="file" />
+                </div>
+            </div>
+            <br/>
             <div id="summernote"></div>
         </fieldset>
         <br />
@@ -63,22 +77,60 @@
 </div>
 
 <script>
-$(function() {
-    $('#summernote').summernote({   
-        tabsize: 2,
-        height: 1000,
-        callbacks: {
-            onBlur: function()  {
-                console.log("datadd");
-                let dataCode = $('#summernote').summernote('code');
-                $('#body').val(dataCode);
-                let imgStr = $('.note-editable img:first').attr('src');
-                $("#editForm #image").val(imgStr);
-            }
-        }
-    });
+    $(function() {
+        $("#pictureAdd").click(function()  {
+            $(".fileBtn").click();
+        });
 
-    let dataCode = $("#body").val();
-    $('#summernote').summernote("code", dataCode);
-});
+        $("#pictureCancel").click(function()  {
+            $('#newsImg').val("");
+            $('#image').attr('src',"").hide();
+            $("#picNone").show();
+            $(".fileBtn").val("");
+        });
+
+        $(":file").change(function()  {
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+                reader.onload = imageIsLoaded;
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+
+        function imageIsLoaded(e)  {
+            $("#picNone").hide();
+            $('#image').attr('src', e.target.result).show();
+            $('#newsImg').val(e.target.result);
+        };
+
+        $('#summernote').summernote({   
+            tabsize: 2,
+            height: 1000,
+            callbacks: {
+                onBlur: function()  {
+                    console.log("datadd");
+                    let dataCode = $('#summernote').summernote('code');
+                    $('#body').val(dataCode);
+                    let imgStr = $('.note-editable img:first').attr('src');
+                    $("#editForm #image").val(imgStr);
+                }
+            }
+        });
+
+        let dataCode = $("#body").val();
+        $('#summernote').summernote("code", dataCode);
+    });
 </script>
+
+<style>
+    #picNone  {
+        background:#cacaca url(<?= $this->Url->image('image-solid.svg')?>) no-repeat center center; 
+        height:300px; 
+        border:1px dashed gray; 
+        border-radius: 7px;
+    }
+
+    #image  {
+        border: 1px dashed gray; 
+    }
+</style>

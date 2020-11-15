@@ -41,18 +41,27 @@
                     ),
                     'class'=>"w-100 form-control mb-5 form-control-lg",
                     'style'=>"height:33px"
-                    // 'empty'=>'Choose'
-                    // 'value'=>2
                 ));
-                echo $this->Form->input('summary',  array('type'=>'textarea','label' => "Товч агуулга",'class'=>"w-100 form-control mb-5"));
             ?>
             <input type="text" id="body" name="body" class="w-100 form-control mb-4 d-none" />
-            <input type="text" id="image" name="image" class="w-100 form-control mb-4 d-none" />
-
-            <div id="summernote"></div>
+            <label>Мэдээний зураг</label>
+            <div class="row">
+                <div class="col-12">
+                    <div id="picNone"></div>
+                    <img id="image" name="image" />
+                </div>
+                <div class="col-12">
+                    <a id="pictureAdd" class="btn btn-primary text-light mt-3">Зураг оруулах</a>
+                    <a id="pictureCancel" class="btn btn-secondary text-light mt-3">Цуцлах</a>
+                    <input type="text" id="newsImg" name="newsImg" class="w-100 form-control d-none" />
+                    <input class="fileBtn d-none" type="file" />
+                </div>
+            </div>
+            <br/>
+            <div id="summernote" class="mt-10"></div>
         </fieldset>
         <br />
-        <?= $this->Form->button(__('Add'),['class'=>'btn btn-success newsAdd form-control-lg']) ?>
+        <?= $this->Form->button(__('Мэдээ нийтлэх'),['class'=>'btn btn-success newsAdd form-control-lg']) ?>
         <?= $this->Form->end() ?>
     </div>
 </div>
@@ -60,6 +69,31 @@
 
 <script>
     $(document).ready(function()  {
+        $("#pictureAdd").click(function()  {
+            $(".fileBtn").click();
+        });
+
+        $("#pictureCancel").click(function()  {
+            $('#newsImg').val("");
+            $('#image').attr('src',"").hide();
+            $("#picNone").show();
+            $(".fileBtn").val("");
+        });
+
+        $(":file").change(function()  {
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+                reader.onload = imageIsLoaded;
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+
+        function imageIsLoaded(e)  {
+            $("#picNone").hide();
+            $('#image').attr('src', e.target.result).show();
+            $('#newsImg').val(e.target.result);
+        };
+
         $('#summernote').summernote({
             tabsize: 2,
             height: 1000,
@@ -67,10 +101,22 @@
                 onBlur: function()  {
                     let dataCode = $('#summernote').summernote('code');
                     $('#body').val(dataCode);
-                    let imgStr = $('.note-editable img:first').attr('src');
-                    $("#image").val(imgStr);
                 }
             }
         });
     });
 </script>
+
+<style>
+    #picNone  {
+        background:#cacaca url(<?= $this->Url->image('image-solid.svg')?>) no-repeat center center; 
+        height:300px; 
+        border:1px dashed gray; 
+        border-radius: 7px;
+    }
+
+    #image  {
+        border: 1px dashed gray;
+        display:none; 
+    }
+</style>

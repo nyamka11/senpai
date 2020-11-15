@@ -33,7 +33,6 @@ class NewsController extends AppController  {
     public function add()  {
         $news = $this->News->newEntity();
         if ($this->request->is('post')) {
-            $news->newsImg = $this->request->getData("image");
             $news->date = time();
             $news = $this->News->patchEntity($news, $this->request->getData());
             if ($this->News->save($news)) {
@@ -53,7 +52,6 @@ class NewsController extends AppController  {
             $news = $this->News->patchEntity($news, $this->request->getData());
             if ($this->News->save($news)) {
                 $this->Flash->success(__('The news has been saved.'));
-
                 return $this->redirect(['action' => 'list']);
             }
             $this->Flash->error(__('The news could not be saved. Please, try again.'));

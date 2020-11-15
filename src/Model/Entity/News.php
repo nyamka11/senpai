@@ -25,7 +25,6 @@ class News extends Entity  {
      */
     protected $_accessible = [
         'title' => true,
-        'summary' => true,
         'body' => true,
         'newsImg' => true,
         'category' => true,
