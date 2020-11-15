@@ -53,7 +53,35 @@
 
             <div class="row">
                 <div class="col-6">
-                    <?php  echo $this->Form->control('birthday', ['empty' => true],['class' => 'form-control mb-15 bday']); ?>
+                    <label for="birthday">Төрсөн өдөр</label></br>
+                    <select name="birthday[year]">
+                        <option value="">Он</option>
+                        <?php
+                            for($i=date('Y')-10; $i>=1930; $i--)  {
+                                $selected = $user->birthday->year == $i ? "selected" : "";
+                                echo '<option value='.$i.' '.$selected.' >'.$i.'</option>';
+                            }
+                        ?>
+                    </select>
+                    <select name="birthday[month]">
+                        <option value="">Сар</option>
+                        <?php
+                            for($i=1; $i<=12; $i++)  {
+                                $selected = $user->birthday->month == $i ? "selected" : "";
+                                echo '<option value='.$i.' '.$selected.' >'.$i.'-р сар</option>';
+                            }
+                        ?>
+                    </select>
+                    <select name="birthday[day]">
+                        <option value="">Өдөр</option>
+                        <?php
+                            for($i=1; $i<=31; $i++)  {
+                                $selected = $user->birthday->day == $i ? "selected" : "";
+                                echo '<option value='.$i.' '.$selected.' >'.$i.'</option>';
+                            }
+                        ?>
+                    </select>
+
                 </div>
                 <div class="col-6">
                     <label for="repassword">Хүйс</label>
