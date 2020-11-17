@@ -26,7 +26,7 @@
         <div class="row tab-space1">
             <div class="col-lg-6 col-md-12">
                 <div class="img-overlay-70 img-scale-animate mb-2">
-                    <img src="img/news/news1.jpg" alt="news" class="img-fluid width-100">
+                    <img src=<?php echo $newsData['Дэлхийд'][0]->newsImg =="" ? "img/news/news1.jpg" : "" ?> alt="news" class="img-fluid width-100">
                     <div class="mask-content-lg">
                         <div class="topic-box-sm color-cinnabar mb-20">Дэлхийд</div>
                         <div class="post-date-light">
@@ -57,7 +57,7 @@
                                     <a href="news/view/<?= $newsData['Эрүүл мэнд'][0]->id ?>" ><?= $newsData['Эрүүл мэнд'][0]->title ?></a>
                                 </h2>
                             </div>
-                            <img src="img/news/news2.jpg" alt="news" class="img-fluid width-100">
+                            <img src=<?php echo $newsData['Эрүүл мэнд'][0]->newsImg =="" ? "img/news/news2.jpg" : "" ?> alt="news" class="img-fluid width-100">
                         </div>
                     </div>
                     <div class="col-sm-6 col-12">

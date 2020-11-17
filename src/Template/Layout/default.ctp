@@ -19,7 +19,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Senpai.mn</title>
+        <title>Senpai.mn | Япон дахь монголчуудын сайт</title>
         <meta content="" name="descriptison">
         <meta content="" name="keywords">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
