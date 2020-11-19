@@ -153,7 +153,7 @@
                     height: cropImgSett.height,
                     type: 'square'
                 },
-                boundary:{
+                boundary: {
                     width: cropImgSett.width + 100,
                     height: cropImgSett.height + 100
                 }

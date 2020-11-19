@@ -4,8 +4,11 @@
     <div class="col-md-4 pb-5">
         <?= $this->Flash->render() ?>
         <div class="card">
-            <h3 class="card-header m-0">Бүртгүүлэх цонх</h3>
-            <div class="card-body">
+            <div class="card-body p-5">
+                <h3 class="m-0">Бүртгүүлэх цонх</h3>
+                <div class="d-flex justify-content-center mt-30">
+                    <?= $this->Html->image("svg/undraw_secure_login_pdn4.svg",['width' => '200','class'=>'mb-1']) ?>
+                </div>
                 <?php echo $this->Form->create() ?>
                 <div class="form-group">
                     <?php echo $this->Form->input('username',['class'=>'form-control','required']) ?>
