@@ -32,7 +32,9 @@ class NewsController extends AppController  {
 
     public function add()  {
         $news = $this->News->newEntity();
-        if ($this->request->is('post')) {
+        if ($this->request->is('post'))  {
+            $news->author_id = $this->Auth->user('user_id');
+            $news->author_name = $this->Auth->user('lastname');
             $news->date = time();
             $news = $this->News->patchEntity($news, $this->request->getData());
             if ($this->News->save($news)) {

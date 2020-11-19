@@ -22,7 +22,7 @@
                 </div>
                 <?php
                     echo $this->Form->button('Нэвтрэх',['class'=>'btn btn-success mr-3']);
-                    echo $this->Html->link('Бүртгүүлэх',['action'=>'register'],['class'=>'btn btn-primary']);
+                    echo $this->Html->link('Бүртгүүлэх',['action'=>'register'],['class'=>'btn btn-primary']); 
                     echo $this->Form->end();
                 ?>
                  <div class="text-center social-btn mt-30">

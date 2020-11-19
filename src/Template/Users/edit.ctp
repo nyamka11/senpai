@@ -46,6 +46,7 @@
                     <input type="password" class="form-control mb-15" id="repassword" readonly/>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-6"><?php echo $this->Form->control('lastname', ['class' => 'form-control mb-15']); ?></div>
                 <div class="col-6"><?php echo $this->Form->control('firstname', ['class' => 'form-control mb-15']); ?></div>
@@ -144,7 +145,7 @@
 <script>
     $(function()  {
         var isPassChange = false;
-        $('#toggle-event').change(function() {
+        $('#toggle-event').change(function()  {
             if($(this).prop('checked'))  {
                 isPassChange = true;
                 $("#password").removeAttr("readonly").attr("name","password");

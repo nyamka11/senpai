@@ -42,21 +42,22 @@
                 <option value="Танин мэдэхүй">Танин мэдэхүй</option>
             </select>
             <input type="text" id="body" name="body" class="w-100 form-control mb-4 d-none" />
-            <label>Мэдээний зураг</label>
+            <label>Мэдээний нүүрний зураг</label><br/><br/>
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 d-flex justify-content-center">
                     <div id="picNone"></div>
                     <img id="image" name="image" />
                     <img alt="..." class="img-thumbnail d-none">
                 </div>
-                <div class="col-12">
+                <div class="col-12 d-flex justify-content-center">
                     <a id="pictureAdd" class="btn btn-primary text-light mt-3">Зураг оруулах</a>
-                    <a id="pictureCancel" class="btn btn-secondary text-light mt-3">Цуцлах</a>
-                    <input type="file" id="newsImg" name="newsImg" class="w-100 form-control d-none" accept="image/*" />
-                    <input type="file" id="realFile" name="realFile" class="w-100 form-control d-none" accept="image/*" />
+                    <a id="pictureCancel" class="btn btn-secondary text-light mt-3 ml-3">Цуцлах</a>
+                    <input type="file" id="newsImg" class="w-100 form-control d-none" accept="image/*" />
+                    <input type="text" id="news-image" name="newsImg" class="d-none" />
                 </div>
             </div>
             <br/>
+            <label>Мэдээний их бие</label>
             <div id="summernote" class="mt-10"></div>
         </fieldset>
         <br />
@@ -96,13 +97,14 @@
             height: 0
         };
 
-        function destroy()  {
+        function destroyImg()  {
             $('.img-thumbnail').removeAttr('src').addClass('d-none');
             $("#picNone").show();
+            $("#news-image").val("");
         };
 
         $("#category").change(function()  {
-            destroy();
+            destroyImg();
             switch($(this).val())  {
             case "Дэлхийд":
                 cropImgSett.width = 577;
@@ -158,14 +160,21 @@
                     height: cropImgSett.height + 100
                 }
             });
+
+            $('#picNone').animate({ 
+                height: cropImgSett.height,
+                width: cropImgSett.width
+            });
+
         }).change();
 
         $('#pictureAdd').click(function()  {
             $('#newsImg').val("").click();
+            $("#news-image").val("");
         });
 
         $('#pictureCancel').click(function()  {
-            destroy();
+            destroyImg();
         });
 
         $('#newsImg').on('change', function()  {
@@ -187,6 +196,7 @@
                 size: 'viewport'
             }).then(function(response)  {
                 $('.img-thumbnail').attr('src',response).removeClass('d-none');
+                $("#news-image").val(response);
                 $('.close').click();
                 $("#picNone").hide();
             });
@@ -207,12 +217,11 @@
 
 <style>
     #picNone  {
-        background:#cacaca url(<?= $this->Url->image('image-solid.svg')?>) no-repeat center center; 
-        height:300px; 
-        border:1px dashed gray; 
-        border-radius: 7px;
+        background:url(<?= $this->Url->image('svg/undraw_images_aef7.svg')?>) no-repeat center center; 
+        background-size: 70% 40%;
+        border:2px dashed gray; 
+        border-radius: 4px;
     }
-
     #image  {
         border: 1px dashed gray;
         display:none; 
