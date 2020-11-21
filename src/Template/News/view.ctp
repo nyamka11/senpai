@@ -3,19 +3,31 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\News $news
  */
+
+$newsData = ['Дэлхийд','Эрүүл мэнд'];
+foreach($news as $item)  {
+    if($item->category == "Дэлхийд")  {
+        $newsData['Дэлхийд'] = array($item);
+    }
+
+    if($item->category == "Эрүүл мэнд")  {
+        $newsData['Эрүүл мэнд'] = array($item);
+    }
+
+    if($item->category == "Улс төр")  {
+        $newsData['Улс төр'] = array($item);
+    }
+
+    if($item->category == "Нийгэм")  {
+        $newsData['Нийгэм'] = array($item);
+    }
+}
 ?>
 <!-- Breadcrumb Area Start Here -->
-<section class="breadcrumbs-area" style="background-image: url(<?= $this->Url->build('img/banner/breadcrumbs-banner.jpg') ?>);">
+<section class="breadcrumbs-area" style="background-image: url(<?= $this->Url->build('https://davidfrenchoriginals.com/wp-content/uploads/2019/02/central-as-jpg-cleaned-cropped-best-1920x134.jpg') ?>);">
     <div class="container">
         <div class="breadcrumbs-content">
-            <h1>Business</h1>
-            <ul>
-                <li>
-                    <a href="index.html">Home</a> -</li>
-                <li>
-                    <a href="#">Business</a> -</li>
-                <li>Single post style_01</li>
-            </ul>
+            <h1>Сурталчилгаа байршуулах</h1>
         </div>
     </div>
 </section>
@@ -26,120 +38,24 @@
         <div class="row">
             <div class="col-lg-8 col-md-12 mb-30">
                 <div class="news-details-layout1">
-                    <div class="position-relative mb-30">
-                        <img src=<?= $this->Url->build('/img/news/news177.jpg') ?> alt="news-details" class="img-fluid">
+                <h2 class="title-semibold-dark size-c30"><?= $news->title ?></h2>
+                    
+                    <div class="position-relative mb-30 d-flex justify-content-center">
+                        <img src=<?= $news->newsImg == "" ? "img/news/news177.jpg" : $news->newsImg ?> alt="news-details" class="img-fluid">
                         <div class="topic-box-top-sm">
                             <div class="topic-box-sm color-cinnabar mb-20"><?= $news->category ?></div>
                         </div>
                     </div>
-                    <h2 class="title-semibold-dark size-c30"><?= $news->title ?></h2>
                     <ul class="post-info-dark mb-30">
                         <li><a href="#"><span>Нийтлэсэн</span> Nyamka</a></li>
                         <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><?= $news->date ?></a></li>
                         <li><a href="#"><i class="fa fa-eye" aria-hidden="true"></i>202</a></li>
                         <li><a href="#"><i class="fa fa-comments" aria-hidden="true"></i>20</a></li>
-                    </ul>asdf
-                    <?= html_entity_decode($news->body, ENT_QUOTES, 'UTF-8') ?>
-                    <ul class="blog-tags item-inline">
-                        <li>Tags</li>
-                        <li>
-                            <a href="#">#Business</a>
-                        </li>
-                        <li>
-                            <a href="#">#Magazine</a>
-                        </li>
-                        <li>
-                            <a href="#">#Lifestyle</a>
-                        </li>
                     </ul>
-                    <div class="post-share-area mb-40 item-shadow-1">
-                        <p>You can share this post!</p>
-                        <ul class="social-default item-inline">
-                            <li>
-                                <a href="#" class="facebook">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="twitter">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="google">
-                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="pinterest">
-                                    <i class="fa fa-pinterest" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="rss">
-                                    <i class="fa fa-rss" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="linkedin">
-                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="row no-gutters divider blog-post-slider">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                            <a href="#" class="prev-article">
-                                <i class="fa fa-angle-left" aria-hidden="true"></i>Previous article</a>
-                            <h3 class="title-medium-dark pr-50">Wonderful Outdoors Experience: Eagle Spotting in Alaska</h3>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-6 text-right">
-                            <a href="#" class="next-article">Next article
-                                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                            </a>
-                            <h3 class="title-medium-dark pl-50">The only thing that overcomes hard luck is hard work</h3>
-                        </div>
-                    </div>
-                    <div class="author-info p-35-r mb-50 border-all">
-                        <div class="media media-none-xs">
-                            <img src=<?= $this->Url->build('/img/author.jpg') ?> alt="author" class="img-fluid rounded-circle">
-                            <div class="media-body pt-10 media-margin30">
-                                <h3 class="size-lg mb-5">Mark Willy</h3>
-                                <div class="post-by mb-5">By Admin</div>
-                                <p class="mb-15">Dorem Ipsum is simply dummy text of the printing and typesetting industr been
-                                    the industry's standard dummy text ever since.</p>
-                                <ul class="author-social-style2 item-inline">
-                                    <li>
-                                        <a href="#" title="facebook">
-                                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="twitter">
-                                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="google-plus">
-                                            <i class="fa fa-google-plus" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="linkedin">
-                                            <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="pinterest">
-                                            <i class="fa fa-pinterest" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="comments-area">
-                        <h2 class="title-semibold-dark size-xl border-bottom mb-40 pb-20">03 Comments</h2>
+                    <br/>
+                    <?= html_entity_decode($news->body, ENT_QUOTES, 'UTF-8') ?>
+                    <div class="comments-area"><br/>
+                        <h2 class="title-semibold-dark size-xl border-bottom mb-40 pb-20">Сэтгэгдэл (10)</h2>
                         <ul>
                             <li>
                                 <div class="media media-none-xs">
@@ -211,38 +127,18 @@
             </div>
             <div class="ne-sidebar sidebar-break-md col-lg-4 col-md-12">
                 <div class="sidebar-box">
-                    <div class="topic-border color-cod-gray mb-30">
-                        <div class="topic-box-lg color-cod-gray">Хуваалцах</div>
+                <div class="topic-border color-cod-gray mb-5">
+                        <div class="topic-box-lg color-cod-gray">Сурталчилгаа</div>
                     </div>
-                    <ul class="stay-connected overflow-hidden">
-                        <li class="facebook">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                            <div class="connection-quantity">10</div>
-                        </li>
-                        <li class="twitter">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                            <div class="connection-quantity">230</div>
-                        </li>
-                        <li class="linkedin">
-                            <i class="fa fa-linkedin" aria-hidden="true"></i>
-                            <div class="connection-quantity">23</div>
-                        </li>
-                        <li class="rss">
-                            <i class="fa fa-rss" aria-hidden="true"></i>
-                            <div class="connection-quantity">22</div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="sidebar-box">
                     <div class="ne-banner-layout1 text-center">
                         <a href="#">
-                            <img src=<?= $this->Url->build('img/banner/banner3.jpg') ?>  alt="ad" class="img-fluid">
+                            <img src=<?= $this->Url->build('https://www.tysonfoodservice.com/sites/default/files/2019-08/TYS-29403-NACS-images-resizes-370x278.jpg') ?>  alt="ad" class="img-fluid">
                         </a>
                     </div>
                 </div>
                 <div class="sidebar-box">
                     <div class="topic-border color-cod-gray mb-5">
-                        <div class="topic-box-lg color-cod-gray">Recent News</div>
+                        <div class="topic-box-lg color-cod-gray">Сүүлд нэмэгдсэн мэдээ</div>
                     </div>
                     <div class="row">
                         <div class="col-lg-6 col-md-4 col-sm-6 col-6">

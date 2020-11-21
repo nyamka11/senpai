@@ -26,7 +26,7 @@
         <div class="row tab-space1">
             <div class="col-lg-6 col-md-12">
                 <div class="img-overlay-70 img-scale-animate mb-2">
-                    <img src=<?php echo $newsData['Дэлхийд'][0]->newsImg =="" ? "img/news/news1.jpg" : "" ?> alt="news" class="img-fluid width-100">
+                    <img  alt="news" class="img-fluid width-100" src=<?= $newsData['Дэлхийд'][0]->newsImg =="" ? "img/news/news1.jpg" : $newsData['Дэлхийд'][0]->newsImg ?> />
                     <div class="mask-content-lg">
                         <div class="topic-box-sm color-cinnabar mb-20">Дэлхийд</div>
                         <div class="post-date-light">
@@ -57,7 +57,7 @@
                                     <a href="news/view/<?= $newsData['Эрүүл мэнд'][0]->id ?>" ><?= $newsData['Эрүүл мэнд'][0]->title ?></a>
                                 </h2>
                             </div>
-                            <img src=<?php echo $newsData['Эрүүл мэнд'][0]->newsImg =="" ? "img/news/news2.jpg" : "" ?> alt="news" class="img-fluid width-100">
+                            <img src=<?= $newsData['Эрүүл мэнд'][0]->newsImg =="" ? "img/news/news2.jpg" : $newsData['Эрүүл мэнд'][0]->newsImg ?> alt="news" class="img-fluid width-100">
                         </div>
                     </div>
                     <div class="col-sm-6 col-12">
@@ -68,7 +68,7 @@
                                     <a href="news/view/<?= $newsData['Улс төр'][0]->id ?>" ><?= $newsData['Улс төр'][0]->title ?></a>
                                 </h3>
                             </div>
-                            <img src="img/news/news3.jpg" alt="news" class="img-fluid width-100">
+                            <img src=<?= $newsData['Улс төр'][0]->newsImg =="" ? "img/news/news3.jpg" : $newsData['Улс төр'][0]->newsImg ?> alt="news" class="img-fluid width-100">
                         </div>
                     </div>
                     <div class="col-sm-6 col-12">
@@ -79,7 +79,7 @@
                                     <a href="news/view/<?= $newsData['Нийгэм'][0]->id ?>" ><?= $newsData['Нийгэм'][0]->title ?></a>
                                 </h3>
                             </div>
-                            <img src="img/news/news4.jpg" alt="news" class="img-fluid width-100">
+                            <img src=<?= $newsData['Нийгэм'][0]->newsImg =="" ? "img/news/news4.jpg" : $newsData['Нийгэм'][0]->newsImg ?> alt="news" class="img-fluid width-100">
                         </div>
                     </div>
                 </div>

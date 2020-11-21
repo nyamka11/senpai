@@ -13,7 +13,7 @@ use App\Controller\AppController;
 class NewsController extends AppController  {
 
     public function index()  {
-        $query = $this->News->find()->order(['id' => 'desc']);
+        $query = $this->News->find()->order(['id' => 'asc']);
         $this->set('news', $this->paginate($query)) ;
     }
 

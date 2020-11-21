@@ -46,7 +46,6 @@
             <div class="row">
                 <div class="col-12 d-flex justify-content-center">
                     <div id="picNone"></div>
-                    <img id="image" name="image" />
                     <img alt="..." class="img-thumbnail d-none">
                 </div>
                 <div class="col-12 d-flex justify-content-center">
@@ -105,42 +104,43 @@
 
         $("#category").change(function()  {
             destroyImg();
+            
             switch($(this).val())  {
-            case "Дэлхийд":
-                cropImgSett.width = 577;
-                cropImgSett.height = 450;
-                break;
-            case "Нийгэм":
-                cropImgSett.width = 820;
-                cropImgSett.height = 316;
-                break;
-            case "Спорт":
-                cropImgSett.width = 730;
-                cropImgSett.height = 577;
-                break;
-            case "Эрүүл мэнд":
-                cropImgSett.width = 730;
-                cropImgSett.height = 577;
-                break;
-            case "Нийтлэл":
-                cropImgSett.width = 730;
-                cropImgSett.height = 577;
-                break;
-            case "Боловсрол":
-                cropImgSett.width = 730;
-                cropImgSett.height = 577;
-                break;
-            case "Түүх":
-                cropImgSett.width = 730;
-                cropImgSett.height = 577;
-                break;
-            case "Улс төр":
-                cropImgSett.width = 200;
-                cropImgSett.height = 200;
-                break;
-            default:
+                case "Дэлхийд":
+                    cropImgSett.width = 730;
+                    cropImgSett.height = 572;
+                    break;
+                case "Нийгэм":
+                    cropImgSett.width = 730;
+                    cropImgSett.height = 577;
+                    break;
+                case "Спорт":
+                    cropImgSett.width = 730;
+                    cropImgSett.height = 577;
+                    break;
+                case "Эрүүл мэнд":
+                    cropImgSett.width = 820;
+                    cropImgSett.height = 316;
+                    break;
+                case "Нийтлэл":
+                    cropImgSett.width = 730;
+                    cropImgSett.height = 577;
+                    break;
+                case "Боловсрол":
+                    cropImgSett.width = 730;
+                    cropImgSett.height = 577;
+                    break;
+                case "Түүх":
+                    cropImgSett.width = 730;
+                    cropImgSett.height = 577;
+                    break;
+                case "Улс төр":
+                    cropImgSett.width = 730;
+                    cropImgSett.height = 577;
+                    break;
+                default:
                 // code block
-            }
+            };
 
             $("#picNone").html("<div class='ml-5'><h2>"+cropImgSett.width+"x"+cropImgSett.height+"</h2></div>")
             $(".modal-dialog").css("max-width", cropImgSett.width + 200).width(cropImgSett.width + 200);
@@ -165,12 +165,10 @@
                 height: cropImgSett.height,
                 width: cropImgSett.width
             });
-
         }).change();
 
         $('#pictureAdd').click(function()  {
             $('#newsImg').val("").click();
-            $("#news-image").val("");
         });
 
         $('#pictureCancel').click(function()  {
@@ -221,9 +219,5 @@
         background-size: 70% 40%;
         border:2px dashed gray; 
         border-radius: 4px;
-    }
-    #image  {
-        border: 1px dashed gray;
-        display:none; 
     }
 </style>
