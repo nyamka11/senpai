@@ -23,6 +23,9 @@ foreach($news as $item)  {
     }
 }
 ?>
+
+                                    
+
 <!-- Breadcrumb Area Start Here -->
 <section class="breadcrumbs-area" style="background-image: url(<?= $this->Url->build('https://davidfrenchoriginals.com/wp-content/uploads/2019/02/central-as-jpg-cleaned-cropped-best-1920x134.jpg') ?>);">
     <div class="container">
@@ -58,70 +61,54 @@ foreach($news as $item)  {
                         <h2 class="title-semibold-dark size-xl border-bottom mb-40 pb-20">Сэтгэгдэл (10)</h2>
                         <ul>
                             <li>
-                                <div class="media media-none-xs">
-                                    <img src=<?= $this->Url->build('/img/blog1.jpg') ?>  class="img-fluid rounded-circle" alt="comments">
-                                    <div class="media-body comments-content media-margin30">
-                                        <h3 class="title-semibold-dark">
-                                            <a href="#">Nitiya ,
-                                                <span> August 29, 2017</span>
-                                            </a>
-                                        </h3>
-                                        <p>Borem Ipsum is simply dummy text of the printing and typesetting industry
-                                            Lorem Ipsum has been the industry's standard dummy text.</p>
+                                <?php 
+                                    $counter = 0;
+                                    foreach($news->cmmt as $comment): 
+                                    $counter++;
+                                ?>
+                                    <div class="media media-none-xs">
+                                        <div class="media-body comments-content media-margin30">
+                                            <h3 class="title-semibold-dark">
+                                                <a href="#"><?= $comment->authorName ?> ,<span> <?= $comment->createDate ?></span></a>
+                                            </h3>
+                                            <p><?= $comment->commentBody ?></p>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="media media-none-xs">
-                                    <img src=<?= $this->Url->build('/img/blog2.jpg') ?> class="img-fluid rounded-circle" alt="comments">
-                                    <div class="media-body comments-content media-margin30">
-                                        <h3 class="title-semibold-dark">
-                                            <a href="#">Fahim ,
-                                                <span> August 29, 2017</span>
-                                            </a>
-                                        </h3>
-                                        <p>Borem Ipsum is simply dummy text of the printing and typesetting industry
-                                            Lorem Ipsum has been the industry's standard dummy text.</p>
+                                    <div id="feedBack" commentId=<?= $comment->id ?> class="ml-5 overflow-hidden">
+                                        <div id="like" class="float-left"><cnt><?= $comment->likeCnt > 0 ? $comment->likeCnt : 0 ?></cnt>&nbsp;<i class="fa fa-thumbs-up"></i></div>
+                                        <div id="unlike" class="float-left ml-5"><i class="fa fa-thumbs-down"></i>&nbsp;<cnt><?= $comment->unlikeCnt > 0 ? $comment->unlikeCnt : 0  ?></cnt></div>
+                                        <div id="replay" class="float-left ml-5"><i class="fa fa-share"></i><small>&nbsp;&nbsp;Хариулах</small></div>
                                     </div>
-                                </div>
+                                    <?php echo count($news->cmmt) != $counter ? "<hr/>" : "" ?>
+                                <?php endforeach; ?>
                             </li>
                         </ul>
                     </div>
                     <div class="leave-comments">
-                        <h2 class="title-semibold-dark size-xl mb-40">Leave Comments</h2>
-                        <form id="leave-comments">
+                        <h2 class="title-semibold-dark size-xl mb-40">Сэтгэгдэл үлдээх</h2>
+                        <?= $this->Form->create($news,['action'=>'commentadd']) ?>
                             <div class="row">
-                                <div class="col-md-4 col-sm-12">
+                                <div class="col-md-6 col-sm-12">
                                     <div class="form-group">
-                                        <input placeholder="Name*" class="form-control" type="text">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-12">
-                                    <div class="form-group">
-                                        <input placeholder="Email*" class="form-control" type="email">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-12">
-                                    <div class="form-group">
-                                        <input placeholder="Web Address" class="form-control" type="text">
+                                        <input placeholder="Нэр" name="author_name" class="form-control" type="text">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <textarea placeholder="Message*" class="textarea form-control" id="form-message" rows="8" cols="20"></textarea>
+                                        <textarea placeholder="Сэтгэгдэл" required name="body" class="textarea form-control" id="form-message" rows="8" cols="20"></textarea>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group mb-none">
-                                        <button type="submit" class="btn-ftg-ptp-45">Post Comment</button>
+                                        <?= $this->Form->button(__('Нийтлэх'),['class'=>'btn-ftg-ptp-45']) ?>
+    
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                        <?= $this->Form->end() ?>
+                        <!-- </form> -->
                     </div>
                 </div>
             </div>
@@ -375,7 +362,7 @@ foreach($news as $item)  {
                         </div>
                         <div class="media">
                             <a class="img-opacity-hover" href="single-news-1.html">
-                                <img src=<?= $this->Url->build('img/news/news121.jpg') ?>alt="news" class="img-fluid">
+                                <!-- <img src=<?= $this->Url->build('img/news/news121.jpg') ?>alt="news" class="img-fluid"> -->
                             </a>
                             <div class="media-body">
                                 <div class="post-date-dark">
@@ -398,3 +385,50 @@ foreach($news as $item)  {
     </div>
 </section>
 
+<style>
+    .fa-thumbs-up, .fa-thumbs-down, .fa-share {
+        color: gray;
+    }
+    .fa-thumbs-up:hover, .fa-thumbs-down:hover ,#replay:hover{
+        cursor: pointer;
+        font-size:17px;
+        transition: all 1s ease-out;
+        color: black;
+    }
+</style>
+
+<script>
+    $(function()  {
+
+        $("#feedBack #like").click(function()  {
+            let cnt = parseInt($("cnt",this).text()) + 1;
+            $("cnt",this).text(cnt);
+            let commentId = parseInt($(this).parent().attr("commentId"));
+            ajaxFeedBack("&type=like&count="+cnt,commentId);
+        });
+
+        $("#feedBack #unlike").click(function()  {
+            let cnt = parseInt($("cnt",this).text()) + 1;
+            $("cnt",this).text(cnt);
+            let commentId = parseInt($(this).parent().attr("commentId"));
+            ajaxFeedBack("&type=unlike&count="+cnt,commentId);
+        });
+
+        function ajaxFeedBack(data,id)  {
+            $.ajax({
+                type: "GET",
+                url: "/news/feedback/"+id,
+                data: data,
+                beforeSend: function(xhr) {
+                    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                },
+                success : function(response){
+                    console.log(response);
+                },
+                error: function(e) {
+                    console.log(e.responseText);
+                }
+            });
+        }
+    });
+</script>

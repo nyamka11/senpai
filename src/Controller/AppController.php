@@ -80,7 +80,9 @@ class AppController extends Controller
             'forgotpassword',
             'resetpassword',
             'index',
-            'view'
+            'view',
+            'feedback',
+            'commentadd',
         ]);
     }
 

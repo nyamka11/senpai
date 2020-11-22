@@ -4,16 +4,16 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Comment Entity
+ * Cmmt Entity
  *
  * @property int $id
- * @property string|null $itemid
- * @property string|null $modul_name
- * @property string|null $author_name
- * @property string|null $body
- * @property \Cake\I18n\FrozenTime|null $create_date
+ * @property string|null $itemid_
+ * @property string|null $modulName
+ * @property string|null $authorName
+ * @property string|null $commentBody
+ * @property \Cake\I18n\FrozenTime|null $createDate
  */
-class Comment extends Entity
+class Cmmt extends Entity
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
@@ -25,10 +25,10 @@ class Comment extends Entity
      * @var array
      */
     protected $_accessible = [
-        'itemid' => true,
-        'modul_name' => true,
-        'author_name' => true,
-        'body' => true,
-        'create_date' => true,
+        'itemid_' => true,
+        'modulName' => true,
+        'authorName' => true,
+        'commentBody' => true,
+        'createDate' => true,
     ];
 }

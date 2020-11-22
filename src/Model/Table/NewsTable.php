@@ -30,9 +30,15 @@ class NewsTable extends Table
     {
         parent::initialize($config);
 
+        $this->hasMany('cmmt')
+        ->setForeignKey('itemid_')  //id taaruulj bgaa heseg ON gsn vg
+        ->setConditions(['cmmt.modulName' => 'News'])  //Nohtsol
+        ->setDependent(true);
+
         $this->setTable('news');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
+
     }
 
     /**

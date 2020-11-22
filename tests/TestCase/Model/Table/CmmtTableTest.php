@@ -1,21 +1,21 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\CommentTable;
+use App\Model\Table\CmmtTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\CommentTable Test Case
+ * App\Model\Table\CmmtTable Test Case
  */
-class CommentTableTest extends TestCase
+class CmmtTableTest extends TestCase
 {
     /**
      * Test subject
      *
-     * @var \App\Model\Table\CommentTable
+     * @var \App\Model\Table\CmmtTable
      */
-    public $Comment;
+    public $Cmmt;
 
     /**
      * Fixtures
@@ -23,7 +23,7 @@ class CommentTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.Comment',
+        'app.Cmmt',
     ];
 
     /**
@@ -34,8 +34,8 @@ class CommentTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::getTableLocator()->exists('Comment') ? [] : ['className' => CommentTable::class];
-        $this->Comment = TableRegistry::getTableLocator()->get('Comment', $config);
+        $config = TableRegistry::getTableLocator()->exists('Cmmt') ? [] : ['className' => CmmtTable::class];
+        $this->Cmmt = TableRegistry::getTableLocator()->get('Cmmt', $config);
     }
 
     /**
@@ -45,7 +45,7 @@ class CommentTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Comment);
+        unset($this->Cmmt);
 
         parent::tearDown();
     }
