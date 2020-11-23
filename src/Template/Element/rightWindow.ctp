@@ -96,10 +96,10 @@
     </div>
     <div class="sidebar-box">
         <div class="topic-border color-cod-gray mb-30">
-            <div class="topic-box-lg color-cod-gray">Newsletter</div>
+            <div class="topic-box-lg color-cod-gray">Мэдээний захидал</div>
         </div>
         <div class="newsletter-area bg-primary">
-            <h2 class="title-medium-light size-xl pl-30 pr-30">Subscribe to our mailing list to get the new updates!</h2>
+            <h2 class="title-medium-light size-xl pl-30 pr-30">Шинэ шинэчлэлтүүдийг авахын тулд манайд бүртгүүлнэ үү!</h2>
             <img src="/img/banner/newsletter.png" alt="newsletter" class="img-fluid m-auto mb-15">
             <p>Subscribe our newsletter to stay updated</p>
             <div class="input-group stylish-input-group">
@@ -113,42 +113,8 @@
         </div>
     </div>
     <div class="sidebar-box">
-        <div class="topic-border color-cod-gray mb-25">
-            <div class="topic-box-lg color-cod-gray">Tags</div>
-        </div>
-        <ul class="sidebar-tags">
-            <li>
-                <a href="#">Apple</a>
-            </li>
-            <li>
-                <a href="#">Business</a>
-            </li>
-            <li>
-                <a href="#">Architecture</a>
-            </li>
-            <li>
-                <a href="#">Gadgets</a>
-            </li>
-            <li>
-                <a href="#">Software</a>
-            </li>
-            <li>
-                <a href="#">Microsoft</a>
-            </li>
-            <li>
-                <a href="#">Robotic</a>
-            </li>
-            <li>
-                <a href="#">Technology</a>
-            </li>
-            <li>
-                <a href="#">Others</a>
-            </li>
-        </ul>
-    </div>
-    <div class="sidebar-box">
         <div class="topic-border color-cod-gray mb-30">
-            <div class="topic-box-lg color-cod-gray">Most Reviews</div>
+            <div class="topic-box-lg color-cod-gray">Хамгийн их үзэлттэй</div>
         </div>
         <div class="position-relative mb30-list bg-body">
             <div class="topic-box-top-xs">
@@ -226,29 +192,6 @@
             <div class="media">
                 <a class="img-opacity-hover" href="single-news-1.html">
                     <img src="/img/news/news120.jpg" alt="news" class="img-fluid">
-                </a>
-                <div class="media-body">
-                    <div class="post-date-dark">
-                        <ul>
-                            <li>
-                                <span>
-                                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                                </span>February 10, 2017</li>
-                        </ul>
-                    </div>
-                    <h3 class="title-medium-dark mb-none">
-                        <a href="single-news-2.html">Can Be Monit roade year with Program.</a>
-                    </h3>
-                </div>
-            </div>
-        </div>
-        <div class="position-relative mb30-list bg-body">
-            <div class="topic-box-top-xs">
-                <div class="topic-box-sm color-cod-gray mb-20">Ipad</div>
-            </div>
-            <div class="media">
-                <a class="img-opacity-hover" href="single-news-1.html">
-                    <!-- <img src=/img/news/news121.jpgalt="news" class="img-fluid"> -->
                 </a>
                 <div class="media-body">
                     <div class="post-date-dark">
