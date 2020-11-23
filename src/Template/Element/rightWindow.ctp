@@ -96,24 +96,6 @@
     </div>
     <div class="sidebar-box">
         <div class="topic-border color-cod-gray mb-30">
-            <div class="topic-box-lg color-cod-gray">Мэдээний захидал</div>
-        </div>
-        <div class="newsletter-area bg-primary">
-            <h2 class="title-medium-light size-xl pl-30 pr-30">Шинэ шинэчлэлтүүдийг авахын тулд манайд бүртгүүлнэ үү!</h2>
-            <img src="/img/banner/newsletter.png" alt="newsletter" class="img-fluid m-auto mb-15">
-            <p>Subscribe our newsletter to stay updated</p>
-            <div class="input-group stylish-input-group">
-                <input type="text" placeholder="Enter your mail" class="form-control">
-                <span class="input-group-addon">
-                    <button type="submit">
-                        <i class="fa fa-angle-right" aria-hidden="true"></i>
-                    </button>
-                </span>
-            </div>
-        </div>
-    </div>
-    <div class="sidebar-box">
-        <div class="topic-border color-cod-gray mb-30">
             <div class="topic-box-lg color-cod-gray">Хамгийн их үзэлттэй</div>
         </div>
         <div class="position-relative mb30-list bg-body">
