@@ -1,4 +1,12 @@
 <!-- Header Area Start Here -->
+
+<?php
+    use Cake\ORM\TableRegistry;
+
+    $Visa = TableRegistry::get('Visa');
+    $Visa = $Visa->find();
+?>
+
 <header>
     <div id="header-layout1" class="header-style1">
         <div class="main-menu-area bg-primarytextcolor header-menu-fixed" id="sticker">
@@ -21,24 +29,11 @@
                                     <li>
                                         <a href="#">Виз</a>
                                         <ul class="ne-dropdown-menu">
-                                            <li>
-                                                <a href="post-style-1.html">Үндсэн ажилтны виз</a>
-                                            </li>
-                                            <li>
-                                                <a href="post-style-2.html">Аялалын виз</a>
-                                            </li>
-                                            <li>
-                                                <a href="post-style-4.html">Сургалтын виз</a>
-                                            </li>
-                                            <li>
-                                                <a href="single-news-1.html">Гэр бүлийн виз</a>
-                                            </li>
-                                            <li>
-                                                <a href="post-style-3.html">Урилага</a>
-                                            </li>
-                                            <li>
-                                                <a href="post-style-4.html">Сунгалт</a>
-                                            </li>
+                                            <?php foreach ($Visa as $items): ?>
+                                                <li>
+                                                    <a href="/visa/view/<?= $items->id ?>"><?= $items->type ?></a>
+                                                </li>
+                                            <?php endforeach; ?>
                                         </ul>
                                     </li>
                                     <li>
@@ -79,8 +74,9 @@
                                                     '.$userData['username'].'
                                                 </button>
                                                 <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href='.$this->Url->build(array('controller'=>'Users','action'=>'view', $userData['user_id'])).' >Profile</a>
-                                                    <a class="dropdown-item" href='.$this->Url->build(array('controller'=>'News','action'=>'list')).' >News control</a>
+                                                    <a class="dropdown-item" href='.$this->Url->build(array('controller'=>'Users','action'=>'view', $userData['user_id'])).' >Профайл</a>
+                                                    <a class="dropdown-item" href='.$this->Url->build(array('controller'=>'News','action'=>'list')).' >Мэдээ</a>
+                                                    <a class="dropdown-item" href='.$this->Url->build(array('controller'=>'Visa','action'=>'list')).' >Визний мэдээлэл</a>
                                                     <div class="dropdown-divider"></div>
                                                     <a class="dropdown-item" href='.$this->Url->build(array('controller'=>'Users','action'=>'logout')).'>Logout</a>
                                                 </div>

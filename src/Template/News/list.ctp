@@ -8,6 +8,7 @@
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 <br/><br/>
+
 <div class="row container m-auto mt-5 mb-5">
     <div class="col-12 mb-5">
         <h3 class="float-left mt-4">Мэдээний жагсаалт</h3>
