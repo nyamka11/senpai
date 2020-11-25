@@ -37,10 +37,13 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="post-style-2.html">Зар</a>
+                                        <a href="<?= $this->Url->build(array('controller'=>'Advertisement','action'=>'list')) ?>" >Зар</a>
                                     </li>
                                     <li>
-                                        <a href="post-style-1.html">Элчин сайдын яам</a>
+                                        <a href="post-style-1.html">Хэлэлцүүлэг</a>
+                                    </li>
+                                    <li>
+                                        <a href="post-style-1.html">ENTERTAINMENT</a>
                                     </li>
                                 </ul>
                             </nav>

@@ -6,7 +6,7 @@
         <div class="card">
                 <div class="card-body p-5">
                 <h3 class="m-0">Нэвтрэх</h3>
-                <div class="d-flex justify-content-center mt-1">
+                <div class="d-flex justify-content-center mt-1" style="max-height:200px">
                     <?= $this->Html->image("svg/undraw_Login_re_4vu2.svg",['width' => '250','class'=>'mb-1']) ?>
                 </div>
                 <br/>

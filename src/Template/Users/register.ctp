@@ -6,7 +6,7 @@
         <div class="card">
             <div class="card-body p-5">
                 <h3 class="m-0">Бүртгүүлэх цонх</h3>
-                <div class="d-flex justify-content-center mt-30">
+                <div class="d-flex justify-content-center mt-30" style="max-height:200px">
                     <?= $this->Html->image("svg/undraw_secure_login_pdn4.svg",['width' => '200','class'=>'mb-1']) ?>
                 </div>
                 <?php echo $this->Form->create() ?>
@@ -20,8 +20,8 @@
                     <?php echo $this->Form->input('password',['class'=>'form-control','required']) ?>
                 </div>
                 <?php
-                    echo $this->Form->button('Бүртгүүлэх',['class'=>'btn btn-primary mr-3']);
-                    echo $this->Html->link('Нэвтрэх цонхруу очих',['action'=>'login'],['class'=>'btn btn-success']);
+                    echo $this->Form->button('Бүртгүүлэх',['class'=>'btn btn-success mr-3']);
+                    echo $this->Html->link('Буцах',['action'=>'login'],['class'=>'btn btn-primary']);
                     echo $this->Form->end();
                 ?>
             </div>

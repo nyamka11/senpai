@@ -6,7 +6,7 @@
         <div class="card">
             <div class="card-body p-5">
                 <h3 class="m-0">Нүүц үгээ мартсан</h3>
-                <div class="d-flex justify-content-center mt-30">
+                <div class="d-flex justify-content-center mt-30" style="max-height:200px">
                     <?= $this->Html->image("svg/undraw_forgot_password_gi2d.svg",['width' => '200','class'=>'mb-1']) ?>
                 </div>
                 <?php echo $this->Form->create() ?>
@@ -15,7 +15,7 @@
                 </div>
                 <?php
                     echo $this->Form->button('Шинэ нууц үг авах',['class'=>'btn btn-success mr-3']);
-                    echo $this->Html->link('Нэвтрэх цонхруу буцах',['action'=>'login'],['class'=>'btn btn-primary']);
+                    echo $this->Html->link('Буцах',['action'=>'login'],['class'=>'btn btn-primary']);
                     echo $this->Form->end();
                 ?>
             </div>
