@@ -20,7 +20,7 @@
                         <div class="topic-box-sm color-cod-gray mb-20">Nature</div>
                     </div>
                     <a href="single-news-1.html" class="mb-10 display-block img-opacity-hover">
-                        <img src="/img/news/news171.jpg" alt="ad" class="img-fluid m-auto width-100">
+                        <img src=<?= $this->Url->build('/img/news/news171.jpg'); ?> alt="logo" class="img-fluid m-auto width-100">
                     </a>
                     <h3 class="title-medium-dark size-md mb-none">
                         <a href="single-news-1.html">Rosie Huntington Whitl Habits Career Art.Rosie TBeauty Habits.</a>
@@ -33,7 +33,7 @@
                         <div class="topic-box-sm color-cod-gray mb-20">Application</div>
                     </div>
                     <a href="single-news-1.html" class="mb-10 display-block img-opacity-hover">
-                        <img src="/img/news/news172.jpg" alt="ad" class="img-fluid m-auto width-100">
+                        <img src=<?= $this->Url->build('/img/news/news172.jpg'); ?> alt="ad" class="img-fluid m-auto width-100">
                     </a>
                     <h3 class="title-medium-dark size-md mb-none">
                         <a href="single-news-1.html">Rosie Huntington Whitl Habits Career Art.Rosie TBeauty Habits.</a>
@@ -46,7 +46,7 @@
                         <div class="topic-box-sm color-cod-gray mb-20">Life Style</div>
                     </div>
                     <a href="single-news-1.html" class="mb-10 display-block img-opacity-hover">
-                        <img src="/img/news/news173.jpg" alt="ad" class="img-fluid m-auto width-100">
+                        <img src=<?= $this->Url->build('/img/news/news173.jpg'); ?> alt="ad" class="img-fluid m-auto width-100">
                     </a>
                     <h3 class="title-medium-dark size-md mb-none">
                         <a href="single-news-1.html">Rosie Huntington Whitl Habits Career Art.Rosie TBeauty Habits.</a>
@@ -59,7 +59,7 @@
                         <div class="topic-box-sm color-cod-gray mb-20">Technology</div>
                     </div>
                     <a href="single-news-1.html" class="mb-10 display-block img-opacity-hover">
-                        <img src="/img/news/news174.jpg" alt="ad" class="img-fluid m-auto width-100">
+                        <img src=<?= $this->Url->build('/img/news/news174.jpg'); ?> alt="ad" class="img-fluid m-auto width-100">
                     </a>
                     <h3 class="title-medium-dark size-md mb-none">
                         <a href="single-news-1.html">Rosie Huntington Whitl Habits Career Art.Rosie TBeauty Habits.</a>
@@ -72,7 +72,7 @@
                         <div class="topic-box-sm color-cod-gray mb-20">Accessories</div>
                     </div>
                     <a href="single-news-1.html" class="mb-10 display-block img-opacity-hover">
-                        <img src="/img/news/news175.jpg" alt="ad" class="img-fluid m-auto width-100">
+                        <img src=<?= $this->Url->build('/img/news/news175.jpg'); ?> alt="ad" class="img-fluid m-auto width-100">
                     </a>
                     <h3 class="title-medium-dark size-md mb-none">
                         <a href="single-news-1.html">Rosie Huntington Whitl Habits Career Art.Rosie TBeauty Habits.</a>
@@ -85,7 +85,7 @@
                         <div class="topic-box-sm color-cod-gray mb-20">Model</div>
                     </div>
                     <a href="single-news-1.html" class="mb-10 display-block img-opacity-hover">
-                        <img src="/img/news/news176.jpg" alt="ad" class="img-fluid m-auto width-100">
+                        <img src=<?= $this->Url->build('/img/news/news176.jpg'); ?> alt="ad" class="img-fluid m-auto width-100">
                     </a>
                     <h3 class="title-medium-dark size-md mb-none">
                         <a href="single-news-1.html">Rosie Huntington Whitl Habits Career Art.Rosie TBeauty Habits.</a>
@@ -104,7 +104,7 @@
             </div>
             <div class="media">
                 <a class="img-opacity-hover" href="single-news-1.html">
-                    <img src="/img/news/news117.jpg" alt="news" class="img-fluid">
+                    <img src=<?= $this->Url->build('/img/news/news117.jpg'); ?> alt="news" class="img-fluid">
                 </a>
                 <div class="media-body">
                     <div class="post-date-dark">
@@ -127,7 +127,7 @@
             </div>
             <div class="media">
                 <a class="img-opacity-hover" href="single-news-2.html">
-                    <img src="/img/news/news118.jpg" alt="news" class="img-fluid">
+                    <img src=<?= $this->Url->build('/img/news/news118.jpg'); ?> alt="news" class="img-fluid">
                 </a>
                 <div class="media-body">
                     <div class="post-date-dark">
@@ -150,7 +150,7 @@
             </div>
             <div class="media">
                 <a class="img-opacity-hover" href="single-news-3.html">
-                    <img src="/img/news/news119.jpg" alt="news" class="img-fluid">
+                    <img src=<?= $this->Url->build('/img/news/news119.jpg'); ?> alt="news" class="img-fluid">
                 </a>
                 <div class="media-body">
                     <div class="post-date-dark">
@@ -173,7 +173,7 @@
             </div>
             <div class="media">
                 <a class="img-opacity-hover" href="single-news-1.html">
-                    <img src="/img/news/news120.jpg" alt="news" class="img-fluid">
+                    <img src=<?= $this->Url->build('/img/news/news120.jpg'); ?> alt="news" class="img-fluid">
                 </a>
                 <div class="media-body">
                     <div class="post-date-dark">

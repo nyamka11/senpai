@@ -31,7 +31,7 @@
                                         <ul class="ne-dropdown-menu">
                                             <?php foreach ($Visa as $items): ?>
                                                 <li>
-                                                    <a href="/visa/view/<?= $items->id ?>"><?= $items->type ?></a>
+                                                    <a href="<?= $this->Url->build(array('controller'=>'Visa','action'=>'view',$items->id)) ?>"><?=  $items->type ?></a>
                                                 </li>
                                             <?php endforeach; ?>
                                         </ul>
