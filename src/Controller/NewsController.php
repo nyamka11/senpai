@@ -28,7 +28,9 @@ class NewsController extends AppController  {
         $news = $this->News->get($id, [
             'contain' => ['Cmmt'],
         ]);
-
+        // Debugger::dump($news->read_count); 2 udaa view duudagdaj baigaag olj zasna
+        $news->read_count++;
+        $this->News->save($news);
         $this->set('news', $news);
     }
 

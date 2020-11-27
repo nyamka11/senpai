@@ -40,9 +40,9 @@ foreach($news as $item)  {
                         </div>
                     </div>
                     <ul class="post-info-dark mb-30">
-                        <li><a href="#"><span>Нийтлэсэн</span> Nyamka</a></li>
+                        <li><a href="#"><span>Нийтлэсэн: </span><?= $news->author_name ?></a></li>
                         <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><?= $news->date ?></a></li>
-                        <li><a href="#"><i class="fa fa-eye" aria-hidden="true"></i>202</a></li>
+                        <li><a href="#"><i class="fa fa-eye" aria-hidden="true"></i><?= $news->read_count ?></a></li>
                         <li><a href="#"><i class="fa fa-comments" aria-hidden="true"></i>20</a></li>
                     </ul>
                     <br/>
