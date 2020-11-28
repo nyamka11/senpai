@@ -4,17 +4,13 @@
  * @var \App\Model\Entity\News[]|\Cake\Collection\CollectionInterface $news
  */
 ?>
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-<br/><br/>
-
-<div class="row container m-auto mt-5 mb-5">
-    <div class="col-12 mb-5">
-        <h3 class="float-left mt-4">Мэдээний жагсаалт</h3>
+<br/>
+<div class="row container m-auto mt-5 mb-5 bg-white rounded">
+    <div class="col-12 mb-5 mt-5">
+        <h1 class="float-left mt-4">Мэдээний жагсаалт</h1>
         <?= $this->Html->link(__('Add news'), ['action' => 'add'], ['class'=>'btn btn-info float-right mb-4']) ?>
         <table cellpadding="0" cellspacing="0" class="table w-100">
-            <thead class="thead-dark">
+            <thead class="bg-light" height="300">
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col"><?= $this->Paginator->sort('Бүлэг') ?></th>

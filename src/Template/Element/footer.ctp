@@ -195,7 +195,7 @@
               <div class="row">
                   <div class="col-12 text-center">
                       <a href="index.html" class="footer-logo img-fluid">
-                          <img src=<?= $this->Url->image('logo.png') ?> alt="logo" class="img-fluid">
+                          <img src=<?= $this->Url->image('logo.png') ?> alt="logo" class="img-fluid" style="max-width:180px;">
                       </a>
                       <ul class="footer-social">
                           <li>

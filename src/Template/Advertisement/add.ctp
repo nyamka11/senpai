@@ -37,9 +37,9 @@
                                 <div class="col-12 d-flex justify-content-center">
                                     <?php
                                         $photoUrl = $this->Url->image('svg/undraw_images_aef7.svg');
-                                        // if($user->profile_photo != "")  {
-                                        //     $photoUrl = $user->profile_photo;
-                                        // }
+                                        if($advertisement->photo != "")  {
+                                            $photoUrl = $advertisement->photo;
+                                        }
                                     ?>
                                     <img src=<?= $photoUrl ?> style="width:300px; height:200px; background-size: 70% 40%;" alt="..." class="img-thumbnail">
                                     <input type="file" name="upload_image" id="upload_image" class="d-none" accept="image/*" /><br/>

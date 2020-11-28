@@ -26,11 +26,12 @@
         
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"> -->
     
         <!-- CSS Files -->
         <?= $this->Html->css('normalize.css') ?>
         <?= $this->Html->css('main.css') ?>
-        <?= $this->Html->css('bootstrap.min.css') ?>
+         <?= $this->Html->css('bootstrap.min.css') ?> 
         <?= $this->Html->css('animate.min.css') ?>
         <?= $this->Html->css('font-awesome.min.css') ?>
         <?= $this->Html->css('../vendor/OwlCarousel/owl.carousel.min.css') ?>

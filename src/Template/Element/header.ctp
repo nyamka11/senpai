@@ -15,7 +15,7 @@
                     <div class="col-lg-2 d-none d-lg-block">
                         <div class="logo-area">
                             <a href=<?= $this->Url->build(array('controller'=>'News','action'=>'index')) ?> >
-                                <img src=<?= $this->Url->build('/img/logo.png'); ?> alt="logo" class="img-fluid">
+                                <img src=<?= $this->Url->build('/img/logo.png'); ?> alt="logo" class="img-fluid" style="max-width:180px;">
                             </a>
                         </div>
                     </div>
@@ -37,7 +37,7 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="<?= $this->Url->build(array('controller'=>'Advertisement','action'=>'list')) ?>" >Зар</a>
+                                        <a href="<?= $this->Url->build(array('controller'=>'Advertisement','action'=>'index')) ?>" >Зар</a>
                                     </li>
                                     <li>
                                         <a href="post-style-1.html">Хэлэлцүүлэг</a>
@@ -77,17 +77,15 @@
                                                     '.$userData['username'].'
                                                 </button>
                                                 <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href='.$this->Url->build(array('controller'=>'Users','action'=>'view', $userData['user_id'])).' >Профайл</a>
-                                                    <a class="dropdown-item" href='.$this->Url->build(array('controller'=>'News','action'=>'list')).' >Мэдээ</a>
-                                                    <a class="dropdown-item" href='.$this->Url->build(array('controller'=>'Visa','action'=>'list')).' >Визний мэдээлэл</a>
+                                                    <a class="dropdown-item" href='.$this->Url->build(array('controller'=>'Users','action'=>'view', $userData['user_id'])).' >&nbsp;<i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;Профайл</a>
+                                                    <a class="dropdown-item" href='.$this->Url->build(array('controller'=>'News','action'=>'list')).' ><i class="fa fa-newspaper-o" aria-hidden="true">&nbsp;&nbsp;</i>Мэдээ</a>
+                                                    <a class="dropdown-item" href='.$this->Url->build(array('controller'=>'Visa','action'=>'list')).' ><i class="fa fa-cc-visa"></i>&nbsp;&nbsp;Визний мэдээлэл</a>
                                                     <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href='.$this->Url->build(array('controller'=>'Users','action'=>'logout')).'>Logout</a>
+                                                    <a class="dropdown-item" href='.$this->Url->build(array('controller'=>'Users','action'=>'logout')).'><i class="fa fa-sign-out" aria-hidden="true">&nbsp;&nbsp;</i>Logout</a>
                                                 </div>
                                             </div>';
                                         }
-                                        
                                     ?>
-                                    
                                 </li>
                                 <li>
                                     <div id="side-menu-trigger" class="offcanvas-menu-btn">

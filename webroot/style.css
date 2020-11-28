@@ -3952,7 +3952,7 @@ div#wrapper.open > .offcanvas-mask {
   content: "";
   height: 100%;
   width: 100%;
-  background-color: #e53935;
+  background-color: black;
   z-index: -1;
   top: 0;
   left: 0;

@@ -5,31 +5,29 @@
  */
 ?>
 
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js" integrity="sha512-Gs+PsXsGkmr+15rqObPJbenQ2wB3qYvTHuJO6YJzPe/dTLvhy0fmae2BcnaozxDo5iaF8emzmCZWbQ1XXiX2Ig==" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css" integrity="sha512-2eMmukTZtvwlfQoG8ztapwAH5fXaQBzaMqdljLopRSA0i6YKM8kBAOrSSykxu9NN9HrtD45lIqfONLII2AFL/Q==" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.js" integrity="sha512-vUJTqeDCu0MKkOhuI83/MEX5HSNPW+Lw46BA775bAWIp1Zwgz3qggia/t2EnSGB9GoS2Ln6npDmbJTdNhHy1Yw==" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css" integrity="sha512-zxBiDORGDEAYDdKLuYU9X/JaJo/DPzE42UubfBw9yg8Qvb2YRRIQ8v4KsGHOx2H1/+sdSXyXxLXv5r7tHc9ygg==" crossorigin="anonymous" />
-
-<div class="row container m-auto mt-5 mb-5">
+<!-- <?= $this->Html->css('summernote.min.css') ?> -->
+<?= $this->Html->script('summernote.min.js') ?>
+<?= $this->Html->script('croppie.min.js') ?>
+<?= $this->Html->css('croppie.css') ?>
+<br/>
+<div class="row container m-auto mt-5 mb-5 bg-white rounded">
     <div class="col-12 mb-5 mt-5">
         <div class="row mb-5 pb-5">
             <div class="col">
-                <h3 class="float-left"><?=h("Шинэ мэдээ нэмэх")?></h3>
+                <h1 class="float-left"><?=h("Шинэ мэдээ нэмэх")?></h1>
             </div>
             <div class="col">
-                <?= $this->Html->link(__('View news list'), ['action' => 'list'], ['class'=>'btn btn-info float-right mt-3']) ?>
+                <?= $this->Html->link(__('View news list'), ['action' => 'list'], ['class'=>'btn btn-info float-right mt-3 btn-lg']) ?>
             </div>
         </div>
         <?= $this->Form->create($news) ?>
         <fieldset>
             <?php
-                echo $this->Form->input('title',  array('type'=>'text','label' => "Гарчиг",'class'=>"w-100 form-control mb-5 form-control-lg"));
-                echo $this->Form->input('placeoforigin',  array('type'=>'text','label' => "Эх сурвалж",'class'=>"w-100 form-control mb-5 form-control-lg"));
+                echo $this->Form->input('title',  array('type'=>'text','label' => ['text' => 'Гарчиг', 'class' => ''],'class'=>"w-100 form-control mb-5 form-control-lg"));
+                echo $this->Form->input('placeoforigin',  array('type'=>'text','label' => ['text' => 'Эх сурвалж', 'class' => ''],'class'=>"w-100 form-control mb-5 form-control-lg"));
             ?>
-            <label for="category">Хамаарах бүлэг</label>
+            <label for="category" >Хамаарах бүлэг</label>
             <select name="category" id="category" class="w-100 form-control mb-5 form-control-lg" style="height:35px;">
                 <option value="Улс төр">Улс төр</option>
                 <option value="Нийгэм">Нийгэм</option>
@@ -49,8 +47,8 @@
                     <img alt="..." class="img-thumbnail d-none">
                 </div>
                 <div class="col-12 d-flex justify-content-center">
-                    <a id="pictureAdd" class="btn btn-primary text-light mt-3">Зураг оруулах</a>
-                    <a id="pictureCancel" class="btn btn-secondary text-light mt-3 ml-3">Цуцлах</a>
+                    <a id="pictureAdd" class="btn btn-primary text-light mt-3 btn-lg">Зураг оруулах</a>
+                    <a id="pictureCancel" class="btn btn-secondary text-light mt-3 ml-3 btn-lg">Цуцлах</a>
                     <input type="file" id="newsImg" class="w-100 form-control d-none" accept="image/*" />
                     <input type="text" id="news-image" name="newsImg" class="d-none" />
                 </div>
@@ -60,12 +58,12 @@
             <div id="summernote" class="mt-10"></div>
         </fieldset>
         <br />
-        <?= $this->Form->button(__('Мэдээ нийтлэх'),['class'=>'btn btn-success newsAdd form-control-lg']) ?>
+        <?= $this->Form->button(__('Мэдээ оруулах'),['class'=>'btn btn-success newsAdd form-control-lg btn-lg w-25']) ?>
         <?= $this->Form->end() ?>
+        <br/>
     </div>
 </div>
-<br/><br/>
-
+<br/>
 <div id="uploadimageModal" class="modal" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -82,8 +80,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-success crop_image">Зургийг тайрч, оруулах</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Цонхыг хаах</button>
+                <button class="btn btn-success crop_image btn-lg">Зургийг тайрч, оруулах</button>
+                <button type="button" class="btn btn-default btn-lg" data-dismiss="modal">Цонхыг хаах</button>
             </div>
         </div>
     </div>
@@ -142,7 +140,7 @@
                 // code block
             };
 
-            $("#picNone").html("<div class='ml-5'><h2>"+cropImgSett.width+"x"+cropImgSett.height+"</h2></div>")
+            $("#picNone").html("<div class='ml-5 mt-5'><h1>"+cropImgSett.width+"x"+cropImgSett.height+"</h1></div>")
             $(".modal-dialog").css("max-width", cropImgSett.width + 200).width(cropImgSett.width + 200);
             $(".modal-content").width(cropImgSett.width + 200);
             $('.img-thumbnail').width(cropImgSett.width).height(cropImgSett.height);

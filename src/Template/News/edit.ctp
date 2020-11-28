@@ -4,15 +4,12 @@
  * @var \App\Model\Entity\News $news
  */
 ?>
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js" integrity="sha512-Gs+PsXsGkmr+15rqObPJbenQ2wB3qYvTHuJO6YJzPe/dTLvhy0fmae2BcnaozxDo5iaF8emzmCZWbQ1XXiX2Ig==" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css" integrity="sha512-2eMmukTZtvwlfQoG8ztapwAH5fXaQBzaMqdljLopRSA0i6YKM8kBAOrSSykxu9NN9HrtD45lIqfONLII2AFL/Q==" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.js" integrity="sha512-vUJTqeDCu0MKkOhuI83/MEX5HSNPW+Lw46BA775bAWIp1Zwgz3qggia/t2EnSGB9GoS2Ln6npDmbJTdNhHy1Yw==" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css" integrity="sha512-zxBiDORGDEAYDdKLuYU9X/JaJo/DPzE42UubfBw9yg8Qvb2YRRIQ8v4KsGHOx2H1/+sdSXyXxLXv5r7tHc9ygg==" crossorigin="anonymous" />
-
-<div class="row container m-auto mt-5 mb-5 pb-5">
+<?= $this->Html->script('summernote.min.js') ?>
+<?= $this->Html->script('croppie.min.js') ?>
+<?= $this->Html->css('croppie.css') ?>
+<br/>
+<div class="row container m-auto mt-5 mb-5 pb-4 bg-white rounded">
     <div class="col-12 mb-5 mt-5">
         <div class="row">
             <div class="col">
@@ -30,8 +27,8 @@
         <?= $this->Form->create($news) ?>
         <fieldset>
             <?php
-                echo $this->Form->input('title',  array('type'=>'text','label' => "Гарчиг",'class'=>"w-100 form-control mb-4"));
-                echo $this->Form->input('placeoforigin',  array('type'=>'text','label' => "Эх сурвалж",'class'=>"w-100 form-control mb-4"));
+                echo $this->Form->input('title',  array('type'=>'text','label' => "Гарчиг",'class'=>"w-100 form-control mb-4 form-control-lg"));
+                echo $this->Form->input('placeoforigin',  array('type'=>'text','label' => "Эх сурвалж",'class'=>"w-100 form-control mb-4 form-control-lg"));
 
                 $itemsValue="";
                 $cotegoryItems=['Улс төр','Нийгэм','Спорт','Эрүүл мэнд','Нийтлэл','Боловсрол','Дэлхийд','Түүх','Танин мэдэхүй'];
@@ -65,10 +62,11 @@
             <div id="summernote"></div>
         </fieldset>
         <br />
-        <?= $this->Form->button(__('Save'),['class'=>'btn btn-success newsAdd']) ?>
+        <?= $this->Form->button(__('Save'),['class'=>'btn btn-success newsAdd w-25 btn-lg']) ?>
         <?= $this->Form->end() ?>
     </div>
 </div>
+<br/>
 
 <div id="uploadimageModal" class="modal" role="dialog">
     <div class="modal-dialog">

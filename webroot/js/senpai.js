@@ -6,4 +6,7 @@
         tabsize: 2
     });
 
+
+    $(".btn").addClass("btn-lg");
+
 })(jQuery);
