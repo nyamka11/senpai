@@ -29,7 +29,9 @@ class News extends Entity  {
         'newsImg' => true,
         'category' => true,
         'placeoforigin' => true,
-        'author' => true,
+        'author_id' => true,
+        'author_name' => true,
         'date' => true,
+        'read_count' => true
     ];
 }

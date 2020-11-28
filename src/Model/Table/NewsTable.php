@@ -77,13 +77,22 @@ class NewsTable extends Table
             ->allowEmptyString('category');
 
         $validator
-            ->scalar('author')
-            ->maxLength('author', 45)
-            ->allowEmptyString('author');
+            ->scalar('author_id')
+            ->maxLength('author_id', 45)
+            ->allowEmptyString('author_id');
+
+        $validator
+            ->scalar('author_name')
+            ->maxLength('author_name', 100)
+            ->allowEmptyString('author_name');
 
         $validator
             ->dateTime('date')
             ->allowEmptyDateTime('date');
+
+        $validator
+            ->integer('read_count')
+            ->allowEmptyString('read_count');
 
         return $validator;
     }
