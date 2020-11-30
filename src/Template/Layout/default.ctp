@@ -39,12 +39,13 @@
         <?= $this->Html->css('meanmenu.min.css') ?>
         <?= $this->Html->css('magnific-popup.css') ?>
         <?= $this->Html->css('hover-min.css') ?>
-        <?= $this->Html->css('../style.css') ?>
         <?= $this->Html->css('ie-only.css') ?>
         <?= $this->Html->css('senpai.css') ?>
+        <?= $this->Html->css('../style.css') ?>
         
         <?= $this->Html->script('modernizr-2.8.3.min.js') ?>
         <?= $this->Html->script('jquery-2.2.4.min.js') ?>
+        
     </head>
 
     <body>
@@ -75,9 +76,12 @@
         <?= $this->Html->script('jquery.magnific-popup.min.js') ?>
         <?= $this->Html->script('ticker.js') ?>
         <?= $this->Html->script('main.js?v=10') ?>
+        <?= $this->Html->script('senpai.js') ?>
+        
 
         <?= $this->Html->css('bootstrap-toggle.css') ?>
          <?= $this->Html->script('bootstrap-toggle.js') ?>
+         
     </body>
 
 </html>

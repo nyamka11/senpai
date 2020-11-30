@@ -98,7 +98,7 @@ class NewsController extends AppController  {
 
         $set = array();
         if($type == "like") $set['likeCnt'] = $count;
-        if($type == "unlike") $set['unlikeCnt'] = $count;
+        if($type == "unlike") $set['unlikeCnt'] = $count; 
 
         $commentTable = TableRegistry::get("cmmt");
         $query = $commentTable->query();

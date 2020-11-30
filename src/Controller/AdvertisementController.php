@@ -32,6 +32,7 @@ class AdvertisementController extends AppController  {
         $advertisement = $this->Advertisement->newEntity();
         if ($this->request->is('post')) {
             $advertisement = $this->Advertisement->patchEntity($advertisement, $this->request->getData());
+            $advertisement->createDate = time();
             if ($this->Advertisement->save($advertisement)) {
                 $this->Flash->success(__('The advertisement has been saved.'));
 

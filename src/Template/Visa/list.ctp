@@ -29,12 +29,29 @@
                     <td><?= h($visa->createDate) ?></td>
                     <td><?= h($visa->updateDate) ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $visa->id],['class'=>'btn btn-info']) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $visa->id],['class'=>'btn btn-dark']) ?>
-                        <?= $this->Form->postLink( 'Устгах',
-                            ['action' => 'delete', $visa->id],
-                            ['confirm' => __('Are you sure you want to delete # {0}?'), 'class'=> 'btn btn-danger']
-                        ) ?>
+                        <a href="<?= $this->Url->build(array('action'=>'view', $visa->id)) ?>">
+                            <button class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Харах">
+                                <i class="fa fa-eye"></i>
+                            </button>
+                        </a>
+                        <a href="<?= $this->Url->build(array('action'=>'edit', $visa->id)) ?>">
+                            <button class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Засах">
+                                <i class="fa fa-wrench"></i>
+                            </button>
+                        </a>
+                        <?=
+                            $this->Form->postLink(
+                                '<button class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Устгах">
+                                    <i class="fa fa-trash"></i>
+                                </button>',
+                                array('action'   => 'delete', $visa->id),
+                                array(
+                                    'class'    => 'tip',
+                                    'escape'   => false,
+                                    'confirm'  => 'Are you sure you want to delete # {0}?'
+                                )
+                            );
+                        ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>
@@ -53,3 +70,7 @@
     </div>
 </div>
 <br/>
+
+<script>
+  
+</script>

@@ -38,12 +38,29 @@
                     <td><?= h($news->author) ?></td>
                     <td><?= h($news->date) ?></td>
                     <td class="actions w-25">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $news->id],['class'=>'btn btn-outline-info']) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $news->id],['class'=>'btn btn-outline-dark']) ?>
-                        <?= $this->Form->postLink( 'Устгах',
-                            ['action' => 'delete', $news->id],
-                            ['confirm' => __('Are you sure you want to delete # {0}?'), 'class'=> 'btn btn-outline-danger']
-                        ) ?>
+                        <a href="<?= $this->Url->build(array('action'=>'view', $news->id)) ?>">
+                            <button class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Харах">
+                                <i class="fa fa-eye"></i>
+                            </button>
+                        </a>
+                        <a href="<?= $this->Url->build(array('action'=>'edit', $news->id)) ?>">
+                            <button class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Засах">
+                                <i class="fa fa-wrench"></i>
+                            </button>
+                        </a>
+                        <?=
+                            $this->Form->postLink(
+                                '<button class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Устгах">
+                                    <i class="fa fa-trash"></i>
+                                </button>',
+                                array('action'   => 'delete', $news->id),
+                                array(
+                                    'class'    => 'tip',
+                                    'escape'   => false,
+                                    'confirm'  => 'Are you sure you want to delete # {0}?'
+                                )
+                            );
+                        ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>

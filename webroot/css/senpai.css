@@ -47,3 +47,25 @@ input, select {
 .logo-mobile img {
     max-width: 180px;
 }
+.btn-ftg-ptp-45  {
+    cursor: pointer;
+}
+.card {
+    border-radius: 0px !important;
+}
+.btn  {
+    border-radius: 0px !important;
+}
+
+.dropdown-menu  {
+    border-radius: 0px !important;
+}
+input  {
+    border-radius: 0px !important;
+}
+select  {
+    border-radius: 0px !important;
+}
+.tooltip {
+    font-size:15px;
+}

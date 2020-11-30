@@ -41,21 +41,22 @@
                                             $photoUrl = $advertisement->photo;
                                         }
                                     ?>
-                                    <img src=<?= $photoUrl ?> style="width:300px; height:200px; background-size: 70% 40%;" alt="..." class="img-thumbnail">
-                                    <input type="file" name="upload_image" id="upload_image" class="d-none" accept="image/*" /><br/>
+                                    <img src=<?= $photoUrl ?> alt="..." class="img-thumbnail">
+                                    <input type="file" id="upload_image" class="d-none" accept="image/*" /><br/>
+                                    <input type="text" name="photo" id="photo" class="d-none" />
                                 </div>
                                 <div class="col-12 d-flex justify-content-center mt-3">
-                                    <button id="addPhoto" class="btn btn-primary btn-lg">Зураг оруулах</button>
-                                    <button id="deletePhoto" class="btn btn-secondary ml-1 btn-lg">Устгах</button>
+                                    <div id="addPhoto" class="btn-ftg-ptp-45"><i class="fa fa-plus"></i>&nbsp;Зураг оруулах</div>&nbsp;
+                                    <div id="deletePhoto" class="btn-ftg-ptp-45"><i class="fa fa-trash"></i> &nbsp;Устгах</div>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="adsBody">Таны зар<font color="red"> *</font></label>
-                            <textarea id="adsBody" name="adsBody" class="w-100 form-control form-control-lg" rows="5" required ></textarea>
+                            <textarea id="adsBody" name="adsBody" class="w-100 form-control form-control-lg" rows="8" required ></textarea>
                         </div>
                     </fieldset>
-                    <?= $this->Form->button(__('+ Зар байршуулах'),['class'=>'btn btn-success btn-lg']) ?>
+                    <?= $this->Form->button(__('Зар байршуулах'),['class'=>'btn-ftg-ptp-45']) ?>
                     <?= $this->Form->end() ?>
                 </div>
             </div>
@@ -91,8 +92,10 @@
     .img-thumbnail  {
         background:url(<?= $this->Url->image('svg/undraw_images_aef7.svg')?>) no-repeat center center; 
         background-size: 70% 40%;
-        border:2px dashed gray; 
-        border-radius: 4px;
+        border:1px solid #cacaca; 
+        border-radius: 3px;
+        width:300px; 
+        height:200px; 
     }
 </style>
 
@@ -115,8 +118,8 @@
     });
 
     $('#deletePhoto').click(function()  {
-        $(".upi").val("");
         $("#upload_image").val("");
+        $("#photo").val("");
         $('.img-thumbnail').attr('src',"<?php echo $this->Url->image('svg/undraw_images_aef7.svg'); ?>");
     });
 
@@ -125,9 +128,9 @@
         reader.onload = function (event) {
         $image_crop.croppie('bind', {
             url: event.target.result
-        }).then(function(){
-            console.log('jQuery bind complete');
-        });
+            }).then(function()  {
+                console.log('jQuery bind complete');
+            });
         }
         reader.readAsDataURL(this.files[0]);
         $('#uploadimageModal').modal('show');
@@ -140,7 +143,7 @@
         }).then(function(response)  {
             $('.img-thumbnail').attr('src',response);
             $('.close').click();
-            $(".upi").val(response);
+            $("#photo").val(response);
         })
     });
 
