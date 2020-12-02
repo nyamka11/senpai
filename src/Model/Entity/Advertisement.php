@@ -29,8 +29,10 @@ class Advertisement extends Entity
         'name' => true,
         'email' => true,
         'phone' => true,
+        'title' => true,
         'adsBody' => true,
         'photo' => true,
+        'read_count' => true,
         'createDate' => true,
     ];
 }

@@ -62,6 +62,11 @@ class AdvertisementTable extends Table
             ->allowEmptyString('phone');
 
         $validator
+            ->scalar('title')
+            ->maxLength('title', 255)
+            ->allowEmptyString('title');
+
+        $validator
             ->scalar('adsBody')
             ->maxLength('adsBody', 255)
             ->allowEmptyString('adsBody');
@@ -69,6 +74,10 @@ class AdvertisementTable extends Table
         $validator
             ->scalar('photo')
             ->allowEmptyString('photo');
+
+        $validator
+            ->integer('read_count')
+            ->allowEmptyString('read_count');
 
         $validator
             ->dateTime('createDate')

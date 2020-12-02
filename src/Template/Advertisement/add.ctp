@@ -20,7 +20,7 @@
                     <?= $this->Form->create($advertisement) ?>
                     <fieldset>
                         <div class="form-group">
-                            <label for="name">Нэр<font color="red"> *</font></label>
+                            <label for="name">Таны нэр<font color="red"> *</font></label>
                             <input type="text" id="name" name="name" class="w-100 form-control form-control-lg" required />
                         </div>
                         <div class="form-group">
@@ -30,6 +30,10 @@
                         <div class="form-group">
                             <label for="phone">Утас<font color="red"> *</font></label>
                             <input type="text" id="phone" name="phone" class="w-100 form-control form-control-lg" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Гарчиг<font color="red"> *</font></label>
+                            <input type="text" id="title" name="title" class="w-100 form-control form-control-lg" required />
                         </div>
                         <div class="form-group">
                             <label for="adsBody">Зураг<font color="red"> *</font></label>

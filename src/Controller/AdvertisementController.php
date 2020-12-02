@@ -13,7 +13,8 @@ use App\Controller\AppController;
 class AdvertisementController extends AppController  {
 
     public function index()  {
-
+        $query = $this->Advertisement->find('all')->order(['id' => 'desc']);
+        $this->set('advertisement', $this->paginate($query));
     }
 
     public function list()  {
@@ -25,6 +26,8 @@ class AdvertisementController extends AppController  {
         $advertisement = $this->Advertisement->get($id, [
             'contain' => [],
         ]);
+        $advertisement->read_count++;
+        $this->Advertisement->save($advertisement);
         $this->set('advertisement', $advertisement);
     }
 
@@ -36,7 +39,7 @@ class AdvertisementController extends AppController  {
             if ($this->Advertisement->save($advertisement)) {
                 $this->Flash->success(__('The advertisement has been saved.'));
 
-                return $this->redirect(['action' => 'list']);
+                return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The advertisement could not be saved. Please, try again.'));
         }
