@@ -27,7 +27,7 @@
         return (round($time/86400) == 1) ? '1 өдрийн өмнө' : round($time/86400).' өдрийн өмнө';
         // weeks
         case $time >= 604800 && $time < 2600640;
-        return (round($time/604800) == 1) ? '1 хоногийн өмнө' : round($time/604800).' 7 хоногийн өмнө';
+        return (round($time/604800) == 1) ? '1 хоногийн өмнө' : round($time/604800).' долоо хоногийн өмнө';
         // months
         case $time >= 2600640 && $time < 31207680;
         return (round($time/2600640) == 1) ? '1 сарын өмнө' : round($time/2600640).' сарын өмнө';
@@ -54,7 +54,6 @@
                     <ul class="post-info-dark mt-2">
                         <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><?= $advertisement->name ?></a></li>
                         <li><a href="#"><i class="fa fa-eye" aria-hidden="true"></i><?= (int) $advertisement->read_count ?></a></li>
-                        <li><a href="#"><i class="fa fa-comments" aria-hidden="true"></i>20</a></li>
                         <li><a href="#"><i class="fa fa-history"></i><?= timeAgo($advertisement->createDate) ?></a></li>
                     </ul>
                 </div>
@@ -62,12 +61,12 @@
                 <p><?=$advertisement->adsBody?></p>
                 <br/>
                 <div class="comments-area">
-                    <h3 class="title-semibold-dark size-xl border-bottom mb-10 pb-10">Сэтгэгдэл (<?= count($advertisement->cmmt)?>)</h3>
+                    <h2 class="title-semibold-dark size-xl border-bottom mb-10 pb-10">Сэтгэгдэл (<?= count($advertisement->cmmt)?>)</h2>
                     <?php foreach($advertisement->cmmt as $comment):  ?>
                     <div id="commentBox">
                         <div class="pl-4">
-                            <b><font size="2"><?= $comment->authorName ?></font></b>,
-                            <small>&nbsp;&nbsp;[ <?=  timeAgo($comment->createDate) ?> ]</small><br/>
+                            <b><font size="2"><?= $comment->authorName ?></font></b>
+                            <small class="text-muted">&nbsp;&nbsp;[ <?=  timeAgo($comment->createDate) ?> ]</small><br/>
                             <small><?= $comment->commentBody ?></small>
                         </div>
                         <div id="feedBack" commentId=<?= $comment->id ?> class="ml-4 mt-2 overflow-hidden">
@@ -80,7 +79,7 @@
                 </div>
                 <div class="leave-comments mt-50">
                     <h2 class="title-semibold-dark size-xl mb-20">Сэтгэгдэл үлдээх</h2>
-                    <?= $this->Form->create($advertisement,['action'=>'commentadd']) ?>
+                    <?= $this->Form->create($advertisement,['action'=>'commentadd', "class"=> "commnetForm"]) ?>
                         <div class="row">
                             <div class="col-md-6 col-sm-12">
                                 <div class="form-group">
@@ -90,13 +89,14 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
-                                    <textarea placeholder="Сэтгэгдэл" required name="body" class="textarea form-control" id="form-message" rows="8" cols="20"></textarea>
+                                    <div id="lengthCtr"><cnt>0</cnt>/255</div>
+                                    <textarea placeholder="Сэтгэгдэл" required name="body" class="commentTextarea textarea form-control" id="form-message" rows="8" cols="20"></textarea>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group mb-none">
-                                    <?= $this->Form->button(__('Нийтлэх'),['class'=>'btn-ftg-ptp-45']) ?>
+                                    <?= $this->Form->button(__('Нийтлэх'),['class'=>'commentPost btn-ftg-ptp-45']) ?>
 
                                 </div>
                             </div>

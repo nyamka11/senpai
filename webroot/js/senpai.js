@@ -1,10 +1,10 @@
 (function ($) {
     "use strict";
 
-    //tooltip
+    //tooltip --------------------------------
     $('[data-toggle="tooltip"]').tooltip();
 
-    //Comment 
+    //Comment ---------------------------------
     $("#feedBack #like").click(function()  {
         let cnt = parseInt($("cnt",this).text()) + 1;
         $("cnt",this).text(cnt);
@@ -35,5 +35,18 @@
             }
         });
     }
+
+    var strCnt=0;
+    $(".commentTextarea").keyup(function(e)  {
+        strCnt = $(this).val().length;
+        $("#lengthCtr cnt").text(strCnt);
+    });
+
+    $('.commnetForm').submit(function() {
+        if(strCnt > 255)  {
+            alert("Сэтгэгдлээ 255 тэмдэгтэнд багтаана уу!");
+            return false
+        }
+    });
 
 })(jQuery);

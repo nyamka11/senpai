@@ -73,8 +73,8 @@
                                         else  {
                                             echo 
                                             '<div class="btn-group">
-                                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    '.$userData['username'].'
+                                                <button id="leggedInfo" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa fa-user" aria-hidden="true"></i> '.$userData['username'].'
                                                 </button>
                                                 <div class="dropdown-menu">
                                                     <a class="dropdown-item" href='.$this->Url->build(array('controller'=>'Users','action'=>'view', $userData['user_id'])).' >&nbsp;<i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;Профайл</a>

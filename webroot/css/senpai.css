@@ -85,3 +85,20 @@ select  {
 #commentBox  {
     margin-top: 15px;
 }
+
+#leggedInfo {
+    background-color: #5f0101;
+    border-color:#dc3545;;
+}
+
+p  {
+    color: black;
+}
+
+#lengthCtr  {
+    position: absolute;
+    right: 23px;
+    top: 0px;
+    font-size: 14px;
+    color: #5f5f5f;
+}

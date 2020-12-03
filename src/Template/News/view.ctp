@@ -47,7 +47,7 @@ function timeAgo($time_ago) {
     return (round($time/86400) == 1) ? '1 өдрийн өмнө' : round($time/86400).' өдрийн өмнө';
     // weeks
     case $time >= 604800 && $time < 2600640;
-    return (round($time/604800) == 1) ? '1 хоногийн өмнө' : round($time/604800).' 7 хоногийн өмнө';
+    return (round($time/604800) == 1) ? '1 хоногийн өмнө' : round($time/604800).' долоо хоногийн өмнө';
     // months
     case $time >= 2600640 && $time < 31207680;
     return (round($time/2600640) == 1) ? '1 сарын өмнө' : round($time/2600640).' сарын өмнө';
@@ -82,17 +82,15 @@ function timeAgo($time_ago) {
                     </ul>
                     <br/>
 
-
                     <?= html_entity_decode($news->body, ENT_QUOTES, 'UTF-8') ?>
 
-
                     <div class="comments-area"><br/>
-                        <h3 class="title-semibold-dark size-xl border-bottom mb-10 pb-10">Сэтгэгдэл (<?= count($news->cmmt)?>)</h3>
+                        <h2 class="title-semibold-dark size-xl border-bottom mb-10 pb-10">Сэтгэгдэл (<?= count($news->cmmt)?>)</h2>
                         <?php foreach($news->cmmt as $comment): ?>
                         <div id="commentBox">
                             <div class="pl-4">
-                                <b><?= $comment->authorName ?></b>,
-                                <small><?=  timeAgo($comment->createDate) ?></small><br/>
+                                <b><?= $comment->authorName ?></b>
+                                <small class="text-muted">&nbsp;&nbsp;[ <?=  timeAgo($comment->createDate) ?> ]</small><br/>
                                 <small><?= $comment->commentBody ?></small>
                             </div>
                             <div id="feedBack" commentId=<?= $comment->id ?> class="ml-4 mt-2 overflow-hidden">
@@ -105,7 +103,7 @@ function timeAgo($time_ago) {
                     </div>
                     <div class="leave-comments mt-50">
                         <h2 class="title-semibold-dark size-xl mb-40">Сэтгэгдэл үлдээх</h2>
-                        <?= $this->Form->create($news,['action'=>'commentadd']) ?>
+                        <?= $this->Form->create($news,['action'=>'commentadd', "class"=> "commnetForm"]) ?>
                             <div class="row">
                                 <div class="col-md-6 col-sm-12">
                                     <div class="form-group">
@@ -115,7 +113,8 @@ function timeAgo($time_ago) {
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <textarea placeholder="Сэтгэгдэл" required name="body" class="textarea form-control" id="form-message" rows="8" cols="20"></textarea>
+                                        <div id="lengthCtr"><cnt>0</cnt>/255</div>
+                                        <textarea placeholder="Сэтгэгдэл" required name="body" class="commentTextarea textarea form-control" id="form-message" rows="8" cols="20"></textarea>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>

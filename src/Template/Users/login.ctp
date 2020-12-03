@@ -1,7 +1,6 @@
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
 <div class="row pb-5 mb-5 mt-5">
-    <div class="col-md-4"></div>
-    <div class="col-md-4 pb-5 mb-5">
+    <div class="col-md-4 pb-5 mb-5 m-auto">
         <?= $this->Flash->render() ?>
         <div class="card">
                 <div class="card-body p-5">
@@ -35,7 +34,6 @@
             </div>
         </div>
     </div>
-    <div class="col-md-4"></div>
 </div>
 
 <style>
