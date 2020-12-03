@@ -2,6 +2,8 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\ORM\TableRegistry;
+use Cake\Http\ServerRequest;
 
 /**
  * Advertisement Controller
@@ -24,7 +26,7 @@ class AdvertisementController extends AppController  {
 
     public function view($id = null)  {
         $advertisement = $this->Advertisement->get($id, [
-            'contain' => [],
+            'contain' => ['Cmmt'],
         ]);
         $advertisement->read_count++;
         $this->Advertisement->save($advertisement);
@@ -72,5 +74,33 @@ class AdvertisementController extends AppController  {
         }
 
         return $this->redirect(['action' => 'list']);
+    }
+
+    public function commentadd($id = null)  {
+        $commentTable = TableRegistry::get('cmmt');
+        $comment = $commentTable -> newEntity();
+
+        $comment->itemid_ = $id;
+        $comment->modulName = 'Advertisement';
+        $comment->authorName = $this->request->getData('author_name') == "" ? "Зочин" : $this->request->getData('author_name') ;
+        $comment->commentBody = $this->request->getData('body');
+        $comment->createDate = time();
+
+        if ($commentTable->save($comment)) {
+            return $this->redirect(['action' => 'view',$id]);
+        }
+    }
+
+    public function feedback($id = null)  {
+        $type = $this->request->getQuery("type");
+        $count = $this->request->getQuery("count");
+
+        $set = array();
+        if($type == "like") $set['likeCnt'] = $count;
+        if($type == "unlike") $set['unlikeCnt'] = $count; 
+
+        $commentTable = TableRegistry::get("cmmt");
+        $query = $commentTable->query();
+        $result = $query->update()->set($set)->where(['id' => $id])->execute();
     }
 }

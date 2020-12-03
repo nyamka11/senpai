@@ -30,6 +30,11 @@ class AdvertisementTable extends Table
     {
         parent::initialize($config);
 
+        $this->hasMany('cmmt')
+        ->setForeignKey('itemid_')  //id taaruulj bgaa heseg ON gsn vg
+        ->setConditions(['cmmt.modulName' => 'Advertisement'])  //Nohtsol
+        ->setDependent(true);
+
         $this->setTable('advertisement');
         $this->setDisplayField('name');
         $this->setPrimaryKey('id');

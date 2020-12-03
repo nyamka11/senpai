@@ -3,42 +3,129 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Advertisement $advertisement
  */
+    function timeAgo($time_ago) {
+        $t = explode(" ",$time_ago);
+        $y = explode(".",$t[0]);
+        $d = explode(":",$t[1]);
+
+        $time_ago = mktime($d[0], $d[1], 0, $y[1], $y[2], $y[0]);
+        $time_ago =  strtotime($time_ago) ? strtotime($time_ago) : $time_ago;
+        $time  = time() - $time_ago;
+
+        switch($time):
+        // seconds
+        case $time <= 60;
+        return 'дөнгөж сая';
+        // minutes
+        case $time >= 60 && $time < 3600;
+        return (round($time/60) == 1) ? '1 минутын өмнө' : round($time/60).' минутын өмнө';
+        // hours
+        case $time >= 3600 && $time < 86400;
+        return (round($time/3600) == 1) ? '1 цагийн өмнө' : round($time/3600).' цагийн өмнө';
+        // days
+        case $time >= 86400 && $time < 604800;
+        return (round($time/86400) == 1) ? '1 өдрийн өмнө' : round($time/86400).' өдрийн өмнө';
+        // weeks
+        case $time >= 604800 && $time < 2600640;
+        return (round($time/604800) == 1) ? '1 хоногийн өмнө' : round($time/604800).' 7 хоногийн өмнө';
+        // months
+        case $time >= 2600640 && $time < 31207680;
+        return (round($time/2600640) == 1) ? '1 сарын өмнө' : round($time/2600640).' сарын өмнө';
+        // years
+        case $time >= 31207680;
+        return (round($time/31207680) == 1) ? '1 жилийн өмнө' : round($time/31207680).' жилийн өмнө' ;
+
+        endswitch;
+    }
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Advertisement'), ['action' => 'edit', $advertisement->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Advertisement'), ['action' => 'delete', $advertisement->id], ['confirm' => __('Are you sure you want to delete # {0}?', $advertisement->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Advertisement'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Advertisement'), ['action' => 'add']) ?> </li>
-    </ul>
-</nav>
-<div class="advertisement view large-9 medium-8 columns content">
-    <h3><?= h($advertisement->name) ?></h3>
-    <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('Name') ?></th>
-            <td><?= h($advertisement->name) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Email') ?></th>
-            <td><?= h($advertisement->email) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Phone') ?></th>
-            <td><?= h($advertisement->phone) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('AdsBody') ?></th>
-            <td><?= h($advertisement->adsBody) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($advertisement->id) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('CreateDate') ?></th>
-            <td><?= h($advertisement->createDate) ?></td>
-        </tr>
-    </table>
-</div>
+
+<?= $this->element('topAds') ?> 
+<section class="bg-body section-space-less30">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-12 mb-30">
+                <h1><?=$advertisement->title?></h1>
+                <?php  
+                    if($advertisement->photo !="" )  {
+                        echo "<div class='m-auto'><img src=".$advertisement->photo." /></div>";
+                    }
+                ?>
+                <div class="w-100 rowFooder mt-10 mb-5">
+                    <ul class="post-info-dark mt-2">
+                        <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><?= $advertisement->name ?></a></li>
+                        <li><a href="#"><i class="fa fa-eye" aria-hidden="true"></i><?= (int) $advertisement->read_count ?></a></li>
+                        <li><a href="#"><i class="fa fa-comments" aria-hidden="true"></i>20</a></li>
+                        <li><a href="#"><i class="fa fa-history"></i><?= timeAgo($advertisement->createDate) ?></a></li>
+                    </ul>
+                </div>
+                <hr/>
+                <p><?=$advertisement->adsBody?></p>
+                <br/>
+                <div class="comments-area">
+                    <h3 class="title-semibold-dark size-xl border-bottom mb-10 pb-10">Сэтгэгдэл (<?= count($advertisement->cmmt)?>)</h3>
+                    <?php foreach($advertisement->cmmt as $comment):  ?>
+                    <div id="commentBox">
+                        <div class="pl-4">
+                            <b><font size="2"><?= $comment->authorName ?></font></b>,
+                            <small>&nbsp;&nbsp;[ <?=  timeAgo($comment->createDate) ?> ]</small><br/>
+                            <small><?= $comment->commentBody ?></small>
+                        </div>
+                        <div id="feedBack" commentId=<?= $comment->id ?> class="ml-4 mt-2 overflow-hidden">
+                            <div id="like" class="float-left"><cnt><?= $comment->likeCnt > 0 ? $comment->likeCnt : 0 ?></cnt>&nbsp;<i class="fa fa-thumbs-up"></i></div>
+                            <div id="unlike" class="float-left ml-5"><i class="fa fa-thumbs-down"></i>&nbsp;<cnt><?= $comment->unlikeCnt > 0 ? $comment->unlikeCnt : 0  ?></cnt></div>
+                            <div id="replay" class="float-left ml-5"><i class="fa fa-share"></i><small>&nbsp;&nbsp;Хариулах</small></div>
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
+                </div>
+                <div class="leave-comments mt-50">
+                    <h2 class="title-semibold-dark size-xl mb-20">Сэтгэгдэл үлдээх</h2>
+                    <?= $this->Form->create($advertisement,['action'=>'commentadd']) ?>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <input placeholder="Нэр" name="author_name" class="form-control" type="text">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <textarea placeholder="Сэтгэгдэл" required name="body" class="textarea form-control" id="form-message" rows="8" cols="20"></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group mb-none">
+                                    <?= $this->Form->button(__('Нийтлэх'),['class'=>'btn-ftg-ptp-45']) ?>
+
+                                </div>
+                            </div>
+                        </div>
+                    <?= $this->Form->end() ?>
+                </div>
+            </div>
+            <?= $this->element('rightWindow') ?> 
+        </div>
+    </div>
+</section>
+
+<style>
+    .media:hover  {
+        background-color:#f8f9fa;;
+        cursor:pointer;
+    }
+    .adImg  {
+        border:1px solid #cacaca;
+    }
+    ul.post-info-dark li a  {
+        color: #464646;
+        font-size: 13px;
+    }
+    .adsBody {
+        font-size: 13px;
+        line-height: 15px;
+        color: #444444;
+        max-height: 63px;
+        overflow: hidden;
+    }
+</style>

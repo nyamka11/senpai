@@ -4,7 +4,6 @@
  * @var \App\Model\Entity\Advertisement[]|\Cake\Collection\CollectionInterface $advertisement
  */
 ?>
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
 
 
 <div class="row container m-auto mt-5 mb-5">

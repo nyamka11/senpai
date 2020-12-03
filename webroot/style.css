@@ -4939,7 +4939,7 @@ ul.post-info-dark li {
   display: inline-block;
   margin-right: 20px;
   padding-right: 20px;
-  border-right: 2px solid #dcdcdc;
+  border-right: 1px solid #dcdcdc;
   line-height: 1;
 }
 ul.post-info-dark li:first-child a {

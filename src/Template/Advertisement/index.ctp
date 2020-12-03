@@ -103,14 +103,13 @@ function timeAgo($time_ago) {
                                 <li class="media mt-3">
                                     <img src="<?= $advertisement->photo !="" ? $advertisement->photo : "/img/news/news171.jpg" ?>" alt="..." class="adImg" style="width:140px;">
                                     <div class="media-body w-100">
-                                        <h3 class="mt-0 mb-1"><?= $advertisement->title ?></h3>
+                                        <h3 class="mt-0 mb-3"><?= $advertisement->title ?></h3>
                                         <div class="adsBody"><?= $advertisement->adsBody ?></div>
-                                        <div class="w-100 rowFooder">
-                                            <i class="fa fa-eye"></i>&nbsp;&nbsp;<?= (int) $advertisement->read_count ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <i class="fa fa-comment"></i>&nbsp;&nbsp;21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <i class="fa fa-user"></i>&nbsp;&nbsp;<?= $advertisement->name ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <i class="fa fa-history"></i>&nbsp;&nbsp;<?= timeAgo($advertisement->createDate) ?>&nbsp;&nbsp;
-                                        </div>
+                                        <ul class="post-info-dark mt-2">
+                                            <li><a href="#"><i class="fa fa-eye" aria-hidden="true"></i><?= (int) $advertisement->read_count ?></a></li>
+                                            <li><a href="#"><i class="fa fa-comments" aria-hidden="true"></i>20</a></li>
+                                            <li><a href="#"><i class="fa fa-history"></i><?= timeAgo($advertisement->createDate) ?></a></li>
+                                        </ul>
                                     </div>
                                     
                                 </li>
@@ -163,17 +162,17 @@ function timeAgo($time_ago) {
     .adImg  {
         border:1px solid #cacaca;
     }
-    .rowFooder {
-        color: #737373;
+
+    ul.post-info-dark li a  {
+        color: #464646;
         font-size: 13px;
     }
 
     .adsBody {
         font-size: 13px;
-        line-height: 15px;
+        line-height: 16px;
         color: #444444;
         max-height: 63px;
         overflow: hidden;
-        /* border: 1px solid;
     }
 </style>

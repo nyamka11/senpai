@@ -69,3 +69,19 @@ select  {
 .tooltip {
     font-size:15px;
 }
+
+.fa-thumbs-up, .fa-thumbs-down, .fa-share {
+    color: #656565;
+}
+.fa-thumbs-up:hover, .fa-thumbs-down:hover ,#replay:hover{
+    cursor: pointer;
+    font-size:14px;
+    transition: all 1s ease-out;
+    color: black;
+}
+#feedBack  {
+    font-size: 13px;
+}
+#commentBox  {
+    margin-top: 15px;
+}

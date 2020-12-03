@@ -26,7 +26,7 @@
             <input type="text" id="body" name="body" class="w-100 form-control mb-4 d-none" />
         </fieldset>
         <br />
-        <?= $this->Form->button(__('Хадаглах'),['class'=>'btn btn-success w-25 form-control-lg']) ?>
+        <?= $this->Form->button(__('Хадгалах'),['class'=>'btn btn-success w-25 form-control-lg']) ?>
         <?= $this->Form->end() ?>
         <br />
     </div>
