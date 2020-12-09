@@ -3,45 +3,6 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Advertisement $advertisement
  */
-
-function timeAgo($time_ago) {
-    $t = explode(" ",$time_ago);
-    $y = explode(".",$t[0]);
-    $d = explode(":",$t[1]);
-
-
-
-    $time_ago = mktime($d[0], $d[1], 0, $y[1], $y[2], $y[0]);
-
-    $time_ago =  strtotime($time_ago) ? strtotime($time_ago) : $time_ago;
-    $time  = time() - $time_ago;
-
-    switch($time):
-    // seconds
-    case $time <= 60;
-    return 'дөнгөж сая';
-    // minutes
-    case $time >= 60 && $time < 3600;
-    return (round($time/60) == 1) ? '1 минутын өмнө' : round($time/60).' минутын өмнө';
-    // hours
-    case $time >= 3600 && $time < 86400;
-    return (round($time/3600) == 1) ? '1 цагын өмнө' : round($time/3600).' цагын өмнө';
-    // days
-    case $time >= 86400 && $time < 604800;
-    return (round($time/86400) == 1) ? '1 өдрийн өмнө' : round($time/86400).' өдрийн өмнө';
-    // weeks
-    case $time >= 604800 && $time < 2600640;
-    return (round($time/604800) == 1) ? '1 хоногын өмнө' : round($time/604800).' 7 хоногын өмнө';
-    // months
-    case $time >= 2600640 && $time < 31207680;
-    return (round($time/2600640) == 1) ? '1 сарын өмнө' : round($time/2600640).' сарын өмнө';
-    // years
-    case $time >= 31207680;
-    return (round($time/31207680) == 1) ? '1 жилийн өмнө' : round($time/31207680).' жилийн өмнө' ;
-
-    endswitch;
-}
-
 ?>
 
 
@@ -108,7 +69,7 @@ function timeAgo($time_ago) {
                                         <ul class="post-info-dark mt-2">
                                             <li><a href="#"><i class="fa fa-eye" aria-hidden="true"></i><?= (int) $advertisement->read_count ?></a></li>
                                             <li><a href="#"><i class="fa fa-comments" aria-hidden="true"></i>20</a></li>
-                                            <li><a href="#"><i class="fa fa-history"></i><?= timeAgo($advertisement->createDate) ?></a></li>
+                                            <li><a href="#"><i class="fa fa-history"></i><?= $this->global->getTimeAgo($advertisement->createDate) ?></a></li>
                                         </ul>
                                     </div>
                                     

@@ -25,6 +25,7 @@ class NewsController extends AppController  {
     }
 
     public function view($id = null)  {
+
         $news = $this->News->get($id, [
             'contain' => ['Cmmt'],
         ]);
