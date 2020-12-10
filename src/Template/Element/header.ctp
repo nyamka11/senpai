@@ -40,10 +40,7 @@
                                         <a href="<?= $this->Url->build(array('controller'=>'Advertisement','action'=>'index')) ?>" >Зар</a>
                                     </li>
                                     <li>
-                                        <a href="post-style-1.html">Хэлэлцүүлэг</a>
-                                    </li>
-                                    <li>
-                                        <a href="post-style-1.html">ENTERTAINMENT</a>
+                                        <a href="">ENTERTAINMENT</a>
                                     </li>
                                 </ul>
                             </nav>
